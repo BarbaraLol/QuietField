@@ -740,7 +740,7 @@
 <footer>
   <!-- <div class="footer-name">Barbara Loletti</div> -->
   <div class="footer-contacts">
-    <a href="mailto:info.quietfiled@gmail.com"><i class="fa-solid fa-envelope"></i> info.quietfiled@gmail.com</a>
+    <a href="mailto:info.quietfield@gmail.com"><i class="fa-solid fa-envelope"></i> info.quietfield@gmail.com</a>
     <a href="https://linkedin.com/in/barbara-loletti/?locale=it"><i class="fa-brands fa-linkedin"></i>Linkedin</a>
     <a href="tel:+393477766092"><i class="fa-solid fa-phone"></i> +39 347 776 6092</a>
   </div>
@@ -749,37 +749,35 @@
 </footer>
 
 <script>
-  // Form handler — placeholder
-  // In produzione: collegare a Formspree, Google Forms, Supabase, o un backend custom
   function handleSubmit() {
     const form = document.getElementById('feedback-form');
     const success = document.getElementById('form-success');
     
-    // Raccogli i dati
     const data = {};
     form.querySelectorAll('input, select, textarea').forEach(el => {
       if (el.name) data[el.name] = el.value;
     });
     
-    // Validazione minima
     if (!data.contatto) {
       alert('Per favore inserisci un modo per ricontattarti (email o telefono).');
       return;
     }
     
-    // Per ora logga in console — da collegare a un backend
-    console.log('Form data:', data);
-    
-    // TODO: Inviare i dati a:
-    // - Formspree (gratuito, semplice): https://formspree.io
-    // - Google Forms (gratuito): crea un form e usa l'URL di submit
-    // - Supabase (gratuito tier): database con API REST
-    // - Tuo backend FastAPI
-    
-    // Mostra conferma
-    form.style.display = 'none';
-    success.style.display = 'block';
-    success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    fetch('https://formspree.io/f/mzdwdbrr', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    }).then(r => {
+      if (r.ok) {
+        form.style.display = 'none';
+        success.style.display = 'block';
+        success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      } else {
+        alert('Errore nell\'invio. Riprova o scrivimi direttamente via email.');
+      }
+    }).catch(() => {
+      alert('Errore di connessione. Riprova o scrivimi direttamente via email.');
+    });
   }
 </script>
 
