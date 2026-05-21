@@ -898,7 +898,7 @@
       body: JSON.stringify(data)
     }).then(r => {
       if (r.ok) {
-        umami.track('form-inviato');
+        if (typeof umami !== 'undefined') umami.track('form-inviato');
         form.style.display = 'none';
         success.style.display = 'block';
         success.scrollIntoView({ behavior: 'smooth', block: 'center' });
