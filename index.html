@@ -406,6 +406,26 @@
     line-height: 1.5;
   }
 
+  .form-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: none;
+  border: 1px dashed var(--color-border);
+  border-radius: 6px;
+  padding: 0.75rem 1.2rem;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--color-text-soft);
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s;
+  width: fit-content;
+}
+.form-toggle:hover {
+  border-color: var(--color-sage);
+  color: var(--color-earth);
+}
+
   /* ---- FOOTER ---- */
   footer {
     background: var(--color-earth);
@@ -717,74 +737,90 @@
 <section class="feedback" id="feedback">
   <div class="container">
     <div class="section-label">Parliamone</div>
-    <h2 class="section-title">Lavori in vigna? La tua esperienza è preziosa.</h2>
+    <h2 class="section-title">Lavori in vigna? Lasciami un contatto.</h2>
     <p class="feedback-intro">
       Sto raccogliendo le esperienze di viticoltori e agronomi per progettare qualcosa che sia davvero utile.
       Se hai 5 minuti, raccontami come gestisci il tuo vigneto — ogni risposta mi aiuta a costruire meglio.
     </p>
+
     <div class="feedback-form" id="feedback-form">
+
+      <!-- BLOCCO OBBLIGATORIO -->
       <div class="form-row">
         <div class="form-group">
-          <label>Nome <span class="optional">(opzionale)</span></label>
+          <label>Nome *</label>
           <input type="text" name="nome" placeholder="Come ti chiami">
         </div>
         <div class="form-group">
-          <label>Azienda <span class="optional">(opzionale)</span></label>
+          <label>Azienda *</label>
           <input type="text" name="azienda" placeholder="Nome dell'azienda">
         </div>
       </div>
       <div class="form-row">
         <div class="form-group">
-          <label>Email o telefono</label>
-          <input type="text" name="contatto" placeholder="Per poterti ricontattare">
+          <label>Ruolo *</label>
+          <select name="ruolo">
+            <option value="" selected disabled>Scegli...</option>
+            <option value="viticoltore">Viticoltore / Titolare</option>
+            <option value="enologo">Enologo</option>
+            <option value="agronomo">Agronomo</option>
+            <option value="ricercatore">Ricercatore / Accademico</option>
+            <option value="altro">Altro</option>
+          </select>
         </div>
         <div class="form-group">
-          <label>Zona e ettari vitati</label>
-          <input type="text" name="zona" placeholder="Es: Montefalco, 12 ettari">
+          <label>Email o telefono *</label>
+          <input type="text" name="contatto" placeholder="Per poterti ricontattare">
         </div>
       </div>
       <div class="form-group">
-        <label>Il tuo ruolo</label>
-        <select name="ruolo">
-          <option value="" selected disabled>Scegli...</option>
-          <option value="viticoltore">Viticoltore / Titolare</option>
-          <option value="enologo">Enologo</option>
-          <option value="agronomo">Agronomo</option>
-          <option value="ricercatore">Ricercatore / Accademico</option>
-          <option value="altro">Altro</option>
-        </select>
+        <label>Raccontami qualcosa — un problema, una domanda, un dubbio *</label>
+        <textarea name="messaggio" placeholder="Es: ogni anno non so quando trattare contro la peronospora, vorrei capire lo stress idrico zona per zona..."></textarea>
       </div>
-      <div class="form-group">
-        <label>Qual è la decisione più difficile che prendi durante la stagione?</label>
-        <textarea name="decisione" placeholder="Es: decidere quando trattare contro la peronospora, capire se irrigare..."></textarea>
+
+      <!-- TOGGLE OPZIONALE -->
+      <button type="button" class="form-toggle" id="form-toggle" onclick="toggleExtra()">
+        <i class="fa-solid fa-plus" id="toggle-icon"></i>
+        Se hai ancora un paio di minuti, raccontami di più
+      </button>
+
+      <div id="form-extra" style="display:none; display:flex; flex-direction:column; gap:1.5rem;">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Zona e ettari vitati <span class="optional">(opzionale)</span></label>
+            <input type="text" name="zona" placeholder="Es: Montefalco, 12 ettari">
+          </div>
+          <div class="form-group">
+            <label>Disponibilità per una chiamata <span class="optional">(opzionale)</span></label>
+            <select name="disponibilita">
+              <option value="" selected disabled>Scegli...</option>
+              <option value="si">Sì, volentieri</option>
+              <option value="forse">Forse, dipende dai tempi</option>
+              <option value="no">Preferisco solo il form</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Usi già qualche strumento per monitorare il vigneto? <span class="optional">(opzionale)</span></label>
+          <textarea name="strumenti" placeholder="Es: ho una Davis Vantage, uso xFarm, vado a occhio..."></textarea>
+        </div>
+        <div class="form-group">
+          <label>C'è qualcosa che vorresti sapere sul tuo vigneto ma oggi non riesci a misurare? <span class="optional">(opzionale)</span></label>
+          <textarea name="desiderio" placeholder="Es: vorrei sapere in anticipo quando arriva la peronospora..."></textarea>
+        </div>
+        <div class="form-group">
+          <label>Altro <span class="optional">(opzionale)</span></label>
+          <textarea name="altro" placeholder="Qualsiasi cosa: dubbi, suggerimenti, critiche..."></textarea>
+        </div>
       </div>
-      <div class="form-group">
-        <label>Usi già qualche strumento per monitorare il vigneto? <span class="optional">(centralina meteo, app, sensori...)</span></label>
-        <textarea name="strumenti" placeholder="Es: ho una Davis Vantage, uso xFarm, vado a occhio..."></textarea>
-      </div>
-      <div class="form-group">
-        <label>C'è qualcosa che vorresti sapere sul tuo vigneto ma oggi non riesci a misurare?</label>
-        <textarea name="desiderio" placeholder="Es: vorrei sapere in anticipo quando arriva la peronospora, capire lo stress idrico zona per zona..."></textarea>
-      </div>
-      <div class="form-group">
-        <label>Saresti disponibile per una chiacchierata di 20 minuti (anche al telefono)?</label>
-        <select name="disponibilita">
-          <option value="" selected disabled>Scegli...</option>
-          <option value="si">Sì, volentieri</option>
-          <option value="forse">Forse, dipende dai tempi</option>
-          <option value="no">Preferisco solo il form</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label>Altro che vuoi dirmi <span class="optional">(opzionale)</span></label>
-        <textarea name="altro" placeholder="Qualsiasi cosa: dubbi, suggerimenti, critiche..."></textarea>
-      </div>
-      <button type="button" class="form-submit" onclick="handleSubmit()">Invia le tue risposte</button>
+
+      <button type="button" class="form-submit" onclick="handleSubmit()">Invia</button>
       <p class="form-note">
-        I dati che condividi verranno usati esclusivamente per lo sviluppo di questo progetto. 
+        I dati che condividi verranno usati esclusivamente per lo sviluppo di questo progetto.
         Non verranno ceduti a terzi né usati per finalità commerciali diverse.
       </p>
     </div>
+
     <div id="form-success" style="display:none; margin-top: 2rem;">
       <div style="background: rgba(107, 127, 94, 0.1); border: 1px solid var(--color-sage-light); border-radius: 10px; padding: 2rem;">
         <h3 style="font-family: var(--font-display); color: var(--color-earth); margin-bottom: 0.5rem;">Grazie!</h3>
@@ -819,7 +855,18 @@
     links.classList.remove('open');
   }
 
-  // Feedback submission 
+  //Form
+  function toggleExtra() {
+    const extra = document.getElementById('form-extra');
+    const icon = document.getElementById('toggle-icon');
+    const btn = document.getElementById('form-toggle');
+    const isHidden = extra.style.display === 'none';
+    extra.style.display = isHidden ? 'flex' : 'none';
+    icon.className = isHidden ? 'fa-solid fa-minus' : 'fa-solid fa-plus';
+    if (isHidden) btn.style.display = 'none';
+  }
+
+  // Form submission 
   function handleSubmit() {
     const form = document.getElementById('feedback-form');
     const success = document.getElementById('form-success');
