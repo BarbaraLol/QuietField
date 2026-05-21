@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- SEO mata data-->
+<!-- SEO mata data -->
 <meta name="description" content="QuietField — Stazioni di monitoraggio intelligente per il vigneto. Microclima, suolo e modelli predittivi per viticoltori in Umbria e in tutta Italia.">
 <meta property="og:title" content="QuietField — Il tuo vigneto ti parla">
 <meta property="og:description" content="Stazioni di monitoraggio intelligente per la viticoltura di precisione.">
@@ -537,6 +537,9 @@
   .hero-content > :nth-child(3) { animation-delay: 0.4s; }
   .hero-content > :nth-child(4) { animation-delay: 0.55s; }
 </style>
+
+<!-- Traffic tracking -->
+<script defer src="https://cloud.umami.is/script.js" data-website-id="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"></script>
 </head>
 <body>
 
@@ -888,6 +891,8 @@
       alert('Per favore inserisci un modo per ricontattarti (email o telefono).');
       return;
     }
+
+    umami.track('form-inviato')
     
     fetch('https://formspree.io/f/mjgzgkop', {
       method: 'POST',
