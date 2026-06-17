@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- SEO mata data -->
+<meta name="description" content="QuietField — Stazioni di monitoraggio intelligente per il vigneto. Microclima, suolo e modelli predittivi per viticoltori in Umbria e in tutta Italia.">
+<meta property="og:title" content="QuietField — Il tuo vigneto ti parla">
+<meta property="og:description" content="Stazioni di monitoraggio intelligente per la viticoltura di precisione.">
+<meta property="og:url" content="https://barbaralol.github.io/QuietField/">
+<meta property="og:type" content="website">
+
+<title>QuietField — Monitoraggio Intelligente per il Vigneto</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="../css/main.css">
+
+
+<!-- Traffic tracking -->
+<script defer src="https://cloud.umami.is/script.js" data-website-id="00ee3724-b878-4638-851a-280723171d61"></script>
+</head>
+<body>
+
+<!-- NAV -->
+<!-- <nav>
+  <a href="#" class="nav-logo">Quiet<span>Field</span></a>
+  <div class="nav-links">
+    <a href="#problema">Problema</a>
+    <a href="#soluzione">Soluzione</a>
+    <a href="#chi-sono">Chi sono</a>
+    <a href="#feedback">Contatti</a>
+  </div>
+</nav> -->
+<nav>
+  <a href="#" class="nav-logo">Quiet<span>Field</span></a>
+  <div class="nav-links" id="nav-links">
+    <a href="#problema" onclick="closeMenu()">Problema</a>
+    <a href="#soluzione" onclick="closeMenu()">Soluzione</a>
+    <a href="#chi-sono" onclick="closeMenu()">Chi sono</a>
+    <a href="#feedback" onclick="closeMenu()">Contatti</a>
+  </div>
+  <!-- <div class="lang-switch">
+    <a href="/it/">IT</a>
+    <a href="/en/">EN</a>
+    <a href="/fr/">FR</a>
+  </div> -->
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <!-- <div class="hero-tag">Precision Viticulture · Umbria</div> -->
+    <div class="hero-tag">Viticultura di Precisione · Umbria</div>
+    <h1>Il tuo vigneto ti parla<br><em>Adesso puoi ascoltarlo</em></h1>
+    <p>Stazioni di monitoraggio intelligenti che misurano microclima e suolo nel vigneto, analizzano i dati con modelli predittivi, e ti avvisano prima che un problema diventi un danno.</p>
+    <a href="#soluzione" class="hero-cta">Scopri di più</a>
+  </div>
+</section>
+
+<!-- PROBLEMA -->
+<section class="problem" id="problema">
+  <div class="container">
+    <div class="section-label">Il problema</div>
+    <!-- <h2 class="section-title">Ogni anno, le stesse domande senza risposta certa</h2> -->
+    <h2 class="section-title">Ogni anno le stesse incertezze</h2>
+    <p style="color: var(--color-text-soft); max-width: 960px; line-height: 1.75;">
+      Trattare troppo presto è uno spreco. Trattare troppo tardi può costare un'annata. 
+      Oggi molte di queste decisioni si prendono a calendario, per abitudine, o guardando il cielo — 
+      con margini di errore che pesano sul portafoglio e sull'ambiente.
+    </p>
+    <div class="problem-grid">
+      <div class="problem-card" data-icon="🍂">
+        <h3>Trattamenti alla cieca</h3>
+        <p>Malattie come peronospora e oidio si combattono spesso "a calendario" anziché su dati reali. Risultato? Trattamenti inutili o tardivi, costi più alti e più impatto ambientale.</p>
+      </div>
+      <div class="problem-card" data-icon="💧">
+        <h3>Irrigazione <i>a intuito</i></h3>
+        <p>Senza dati sull'umidità del suolo e sull'evapotraspirazione, si irriga troppo, troppo poco, o al momento sbagliato — con effetti diretti sulla qualità del prodotto.</p>
+      </div>
+      <div class="problem-card" data-icon="📊">
+        <h3>Dati frammentati o assenti</h3>
+        <p>Chi ha una centralina meteo si ritrova con numeri da interpretare da solo. Chi non ce l'ha si affida alla propria esperienza. Con i dati giusti, entrambi prendono decisioni migliori.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUZIONE -->
+<section class="solution" id="soluzione">
+  <div class="container">
+    <div class="section-label">La soluzione</div>
+    <!-- <h2 class="section-title">Una stazione che non si limita a misurare.<br>Ti dice cosa fare.</h2> -->
+    <h2 class="section-title">Una sentinella nel vigneto<br>Misura, prevede e ti dice quando agire</h2>
+    <div class="solution-grid">
+      <ul class="solution-list">
+        <li>
+          <strong>Sensori microclimatici e del suolo</strong>
+          Temperatura, umidità dell'aria e del suolo, bagnatura fogliare, pioggia, vento, radiazione — tutto in un'unica stazione da vigneto, alimentata a pannello solare.
+        </li>
+        <li>
+          <strong>Modelli predittivi integrati</strong>
+          I dati vengono analizzati da modelli agronomici e di machine learning che stimano il rischio fitosanitario, lo stress idrico, e lo stadio fenologico — non solo oggi, ma nelle prossime 48-72 ore.
+        </li>
+        <li>
+          <strong>Alert azionabili sullo smartphone</strong>
+          Niente grafici da interpretare. Ricevi notifiche chiare: "rischio peronospora alto entro venerdì", "lo stress idrico nel blocco 2 è in aumento". <b><i>Tu decidi</i></b>, con le informazioni giuste.
+        </li>
+        <li>
+          <strong>Architettura modulare</strong>
+          Progettata per la viticoltura, costruita per espandersi. La stessa piattaforma potrà essere adattata anche per altre colture
+        </li>
+      </ul>
+      <div class="solution-visual">
+        <div class="station-diagram">
+          <svg viewBox="0 0 300 380" xmlns="http://www.w3.org/2000/svg">
+            <!-- pole -->
+            <rect x="145" y="80" width="10" height="250" rx="3" fill="#8B6F4E"/>
+            <!-- solar panel -->
+            <rect x="100" y="55" width="100" height="40" rx="4" fill="#5C6B4E" stroke="#3C4A33" stroke-width="1.5"/>
+            <line x1="130" y1="55" x2="130" y2="95" stroke="#3C4A33" stroke-width="0.5" opacity="0.5"/>
+            <line x1="170" y1="55" x2="170" y2="95" stroke="#3C4A33" stroke-width="0.5" opacity="0.5"/>
+            <line x1="100" y1="75" x2="200" y2="75" stroke="#3C4A33" stroke-width="0.5" opacity="0.5"/>
+            <!-- main box -->
+            <rect x="115" y="110" width="70" height="55" rx="6" fill="#E8DFD0" stroke="#B8A890" stroke-width="1.5"/>
+            <circle cx="135" cy="130" r="4" fill="#6B7F5E"/>
+            <circle cx="150" cy="130" r="4" fill="#B85C38"/>
+            <circle cx="165" cy="130" r="4" fill="#6B7F5E" opacity="0.5"/>
+            <rect x="128" y="142" width="44" height="14" rx="2" fill="#F4F0E8" stroke="#D4CBBC"/>
+            <!-- antenna -->
+            <line x1="185" y1="110" x2="195" y2="75" stroke="#8B6F4E" stroke-width="2"/>
+            <circle cx="195" cy="72" r="3" fill="#B85C38"/>
+            <!-- temp/hum sensor -->
+            <rect x="68" y="140" width="36" height="24" rx="4" fill="#fff" stroke="#B8A890" stroke-width="1"/>
+            <line x1="104" y1="152" x2="115" y2="145" stroke="#B8A890" stroke-width="1" stroke-dasharray="3,2"/>
+            <text x="86" y="156" text-anchor="middle" font-size="7" fill="#5C5347" font-family="sans-serif">T/H</text>
+            <!-- leaf wetness -->
+            <rect x="196" y="170" width="40" height="20" rx="4" fill="#fff" stroke="#B8A890" stroke-width="1"/>
+            <line x1="196" y1="180" x2="185" y2="160" stroke="#B8A890" stroke-width="1" stroke-dasharray="3,2"/>
+            <text x="216" y="184" text-anchor="middle" font-size="6.5" fill="#5C5347" font-family="sans-serif">Foglia</text>
+            <!-- rain gauge -->
+            <path d="M128 195 L132 210 L142 210 L146 195 Z" fill="#fff" stroke="#B8A890" stroke-width="1"/>
+            <line x1="137" y1="210" x2="137" y2="225" stroke="#B8A890" stroke-width="1" stroke-dasharray="3,2"/>
+            <text x="137" y="238" text-anchor="middle" font-size="7" fill="#5C5347" font-family="sans-serif">Pioggia</text>
+            <!-- soil sensor -->
+            <line x1="150" y1="330" x2="150" y2="310" stroke="#8B6F4E" stroke-width="2"/>
+            <ellipse cx="150" cy="340" rx="22" ry="8" fill="#C5B89E" stroke="#A69880" stroke-width="1"/>
+            <text x="150" y="360" text-anchor="middle" font-size="7" fill="#5C5347" font-family="sans-serif">Suolo</text>
+            <!-- ground line -->
+            <line x1="60" y1="330" x2="240" y2="330" stroke="#A69880" stroke-width="1" stroke-dasharray="5,3"/>
+            <!-- wifi waves -->
+            <path d="M210 100 Q220 95 225 100" stroke="#B85C38" stroke-width="1.2" fill="none" opacity="0.5"/>
+            <path d="M212 93 Q225 85 232 93" stroke="#B85C38" stroke-width="1.2" fill="none" opacity="0.35"/>
+            <path d="M214 86 Q230 75 239 86" stroke="#B85C38" stroke-width="1.2" fill="none" opacity="0.2"/>
+          </svg>
+        </div>
+        <p style="font-size: 0.85rem; color: var(--color-text-soft); margin-top: 1.5rem; line-height: 1.5;">
+          Schema concettuale — il design definitivo<br>è attualmente in fase di sviluppo
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PER CHI -->
+<section class="for-who" id="per-chi">
+  <div class="container">
+    <div class="section-label">Per chi è</div>
+    <h2 class="section-title">Progettiamo con voi, non per voi</h2>
+    <p style="color: rgba(232, 223, 208, 0.75); max-width: 750px; margin-bottom: 2rem; line-height: 1.75;">
+      Il progetto è nella fase iniziale di sviluppo. Cerchiamo viticoltori, agronomi e ricercatori 
+      che vogliano contribuire con la loro esperienza a costruire uno strumento che sia davvero utile in campo.
+    </p>
+    <div class="audience-grid">
+      <div class="audience-card">
+        <h3>🍇 Viticoltori</h3>
+        <p>Aziende vitivinicole in <!--Centro e Sud --> Italia, dalla piccola cantina alla media produzione, che vogliono decisioni più informate e meno sprechi.</p>
+      </div>
+      <div class="audience-card">
+        <h3>🔬 Ricercatori e agronomi</h3>
+        <p>Professionisti e accademici in agronomia, fitopatologia, o precision farming interessati a collaborazioni di ricerca e sviluppo.</p>
+      </div>
+      <div class="audience-card">
+        <h3>🌱 Investitori e partner</h3>
+        <p>Chi crede che l'agricoltura di precisione accessibile sia un'opportunità concreta per il territorio italiano.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CHI SONO -->
+<section class="about" id="chi-sono">
+  <div class="container">
+    <div class="section-label">Chi c'è dietro</div>
+    <h2 class="section-title">Sono Barbara Loletti</h2>
+    <div class="about-content">
+      <div class="about-photo">
+        <!-- <img src="img/profile_pic_serious.png" alt="Barbara Loletti" style="width:100%; height:100%; object-fit:cover; border-radius:12px;"> -->
+      </div>
+      <div class="about-text">
+        <p>
+          Dottoressa in Ingegneria Informatica e Data Scientist, specializzata in Data Science e Intelligenza Artificiale con un percorso di laurea 
+          magistrale tra l'Università di Trieste e la Universidad de Alicante. Le mie competenze spaziano dalla modellazione statistica ai sistemi 
+          embedded, con applicazione diretta anche in ambito agricolo.
+        </p>
+        <p>
+          Ho fondato QuietField perché credo che il monitoraggio intelligente dei campi non debba essere un lusso riservato a pochi. L'obiettivo è 
+          dare a ogni produttore uno strumento accessibile e affidabile, che trasformi i dati del campo in informazioni concretamente utili.
+        </p>
+        <div class="skills-row">
+          <span class="skill-tag">Artificial Intelligence</span>
+          <span class="skill-tag">Machine Learning</span>
+          <span class="skill-tag">Data Science</span>
+          <span class="skill-tag">Computer Vision</span>
+          <span class="skill-tag">Software Developement</span>
+          <span class="skill-tag">IoT</span>
+          <span class="skill-tag">Embedded Systems</span>  
+          <span class="skill-tag">Agritech</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FORM FEEDBACK -->
+<section class="feedback" id="feedback">
+  <div class="container">
+    <div class="section-label">Parliamone</div>
+    <h2 class="section-title">Lavori in vigna? Lasciami un contatto.</h2>
+    <p class="feedback-intro">
+      Sto raccogliendo le esperienze di viticoltori e agronomi per progettare qualcosa che sia davvero utile.
+      Se hai 5 minuti, raccontami come gestisci il tuo vigneto — ogni risposta mi aiuta a costruire meglio.
+    </p>
+
+    <div class="feedback-form" id="feedback-form">
+
+      <!-- BLOCCO OBBLIGATORIO -->
+      <div class="form-row">
+        <div class="form-group">
+          <label>Nome *</label>
+          <input type="text" name="nome" placeholder="Come ti chiami">
+        </div>
+        <div class="form-group">
+          <label>Azienda *</label>
+          <input type="text" name="azienda" placeholder="Nome dell'azienda">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Ruolo *</label>
+          <select name="ruolo">
+            <option value="" selected disabled>Scegli...</option>
+            <option value="viticoltore">Viticoltore / Titolare</option>
+            <option value="enologo">Enologo</option>
+            <option value="agronomo">Agronomo</option>
+            <option value="ricercatore">Ricercatore / Accademico</option>
+            <option value="altro">Altro</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Email o telefono *</label>
+          <input type="text" name="contatto" placeholder="Per poterti ricontattare">
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Raccontami qualcosa — un problema, una domanda, un dubbio *</label>
+        <textarea name="messaggio" placeholder="Es: ogni anno non so quando trattare contro la peronospora, vorrei capire lo stress idrico zona per zona..."></textarea>
+      </div>
+
+      <!-- TOGGLE OPZIONALE -->
+      <button type="button" class="form-toggle" id="form-toggle" onclick="toggleExtra()">
+        <i class="fa-solid fa-plus" id="toggle-icon"></i>
+        Se hai ancora un paio di minuti, raccontami di più
+      </button>
+
+      <div id="form-extra" style="display:none; flex-direction:column; gap:1.5rem;">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Zona e ettari vitati <span class="optional">(opzionale)</span></label>
+            <input type="text" name="zona" placeholder="Es: Montefalco, 12 ettari">
+          </div>
+          <div class="form-group">
+            <label>Disponibilità per una chiamata <span class="optional">(opzionale)</span></label>
+            <select name="disponibilita">
+              <option value="" selected disabled>Scegli...</option>
+              <option value="si">Sì, volentieri</option>
+              <option value="forse">Forse, dipende dai tempi</option>
+              <option value="no">Preferisco solo il form</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Usi già qualche strumento per monitorare il vigneto? <span class="optional">(opzionale)</span></label>
+          <textarea name="strumenti" placeholder="Es: ho una Davis Vantage, uso xFarm, vado a occhio..."></textarea>
+        </div>
+        <div class="form-group">
+          <label>C'è qualcosa che vorresti sapere sul tuo vigneto ma oggi non riesci a misurare? <span class="optional">(opzionale)</span></label>
+          <textarea name="desiderio" placeholder="Es: vorrei sapere in anticipo quando arriva la peronospora..."></textarea>
+        </div>
+        <div class="form-group">
+          <label>Altro <span class="optional">(opzionale)</span></label>
+          <textarea name="altro" placeholder="Qualsiasi cosa: dubbi, suggerimenti, critiche..."></textarea>
+        </div>
+      </div>
+
+      <button type="button" class="form-submit" onclick="handleSubmit()">Invia</button>
+      <p class="form-note">
+        I dati che condividi verranno usati esclusivamente per lo sviluppo di questo progetto.
+        Non verranno ceduti a terzi né usati per finalità commerciali diverse.
+      </p>
+    </div>
+
+    <div id="form-success" style="display:none; margin-top: 2rem;">
+      <div style="background: rgba(107, 127, 94, 0.1); border: 1px solid var(--color-sage-light); border-radius: 10px; padding: 2rem;">
+        <h3 style="font-family: var(--font-display); color: var(--color-earth); margin-bottom: 0.5rem;">Grazie!</h3>
+        <p style="color: var(--color-text-soft);">Le tue risposte sono preziose. Ti ricontatterò presto! Nel frattempo, se vuoi scrivermi direttamente, trovi i miei contatti qui sotto.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <!-- <div class="footer-name">Barbara Loletti</div> -->
+  <div class="footer-contacts">
+    <a href="mailto:info.quietfield@gmail.com"><i class="fa-solid fa-envelope"></i> info.quietfield@gmail.com</a>
+    <a href="https://linkedin.com/in/barbara-loletti/?locale=it"><i class="fa-brands fa-linkedin"></i> Linkedin</a>
+    <a href="tel:+393477766092"><i class="fa-solid fa-phone"></i> +39 347 776 6092</a>
+  </div>
+  <div style="font-size: 0.85rem; color: rgba(232, 223, 208, 0.6); margin-bottom: 0.5rem;">Terni, Umbria — Italia</div>
+  <div class="footer-copy">© 2026 Barbara Loletti · QuietField</div>
+</footer>
+
+<script src="../js/main.js"></script>
+
+</body>
+</html>
