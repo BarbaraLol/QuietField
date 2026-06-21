@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,21 +26,39 @@
 <!-- NAV -->
 <div id="nav-placeholder"></div>
 
+<nav>
+  <a href="#" class="nav-logo">Quiet<span>Field</span></a>
+  <div class="nav-links" id="nav-links">
+    <a href="#problema" onclick="closeMenu()">Problem</a>
+    <a href="#soluzione" onclick="closeMenu()">Solution</a>
+    <a href="#chi-sono" onclick="closeMenu()">Who am I</a>
+    <a href="#feedback" onclick="closeMenu()">Contacts</a>
+  </div>
+  <!-- <div class="lang-switch">
+    <a href="/it/">IT</a>
+    <a href="/en/">EN</a>
+    <a href="/fr/">FR</a>
+  </div> -->
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
 <!-- HERO -->
 <section class="hero">
   <div class="hero-content">
     <!-- <div class="hero-tag">Precision Viticulture · Umbria</div> -->
-    <div class="hero-tag">Agricoltura di Precisione</div>
-    <h1>Il tuo campo ti parla<br><em>Adesso puoi ascoltarlo</em></h1>
-    <p>Stazioni di monitoraggio intelligenti che misurano microclima e suolo nel campo, analizzano i dati con modelli predittivi, e ti avvisano prima che un problema diventi un danno.</p>
-    <a href="#soluzione" class="hero-cta">Scopri di più</a>
+    <div class="hero-tag">Precision Agricolture</div>
+    <!-- <h1>Il tuo vigneto ti parla<br><em>Adesso puoi ascoltarlo</em></h1>
+    <p>Stazioni di monitoraggio intelligenti che misurano microclima e suolo nel vigneto, analizzano i dati con modelli predittivi, e ti avvisano prima che un problema diventi un danno.</p> -->
+    <a href="#soluzione" class="hero-cta">Find out more</a>
   </div>
 </section>
 
 <!-- PROBLEMA -->
 <section class="problem" id="problema">
   <div class="container">
-    <div class="section-label">Il problema</div>
+    <div class="section-label">The problem</div>
     <!-- <h2 class="section-title">Ogni anno, le stesse domande senza risposta certa</h2> -->
     <h2 class="section-title">Ogni anno le stesse incertezze</h2>
     <p style="color: var(--color-text-soft); max-width: 960px; line-height: 1.75;">
@@ -196,6 +214,103 @@
           <span class="skill-tag">Embedded Systems</span>  
           <span class="skill-tag">Agritech</span>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FORM FEEDBACK -->
+<section class="feedback" id="feedback">
+  <div class="container">
+    <div class="section-label">Parliamone</div>
+    <h2 class="section-title">Lavori in vigna? Lasciami un contatto.</h2>
+    <p class="feedback-intro">
+      Sto raccogliendo le esperienze di viticoltori e agronomi per progettare qualcosa che sia davvero utile.
+      Se hai 5 minuti, raccontami come gestisci il tuo vigneto — ogni risposta mi aiuta a costruire meglio.
+    </p>
+
+    <div class="feedback-form" id="feedback-form">
+
+      <!-- BLOCCO OBBLIGATORIO -->
+      <div class="form-row">
+        <div class="form-group">
+          <label>Nome *</label>
+          <input type="text" name="nome" placeholder="Come ti chiami">
+        </div>
+        <div class="form-group">
+          <label>Azienda *</label>
+          <input type="text" name="azienda" placeholder="Nome dell'azienda">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Ruolo *</label>
+          <select name="ruolo">
+            <option value="" selected disabled>Scegli...</option>
+            <option value="viticoltore">Viticoltore / Titolare</option>
+            <option value="enologo">Enologo</option>
+            <option value="agronomo">Agronomo</option>
+            <option value="ricercatore">Ricercatore / Accademico</option>
+            <option value="altro">Altro</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Email o telefono *</label>
+          <input type="text" name="contatto" placeholder="Per poterti ricontattare">
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Raccontami qualcosa — un problema, una domanda, un dubbio *</label>
+        <textarea name="messaggio" placeholder="Es: ogni anno non so quando trattare contro la peronospora, vorrei capire lo stress idrico zona per zona..."></textarea>
+      </div>
+
+      <!-- TOGGLE OPZIONALE -->
+      <button type="button" class="form-toggle" id="form-toggle" onclick="toggleExtra()">
+        <i class="fa-solid fa-plus" id="toggle-icon"></i>
+        Se hai ancora un paio di minuti, raccontami di più
+      </button>
+
+      <div id="form-extra" style="display:none; flex-direction:column; gap:1.5rem;">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Zona e ettari vitati <span class="optional">(opzionale)</span></label>
+            <input type="text" name="zona" placeholder="Es: Montefalco, 12 ettari">
+          </div>
+          <div class="form-group">
+            <label>Disponibilità per una chiamata <span class="optional">(opzionale)</span></label>
+            <select name="disponibilita">
+              <option value="" selected disabled>Scegli...</option>
+              <option value="si">Sì, volentieri</option>
+              <option value="forse">Forse, dipende dai tempi</option>
+              <option value="no">Preferisco solo il form</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Usi già qualche strumento per monitorare il vigneto? <span class="optional">(opzionale)</span></label>
+          <textarea name="strumenti" placeholder="Es: ho una Davis Vantage, uso xFarm, vado a occhio..."></textarea>
+        </div>
+        <div class="form-group">
+          <label>C'è qualcosa che vorresti sapere sul tuo vigneto ma oggi non riesci a misurare? <span class="optional">(opzionale)</span></label>
+          <textarea name="desiderio" placeholder="Es: vorrei sapere in anticipo quando arriva la peronospora..."></textarea>
+        </div>
+        <div class="form-group">
+          <label>Altro <span class="optional">(opzionale)</span></label>
+          <textarea name="altro" placeholder="Qualsiasi cosa: dubbi, suggerimenti, critiche..."></textarea>
+        </div>
+      </div>
+
+      <button type="button" class="form-submit" onclick="handleSubmit()">Invia</button>
+      <p class="form-note">
+        I dati che condividi verranno usati esclusivamente per lo sviluppo di questo progetto.
+        Non verranno ceduti a terzi né usati per finalità commerciali diverse.
+      </p>
+    </div>
+
+    <div id="form-success" style="display:none; margin-top: 2rem;">
+      <div style="background: rgba(107, 127, 94, 0.1); border: 1px solid var(--color-sage-light); border-radius: 10px; padding: 2rem;">
+        <h3 style="font-family: var(--font-display); color: var(--color-earth); margin-bottom: 0.5rem;">Grazie!</h3>
+        <p style="color: var(--color-text-soft);">Le tue risposte sono preziose. Ti ricontatterò presto! Nel frattempo, se vuoi scrivermi direttamente, trovi i miei contatti qui sotto.</p>
       </div>
     </div>
   </div>

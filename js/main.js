@@ -1,14 +1,53 @@
-// Hamburger menu
-const toggle = document.getElementById('nav-toggle');
-const links = document.getElementById('nav-links');
-toggle.addEventListener('click', () => {
-toggle.classList.toggle('open');
-links.classList.toggle('open');
-});
-function closeMenu() {
-toggle.classList.remove('open');
-links.classList.remove('open');
+// Nav (hamburger menu + active link highlight)
+// Chiamabile più volte senza rompersi: se nav-toggle/nav-links non esistono ancora
+// (es. mentre il fetch di nav.html è in corso) esce subito senza errori.
+function initNav() {
+  const toggle = document.getElementById('nav-toggle');
+  const links = document.getElementById('nav-links');
+  if (!toggle || !links) return;
+ 
+  if (!toggle.dataset.navInit) {
+    toggle.dataset.navInit = 'true';
+    toggle.addEventListener('click', () => {
+      toggle.classList.toggle('open');
+      links.classList.toggle('open');
+    });
+  }
+ 
+  // Evidenzia il link della pagina corrente (il file nav.html è identico su tutte le pagine)
+  const current = location.pathname.split('/').pop() || 'index.html';
+  links.querySelectorAll('a').forEach(a => {
+    a.classList.toggle('active', a.getAttribute('href') === current);
+  });
 }
+ 
+function closeMenu() {
+  const toggle = document.getElementById('nav-toggle');
+  const links = document.getElementById('nav-links');
+  if (toggle) toggle.classList.remove('open');
+  if (links) links.classList.remove('open');
+}
+ 
+// Carica il nav condiviso in ogni pagina e poi inizializza i listener
+function loadNav() {
+  const placeholder = document.getElementById('nav-placeholder');
+  if (!placeholder) return;
+  fetch('nav.html')
+    .then(r => r.text())
+    .then(html => {
+      placeholder.innerHTML = html;
+      initNav();
+    })
+    .catch(() => {
+      console.error('Impossibile caricare nav.html (controlla che tu stia usando un server locale, non file://)');
+    });
+}
+ 
+// Esegue subito: se la pagina ha già il nav nel markup, lo aggancia;
+// se ha solo il placeholder, loadNav() lo popola e poi chiama initNav() lui stesso.
+initNav();
+loadNav();
+
 
 //Form
 function toggleExtra() {
