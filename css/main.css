@@ -63,6 +63,7 @@
     transition: color 0.2s;
   }
   .nav-links a:hover { color: var(--color-accent); }
+  .nav-links a.active { color: var(--color-accent); }
 
   /* ---- SECTIONS ---- */
   section { padding: 6rem 2rem; }
@@ -137,6 +138,45 @@
     transition: background 0.25s, transform 0.2s;
   }
   .hero-cta:hover { background: var(--color-accent-hover); transform: translateY(-1px); }
+  .hero-secondary {
+    display: inline-block;
+    margin-left: 1rem;
+    background: transparent;
+    color: var(--color-sand-light);
+    border: 2px solid rgba(244, 240, 232, 0.5);
+    padding: 0.75rem 2.2rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: 0.02em;
+    transition: background 0.25s, border-color 0.25s;
+  }
+  .hero-secondary:hover { background: rgba(255,255,255,0.1); border-color: rgba(244, 240, 232, 0.9); }
+
+  /* ---- PAGE HEADER (for non-home pages) ---- */
+  .page-header {
+    background: var(--color-earth);
+    color: var(--color-sand-light);
+    padding: 9rem 2rem 4.5rem;
+    text-align: center;
+  }
+  .page-header .section-label { color: var(--color-sage-light); justify-content: center; display: flex; }
+  .page-header h1 {
+    font-family: var(--font-display);
+    font-size: clamp(2.4rem, 5vw, 3.6rem);
+    color: var(--color-sand-light);
+    margin-bottom: 1rem;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+  }
+  .page-header p {
+    max-width: 640px;
+    margin: 0 auto;
+    color: rgba(232, 223, 208, 0.78);
+    font-size: 1.15rem;
+    line-height: 1.7;
+  }
 
   /* ---- PROBLEM ---- */
   .problem {
@@ -240,6 +280,49 @@
   }
   .station-diagram svg { width: 100%; height: auto; }
 
+  /* ---- FLOW STEPS (conceptual, non-technical visual) ---- */
+  .flow-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    align-items: center;
+  }
+  .flow-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.9rem;
+    text-align: center;
+  }
+  .flow-step .flow-icon {
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    background: var(--color-cream);
+    border: 1px solid var(--color-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.7rem;
+    color: var(--color-sage);
+  }
+  .flow-step strong {
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    color: var(--color-earth);
+  }
+  .flow-step p {
+    font-size: 0.92rem;
+    color: var(--color-text-soft);
+    max-width: 220px;
+    line-height: 1.5;
+  }
+  .flow-arrow {
+    color: var(--color-sage-light);
+    font-size: 1.2rem;
+    margin: 0.6rem 0;
+  }
+
   /* ---- FOR WHO ---- */
   .for-who {
     background: var(--color-earth);
@@ -272,6 +355,107 @@
     color: rgba(232, 223, 208, 0.7);
     line-height: 1.6;
   }
+
+  /* ---- PHASES (Il Progetto: stato di sviluppo) ---- */
+  .phases-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.75rem;
+    margin-top: 2.5rem;
+  }
+  .phase-card {
+    background: var(--color-cream);
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+    padding: 1.8rem;
+    position: relative;
+  }
+  .phase-card.current {
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 1px rgba(184, 92, 56, 0.15);
+  }
+  .phase-number {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    color: var(--color-sage-pale);
+    display: block;
+    margin-bottom: 0.8rem;
+  }
+  .phase-card.current .phase-number { color: var(--color-accent); }
+  .phase-card h3 {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    color: var(--color-earth);
+    margin-bottom: 0.5rem;
+  }
+  .phase-card p {
+    font-size: 0.98rem;
+    color: var(--color-text-soft);
+    line-height: 1.6;
+  }
+  .phase-badge {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #fff;
+    background: var(--color-accent);
+    padding: 0.2rem 0.7rem;
+    border-radius: 1rem;
+    margin-bottom: 0.7rem;
+  }
+
+  /* ---- VISION ---- */
+  .vision-text {
+    color: var(--color-text-soft);
+    max-width: 760px;
+    line-height: 1.75;
+    font-size: 1.08rem;
+  }
+  .vision-text p { margin-bottom: 1.2rem; }
+
+  /* ---- BRIDGE / CTA BETWEEN PAGES ---- */
+  .bridge {
+    background: var(--color-sand-light);
+    border-top: 1px solid var(--color-border);
+    text-align: center;
+  }
+  .bridge .section-title { margin-bottom: 1rem; }
+  .bridge-intro {
+    color: var(--color-text-soft);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+  .bridge-buttons {
+    display: flex;
+    gap: 1.2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2.2rem;
+  }
+  .bridge-btn {
+    display: inline-block;
+    padding: 0.85rem 2.2rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.05rem;
+    letter-spacing: 0.01em;
+    transition: background 0.25s, transform 0.2s, color 0.25s;
+  }
+  .bridge-btn.primary {
+    background: var(--color-accent);
+    color: #fff;
+  }
+  .bridge-btn.primary:hover { background: var(--color-accent-hover); transform: translateY(-1px); }
+  .bridge-btn.ghost {
+    background: transparent;
+    color: var(--color-earth);
+    border: 2px solid var(--color-earth);
+  }
+  .bridge-btn.ghost:hover { background: var(--color-earth); color: #fff; }
 
   /* ---- ABOUT ---- */
   .about-content {
@@ -319,6 +503,29 @@
     letter-spacing: 0.01em;
   }
 
+  /* ---- DIRECT CONTACTS (light background variant, used on Contatti page) ---- */
+  .direct-contacts {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin: 1.6rem 0 2.8rem;
+  }
+  .direct-contacts a {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    color: var(--color-earth);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.98rem;
+    border: 1px solid var(--color-border);
+    border-radius: 2rem;
+    padding: 0.65rem 1.3rem;
+    background: var(--color-cream);
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .direct-contacts a:hover { border-color: var(--color-sage); color: var(--color-accent); }
+
   /* ---- FORM ---- */
   .feedback {
     background: var(--color-sand-light);
@@ -328,7 +535,7 @@
   .feedback-intro {
     color: var(--color-text-soft);
     max-width: 800px;
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.5rem;
     line-height: 1.75;
   }
   .feedback-form {
@@ -458,6 +665,7 @@
     .form-row { grid-template-columns: 1fr; }
     .nav-links { gap: 1rem; }
     .nav-links a { font-size: 0.78rem; }
+    .hero-secondary { margin-left: 0; margin-top: 1rem; display: block; }
   }
 
   .nav-toggle {
@@ -518,3 +726,5 @@
   .hero-content > :nth-child(2) { animation-delay: 0.25s; }
   .hero-content > :nth-child(3) { animation-delay: 0.4s; }
   .hero-content > :nth-child(4) { animation-delay: 0.55s; }
+
+  .page-header > * { animation: fadeUp 0.6s ease-out both; }
