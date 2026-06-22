@@ -80,7 +80,7 @@
     position: relative;
     overflow: hidden;
     background:
-      url('../img/grape.jpg') center center / cover no-repeat;
+      url('../img/background_img.jpg') center center / cover no-repeat;
   }
   .hero::before {
     content: '';
@@ -424,7 +424,7 @@
   .bridge .section-title { margin-bottom: 1rem; }
   .bridge-intro {
     color: var(--color-text-soft);
-    max-width: 600px;
+    max-width: 900px;
     margin: 0 auto;
     line-height: 1.7;
   }
@@ -623,38 +623,103 @@
   color: var(--color-earth);
 }
 
-  /* ---- FOOTER ---- */
+/* ---- FOOTER ---- */ 
+footer {
+  background: var(--color-earth);
+  color: var(--color-sand);
+  padding: 2rem 2rem 1rem;  /* era 4rem 2rem 2rem */
+}
+
+.footer-container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.footer-main {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 1.5rem;  /* era 3rem */
+  padding-bottom: 1rem;  /* era 2.5rem */
+  border-bottom: 1px solid rgba(232, 223, 208, 0.15);
+}
+
+.footer-left .footer-logo {
+  font-family: var(--font-display);
+  font-size: 1.6rem;  /* era 1.8rem */
+  color: var(--color-sand-light);
+  margin-bottom: 0.6rem;  /* era 1rem */
+}
+
+.footer-left .footer-logo span {
+  color: var(--color-sage-light);
+}
+
+.footer-description {
+  font-size: 0.9rem;  /* era 0.95rem */
+  color: rgba(232, 223, 208, 0.7);
+  line-height: 1.5;  /* era 1.6 */
+  max-width: 320px;
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer-contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;  /* era 0.8rem */
+  margin-bottom: 1rem;  /* era 1.5rem */
+}
+
+.footer-contact-list a {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--color-sage-pale);
+  text-decoration: none;
+  font-size: 0.85rem;  /* era 0.9rem */
+  transition: color 0.2s;
+}
+
+.footer-contact-list a:hover {
+  color: #fff;
+}
+
+.footer-location {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;  /* era 0.85rem */
+  color: rgba(232, 223, 208, 0.6);
+}
+
+.footer-bottom {
+  padding-top: 0.8rem;  /* era 1.5rem */
+  text-align: center;
+}
+
+.footer-copy {
+  font-size: 0.75rem;  /* era 0.8rem */
+  color: rgba(232, 223, 208, 0.4);
+}
+
+@media (max-width: 768px) {
   footer {
-    background: var(--color-earth);
-    color: var(--color-sand);
-    padding: 0.4rem 0.3rem;
-    text-align: center;
+    padding: 2rem 1.5rem 1rem;  /* era 3rem 1.5rem 1.5rem */
   }
-  .footer-name {
-    font-family: var(--font-display);
-    font-size: 1.3rem;
-    color: var(--color-sand-light);
-    margin-bottom: 1rem;
+  
+  .footer-main {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;  /* era 2rem */
   }
-  .footer-contacts {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-    margin-bottom: 0.2rem;
+  
+  .footer-description {
+    max-width: 100%;
   }
-  .footer-contacts a {
-    color: var(--color-sage-pale);
-    text-decoration: none;
-    font-size: 1.1rem;
-    transition: color 0.2s;
-  }
-  .footer-contacts a:hover { color: #fff; }
-  .footer-copy {
-    font-size: 0.78rem;
-    color: rgba(232, 223, 208, 0.4);
-    margin-top: 0.0rem;
-  }
+}
 
   /* ---- RESPONSIVE ---- */
   @media (max-width: 768px) {
@@ -728,3 +793,193 @@
   .hero-content > :nth-child(4) { animation-delay: 0.55s; }
 
   .page-header > * { animation: fadeUp 0.6s ease-out both; }
+
+  /* ---- COME FUNZIONA (carosello + timeline) ---- */
+  .how-it-works {
+    background: var(--color-sand-light);
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+  }
+  .how-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.25fr;
+    gap: 3.5rem;
+    align-items: start;
+    margin-top: 2.5rem;
+  }
+  @media (max-width: 900px) {
+    .how-grid { grid-template-columns: 1fr; }
+  }
+
+  /* Image / carousel card */
+  .how-visual {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    min-height: 480px;
+    background: linear-gradient(180deg, var(--color-sand-light) 0%, var(--color-sand) 38%, var(--color-warm) 72%, var(--color-earth) 100%);
+    border: 1px solid var(--color-border);
+  }
+  .how-slide {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 2.2rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease;
+  }
+  .how-slide.active { opacity: 1; visibility: visible; }
+  .how-slide img { width: 100%; height: 100%; object-fit: cover; border-radius: 10px; }
+  .how-dropzone {
+    width: 100%;
+    max-width: 300px;
+    margin-top: 1.2rem;
+    border: 1.5px dashed var(--color-border);
+    border-radius: 10px;
+    background: rgba(250, 250, 246, 0.55);
+    padding: 1.8rem 1.2rem;
+    text-align: center;
+    color: var(--color-text-soft);
+  }
+  .how-dropzone i { font-size: 1.6rem; color: var(--color-warm); margin-bottom: 0.6rem; display: block; }
+  .how-dropzone p { font-size: 0.85rem; line-height: 1.45; margin: 0; }
+  .how-slide-footer {
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    padding: 1.6rem 1.8rem 1.5rem;
+    color: var(--color-sand-light);
+  }
+  .how-counter { font-size: 0.85rem; opacity: 0.8; margin-bottom: 0.4rem; }
+  .how-counter strong { font-family: var(--font-display); font-size: 1.5rem; color: #fff; margin-right: 0.15rem; }
+  .how-slide-title {
+    font-family: var(--font-display);
+    font-size: 1.7rem;
+    margin-bottom: 1.1rem;
+  }
+  .how-progress-track { height: 3px; background: rgba(255,255,255,0.25); border-radius: 2px; overflow: hidden; }
+  .how-progress-bar { height: 100%; width: 0%; background: #fff; border-radius: 2px; }
+  .how-progress-bar.animate { animation: howFill var(--how-interval, 5s) linear forwards; }
+  @keyframes howFill { from { width: 0%; } to { width: 100%; } }
+
+  /* Steps timeline */
+  .how-timeline { display: flex; flex-direction: column; margin-top: 1rem; }
+  .how-step {
+    display: flex;
+    gap: 1.2rem;
+    position: relative;
+    padding: 0.9rem 1.2rem;
+    border-radius: 10px;
+    margin-bottom: 0.3rem;
+    cursor: pointer;
+  }
+  .how-step:not(:last-child)::before {
+    content: '';
+    position: absolute;
+    left: calc(1.2rem + 23px);
+    top: 48px;
+    bottom: -0.3rem;
+    width: 2px;
+    background: var(--color-border);
+  }
+  .how-step-icon {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-cream);
+    border: 1.5px solid var(--color-sage-light);
+    color: var(--color-sage);
+    font-size: 1.1rem;
+    transition: background 0.3s, color 0.3s, border-color 0.3s;
+    z-index: 1;
+  }
+  .how-step-body h3 {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    color: var(--color-sage);
+    margin-top: 0.65rem;
+    transition: color 0.3s;
+  }
+  .how-step-body p {
+    display: none;
+    color: var(--color-text-soft);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-top: 0.4rem;
+  }
+  .how-step.active { background: var(--color-cream); box-shadow: 0 1px 3px rgba(60,42,26,0.06); }
+  .how-step.active .how-step-icon { background: var(--color-sage); border-color: var(--color-sage); color: #fff; }
+  .how-step.active .how-step-body h3 { color: var(--color-earth); margin-top: 0; }
+  .how-step.active .how-step-body p { display: block; }
+
+  /* How it works - horyzontal pipeline */
+  /* ---- COME FUNZIONA (pipeline orizzontale) ---- */
+.how-it-works {
+  background: var(--color-sand-light);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.how-pipeline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+}
+
+.how-pipeline-step {
+  text-align: center;
+  flex: 1;
+  min-width: 200px;
+  max-width: 280px;
+}
+
+.how-pipeline-icon {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: var(--color-sage);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  margin: 0 auto 1.2rem;
+}
+
+.how-pipeline-step h3 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--color-earth);
+  margin-bottom: 0.5rem;
+}
+
+.how-pipeline-step p {
+  font-size: 0.95rem;
+  color: var(--color-text-soft);
+  line-height: 1.5;
+}
+
+.how-pipeline-arrow {
+  color: var(--color-sage-light);
+  font-size: 1.8rem;
+}
+
+@media (max-width: 768px) {
+  .how-pipeline {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .how-pipeline-arrow {
+    transform: rotate(90deg);
+  }
+}

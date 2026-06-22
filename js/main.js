@@ -32,7 +32,7 @@ function closeMenu() {
 function loadNav() {
   const placeholder = document.getElementById('nav-placeholder');
   if (!placeholder) return;
-  fetch('nav.html')
+  fetch('nav.html', { cache: 'no-store' })
     .then(r => r.text())
     .then(html => {
       placeholder.innerHTML = html;
@@ -47,6 +47,117 @@ function loadNav() {
 // se ha solo il placeholder, loadNav() lo popola e poi chiama initNav() lui stesso.
 initNav();
 loadNav();
+
+// Footer translation
+const footerTranslations = {
+  it: {
+    description: 'Stazioni di monitoraggio intelligente per decisioni agricole basate su dati reali.',
+    location: 'Terni, Umbria — Italia',
+    copyright: '&copy; 2026 Barbara Loletti · QuietField'
+  },
+  en: {
+    description: 'Smart monitoring stations for agricultural decisions based on real data.',
+    location: 'Terni, Umbria — Italy',
+    copyright: '&copy; 2026 Barbara Loletti · QuietField'
+  },
+  fr: {
+    description: 'Stations de surveillance intelligente pour des décisions agricoles basées sur des données réelles.',
+    location: 'Terni, Ombrie — Italie',
+    copyright: '&copy; 2026 Barbara Loletti · QuietField'
+  },
+  es: {
+    description: 'Estaciones de monitoreo inteligente para decisiones agrícolas basadas en datos reales.',
+    location: 'Terni, Umbría — Italia',
+    copyright: '&copy; 2026 Barbara Loletti · QuietField'
+  }
+};
+
+
+// Load footer and translate it
+function loadFooter() {
+  const placeholder = document.getElementById('footer-placeholder');
+  if (!placeholder) return;
+  
+  const path = window.location.pathname;
+  const isSubfolder = path.match(/\/(en|it|fr|es)\//);
+  const basePath = isSubfolder ? '../components/' : '';
+  
+  fetch(`${basePath}footer.html`, { cache: 'no-store' })
+    .then(r => r.text())
+    .then(html => {
+      placeholder.innerHTML = html;
+      
+      // Rileva lingua dal path
+      let lang = 'it';
+      if (path.includes('/en/')) lang = 'en';
+      else if (path.includes('/fr/')) lang = 'fr';
+      else if (path.includes('/es/')) lang = 'es';
+      
+      // Traduci elementi con data-i18n
+      const translations = footerTranslations[lang] || footerTranslations['it'];
+      placeholder.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[key]) {
+          el.innerHTML = translations[key];
+        }
+      });
+    })
+    .catch(() => {
+      console.error('Impossibile caricare footer.html');
+    });
+}
+
+loadFooter();
+
+// Crousel with images and texts sync
+function initHowItWorks() {
+  const section = document.querySelector('.how-it-works');
+  if (!section) return;
+
+  const steps = section.querySelectorAll('.how-step');
+  const slides = section.querySelectorAll('.how-slide');
+  const counterCurrent = section.querySelector('.how-counter-current');
+  const slideTitle = section.querySelector('.how-slide-title');
+  const progressBar = section.querySelector('.how-progress-bar');
+  const INTERVAL = 5000; // ms — durata di ogni passo prima di passare al successivo
+  let current = 0;
+  let timer;
+
+  function show(i) {
+    current = i;
+    steps.forEach((s, idx) => s.classList.toggle('active', idx === i));
+    slides.forEach((s, idx) => s.classList.toggle('active', idx === i));
+    if (counterCurrent) counterCurrent.textContent = String(i + 1).padStart(2, '0');
+    if (slideTitle) slideTitle.textContent = steps[i].querySelector('h3').textContent;
+    if (progressBar) {
+      progressBar.classList.remove('animate');
+      void progressBar.offsetWidth; // forza il reflow per far ripartire l'animazione da zero
+      progressBar.style.setProperty('--how-interval', INTERVAL + 'ms');
+      progressBar.style.animationPlayState = 'running';
+      progressBar.classList.add('animate');
+    }
+  }
+
+  function next() { show((current + 1) % steps.length); }
+  function start() { stop(); timer = setInterval(next, INTERVAL); }
+  function stop() { if (timer) clearInterval(timer); }
+
+  steps.forEach((s, idx) => {
+    s.addEventListener('click', () => { show(idx); start(); });
+  });
+  section.addEventListener('mouseenter', () => {
+    stop();
+    if (progressBar) progressBar.style.animationPlayState = 'paused';
+  });
+  section.addEventListener('mouseleave', () => {
+    if (progressBar) progressBar.style.animationPlayState = 'running';
+    start();
+  });
+
+  show(0);
+  start();
+}
+initHowItWorks();
 
 // Form
 function toggleExtra() {
@@ -91,3 +202,4 @@ function handleSubmit() {
     alert('Errore di connessione. Riprova o scrivimi direttamente via email.');
   });
 }
+
