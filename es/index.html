@@ -1,90 +1,186 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="robots" content="noindex">
 
-<meta name="description" content="QuietField — Our English pages are currently being rebuilt. Check back soon.">
-<meta property="og:title" content="QuietField — Site Update in Progress">
-<meta property="og:description" content="Our English pages are currently being rebuilt.">
-<meta property="og:url" content="https://barbaralol.github.io/QuietField/en/">
+<!-- SEO metadata -->
+<meta name="description" content="QuietField — Estaciones de monitoreo inteligente para la agricultura. Microclima, suelo y modelos predictivos para productores en Italia y en el mundo.">
+<meta property="og:title" content="QuietField — Tu campo te habla">
+<meta property="og:description" content="Estaciones de monitoreo inteligente para la agricultura de precisión.">
+<meta property="og:url" content="https://barbaralol.github.io/QuietField/es/">
 <meta property="og:type" content="website">
 
-<title>QuietField — Site Update in Progress</title>
+<title>QuietField — Monitoreo Inteligente para la Agricultura</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="../css/main.css">
 
+<!-- Traffic tracking -->
 <script defer src="https://cloud.umami.is/script.js" data-website-id="00ee3724-b878-4638-851a-280723171d61"></script>
-
-<style>
-  .maintenance {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background: var(--color-earth);
-    padding: 2rem;
-  }
-  .maintenance-content { max-width: 560px; }
-  .maintenance-icon {
-    font-size: 2.4rem;
-    color: var(--color-sage-pale);
-    margin-bottom: 1.5rem;
-  }
-  .maintenance h1 {
-    font-family: var(--font-display);
-    font-size: clamp(2rem, 5vw, 2.8rem);
-    color: var(--color-sand-light);
-    margin-bottom: 1.2rem;
-    line-height: 1.25;
-    letter-spacing: -0.01em;
-  }
-  .maintenance p {
-    color: rgba(232, 223, 208, 0.8);
-    font-size: 1.1rem;
-    line-height: 1.7;
-    margin-bottom: 2rem;
-  }
-  .maintenance .direct-contacts {
-    justify-content: center;
-  }
-  .maintenance .direct-contacts a {
-    background: rgba(255,255,255,0.05);
-    border-color: rgba(197, 212, 181, 0.2);
-    color: var(--color-sand-light);
-  }
-  .maintenance .direct-contacts a:hover {
-    border-color: var(--color-sage-light);
-    color: var(--color-sage-pale);
-  }
-  .lang-note {
-    margin-top: 2.2rem;
-    font-size: 0.9rem;
-    color: rgba(232, 223, 208, 0.55);
-  }
-  .lang-note a {
-    color: var(--color-sage-pale);
-    text-decoration: underline;
-  }
-</style>
 </head>
 <body>
 
-<section class="maintenance">
-  <div class="maintenance-content">
-    <div class="maintenance-icon"><i class="fa-solid fa-seedling"></i></div>
-    <h1>Estmaos modificanto esta sectión de nuestra web</h1>
-    <p>Las páginas de QuietField se están actualizando en estos momentos. Vuelve a visitarnos pronto o ponte en contacto con nosotros directamente a través de los datos que aparecen a continuación. Nos encantaría saber de usted mientras tanto.</p>
-    <div class="direct-contacts">
-      <a href="mailto:info.quietfield@gmail.com"><i class="fa-solid fa-envelope"></i> info.quietfield@gmail.com</a>
-      <a href="https://linkedin.com/in/barbara-loletti/?locale=en"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+<!-- NAV -->
+<div id="nav-placeholder"></div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-tag">Agricultura de Precisión</div>
+    <h1 style="white-space: nowrap;">Tu campo te habla<br><em>Ahora puedes escucharlo</em></h1>
+    <p><b>QuietField desarrolla estaciones de monitoreo inteligente que leen el microclima y el suelo de tu campo, interpretan los datos y te avisan antes de que un problema se convierta en daño.</b></p>
+    <a href="proyecto.html" class="hero-cta">Descubre el proyecto</a>
+  </div>
+</section>
+
+<!-- PROBLEMA -->
+<section class="problem" id="problema">
+  <div class="container">
+    <div class="section-label">El problema</div>
+    <h2 class="section-title">Las mismas incertidumbres cada año</h2>
+    <p style="color: var(--color-text-soft); max-width: 960px; line-height: 1.75;">
+      Tratar demasiado pronto es un desperdicio. Tratar demasiado tarde puede costarte una cosecha. 
+      Hoy muchas de estas decisiones se toman por calendario, por costumbre, o mirando al cielo, 
+      con márgenes de error que pesan en el bolsillo y en el medio ambiente.
+    </p>
+    <div class="problem-grid">
+      <div class="problem-card" data-icon="🍂">
+        <h3>Tratamientos a ciegas</h3>
+        <p>Enfermedades como el mildiu y el oídio se combaten a menudo "por calendario" en lugar de basándose en datos reales. ¿Resultado? Tratamientos innecesarios o tardíos, costes más altos y mayor impacto ambiental.</p>
+      </div>
+      <div class="problem-card" data-icon="💧">
+        <h3>Riego <i>a intuición</i></h3>
+        <p>Sin datos sobre la humedad del suelo y la evapotranspiración, se riega demasiado, demasiado poco, o en el momento equivocado, con efectos directos en la calidad del producto.</p>
+      </div>
+      <div class="problem-card" data-icon="📊">
+        <h3>Datos fragmentados o ausentes</h3>
+        <p>Quien tiene una estación meteorológica se encuentra con números que interpretar por su cuenta. Quien no la tiene confía en su experiencia. Con los datos adecuados, ambos toman mejores decisiones.</p>
+      </div>
+      <div class="problem-card" data-icon="🪰">
+        <h3>Plagas en silencio</h3>
+        <p>Mosca del olivo, polilla del racimo, psílido del peral: los insectos se mueven antes de que te des cuenta. Sin monitoreo continuo, te das cuenta de la infestación cuando el daño ya está hecho.</p>
+      </div>
+      <div class="problem-card" data-icon="❄️">
+        <h3>Heladas y cambios térmicos</h3>
+        <p>Unos pocos grados bajo cero en floración pueden arruinar una cosecha. El estrés térmico y las heladas tardías golpean en silencio, y sin alertas en tiempo real no hay margen para intervenir.</p>
+      </div>
     </div>
   </div>
 </section>
+
+<!-- SOLUCIÓN -->
+<section class="solution" id="solucion">
+  <div class="container">
+    <div class="section-label">La solución</div>
+    <h2 class="section-title">Un centinela en el campo<br>Mide, predice y te dice cuándo actuar</h2>
+    <div class="solution-grid">
+      <ul class="solution-list">
+        <li>
+          <strong>Sensores de microclima y suelo</strong>
+          Temperatura, humedad del aire y del suelo, humedad foliar, lluvia, viento, radiación y mucho más. Todo en una única estación, alimentada por un panel solar.
+        </li>
+        <li>
+          <strong>Modelos predictivos integrados</strong>
+          Los datos son analizados por modelos agronómicos y de machine learning que estiman el riesgo fitosanitario, el estrés hídrico y la etapa fenológica, no solo hoy, sino en las próximas 48-72 horas.
+        </li>
+        <li>
+          <strong>Alertas accionables en tu smartphone</strong>
+          Sin gráficos que interpretar, solo notificaciones claras. <b><i>Tú decides</i></b>, con la información adecuada.
+        </li>
+        <li>
+          <strong>Diseñado para crecer</strong>
+          Nacido para el viñedo, diseñado para expandirse: la arquitectura modular de QuietField se adapta a cualquier cultivo.
+        </li>
+      </ul>
+      <div class="solution-visual">
+        <div class="station-diagram">
+          <svg viewBox="0 0 300 380" xmlns="http://www.w3.org/2000/svg">
+            <!-- pole -->
+            <rect x="145" y="80" width="10" height="250" rx="3" fill="#8B6F4E"/>
+            <!-- solar panel -->
+            <rect x="100" y="55" width="100" height="40" rx="4" fill="#5C6B4E" stroke="#3C4A33" stroke-width="1.5"/>
+            <line x1="130" y1="55" x2="130" y2="95" stroke="#3C4A33" stroke-width="0.5" opacity="0.5"/>
+            <line x1="170" y1="55" x2="170" y2="95" stroke="#3C4A33" stroke-width="0.5" opacity="0.5"/>
+            <line x1="100" y1="75" x2="200" y2="75" stroke="#3C4A33" stroke-width="0.5" opacity="0.5"/>
+            <!-- main box -->
+            <rect x="115" y="110" width="70" height="55" rx="6" fill="#E8DFD0" stroke="#B8A890" stroke-width="1.5"/>
+            <circle cx="135" cy="130" r="4" fill="#6B7F5E"/>
+            <circle cx="150" cy="130" r="4" fill="#B85C38"/>
+            <circle cx="165" cy="130" r="4" fill="#6B7F5E" opacity="0.5"/>
+            <rect x="128" y="142" width="44" height="14" rx="2" fill="#F4F0E8" stroke="#D4CBBC"/>
+            <!-- antenna -->
+            <line x1="185" y1="110" x2="195" y2="75" stroke="#8B6F4E" stroke-width="2"/>
+            <circle cx="195" cy="72" r="3" fill="#B85C38"/>
+            <!-- temp/hum sensor -->
+            <rect x="68" y="140" width="36" height="24" rx="4" fill="#fff" stroke="#B8A890" stroke-width="1"/>
+            <line x1="104" y1="152" x2="115" y2="145" stroke="#B8A890" stroke-width="1" stroke-dasharray="3,2"/>
+            <text x="86" y="156" text-anchor="middle" font-size="7" fill="#5C5347" font-family="sans-serif">T/H</text>
+            <!-- leaf wetness -->
+            <rect x="196" y="170" width="40" height="20" rx="4" fill="#fff" stroke="#B8A890" stroke-width="1"/>
+            <line x1="196" y1="180" x2="185" y2="160" stroke="#B8A890" stroke-width="1" stroke-dasharray="3,2"/>
+            <text x="216" y="184" text-anchor="middle" font-size="6.5" fill="#5C5347" font-family="sans-serif">Hoja</text>
+            <!-- rain gauge -->
+            <path d="M128 195 L132 210 L142 210 L146 195 Z" fill="#fff" stroke="#B8A890" stroke-width="1"/>
+            <line x1="137" y1="210" x2="137" y2="225" stroke="#B8A890" stroke-width="1" stroke-dasharray="3,2"/>
+            <text x="137" y="238" text-anchor="middle" font-size="7" fill="#5C5347" font-family="sans-serif">Lluvia</text>
+            <!-- soil sensor -->
+            <line x1="150" y1="330" x2="150" y2="310" stroke="#8B6F4E" stroke-width="2"/>
+            <ellipse cx="150" cy="340" rx="22" ry="8" fill="#C5B89E" stroke="#A69880" stroke-width="1"/>
+            <text x="150" y="360" text-anchor="middle" font-size="7" fill="#5C5347" font-family="sans-serif">Suelo</text>
+            <!-- ground line -->
+            <line x1="60" y1="330" x2="240" y2="330" stroke="#A69880" stroke-width="1" stroke-dasharray="5,3"/>
+            <!-- wifi waves -->
+            <path d="M210 100 Q220 95 225 100" stroke="#B85C38" stroke-width="1.2" fill="none" opacity="0.5"/>
+            <path d="M212 93 Q225 85 232 93" stroke="#B85C38" stroke-width="1.2" fill="none" opacity="0.35"/>
+            <path d="M214 86 Q230 75 239 86" stroke="#B85C38" stroke-width="1.2" fill="none" opacity="0.2"/>
+          </svg>
+        </div>
+        <p style="font-size: 0.85rem; color: var(--color-text-soft); margin-top: 1.5rem; line-height: 1.5;">
+          Diagrama conceptual — el diseño definitivo<br>está actualmente en desarrollo
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- How it works -->
+<section class="how-it-works" id="how-it-works">
+  <div class="container">
+    <div class="section-label">Cómo funciona</div>
+    <h2 class="section-title">De los datos a la acción, en tres pasos</h2>
+    
+    <div class="how-pipeline">
+      <div class="how-pipeline-step">
+        <div class="how-pipeline-icon"><i class="fa-solid fa-seedling"></i></div>
+        <h3>Mide</h3>
+        <p>Microclima y suelo, directamente en el campo</p>
+      </div>
+      
+      <div class="how-pipeline-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+      
+      <div class="how-pipeline-step">
+        <div class="how-pipeline-icon"><i class="fa-solid fa-chart-line"></i></div>
+        <h3>Predice</h3>
+        <p>Estimaciones de riesgo para las próximas horas</p>
+      </div>
+      
+      <div class="how-pipeline-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+      
+      <div class="how-pipeline-step">
+        <div class="how-pipeline-icon"><i class="fa-solid fa-bell"></i></div>
+        <h3>Alerta</h3>
+        <p>Alerta clara en tu teléfono, en el momento adecuado</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<div id="footer-placeholder"></div>
+
+<script src="../js/main.js" defer></script>
 
 </body>
 </html>

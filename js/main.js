@@ -43,11 +43,6 @@ function loadNav() {
     });
 }
 
-// Esegue subito: se la pagina ha già il nav nel markup, lo aggancia;
-// se ha solo il placeholder, loadNav() lo popola e poi chiama initNav() lui stesso.
-initNav();
-loadNav();
-
 // Footer translation
 const footerTranslations = {
   it: {
@@ -106,6 +101,8 @@ function loadFooter() {
     });
 }
 
+initNav();
+loadNav();
 loadFooter();
 
 // Crousel with images and texts sync

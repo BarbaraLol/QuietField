@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+<meta name="description" content="QuietField — Contáctanos: ¿trabajas en el campo? Cuéntanos tu experiencia.">
+<meta property="og:title" content="QuietField — Contactos">
+<meta property="og:description" content="¿Trabajas en un viñedo, un olivar o un huerto? Hablemos.">
+<meta property="og:url" content="https://barbaralol.github.io/QuietField/es/contactos.html">
+<meta property="og:type" content="website">
+
+<title>Contactos - QuietField</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="../css/main.css">
+ 
+<script defer src="https://cloud.umami.is/script.js" data-website-id="00ee3724-b878-4638-851a-280723171d61"></script>
+</head>
+
+<body>
+  <div id="nav-placeholder"></div>
+  
+  <section class="feedback" id="feedback">
+    <div class="container">
+      <h2 class="section-title">Hablemos</h2>
+      <p class="feedback-intro">
+        ¿Trabajas en el campo, estudias agronomía o te interesa el monitoreo agrícola?
+        Me encantaría conocer tu experiencia o responder a tus preguntas.
+      </p>
+
+      <div class="feedback-form" id="feedback-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Nombre *</label>
+            <input type="text" name="nombre" placeholder="¿Cómo te llamas?">
+          </div>
+          <div class="form-group">
+            <label>Email o teléfono *</label>
+            <input type="text" name="contacto" placeholder="Para poder contactarte">
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label>Rol</label>
+          <select name="rol">
+            <option value="" selected disabled>Elige...</option>
+            <option value="cultivador">Cultivador / Titular</option>
+            <option value="agronomo">Agrónomo</option>
+            <option value="investigador">Investigador / Académico</option>
+            <option value="inversor">Inversor / Socio</option>
+            <option value="otro">Otro</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label>Mensaje</label>
+          <textarea name="mensaje" placeholder="Cuéntame tu experiencia, hazme una pregunta, o simplemente dime qué te interesa..."></textarea>
+        </div>
+
+        <button type="button" class="form-submit" onclick="handleSubmit()">Enviar</button>
+        <p class="form-note">
+          Los datos que compartas se utilizarán exclusivamente para el desarrollo de este proyecto.
+          No se compartirán con terceros ni se utilizarán para fines comerciales distintos a estos.
+        </p>
+      </div>
+
+      <div id="form-success" style="display:none; margin-top: 2rem;">
+        <div style="background: rgba(107, 127, 94, 0.1); border: 1px solid var(--color-sage-light); border-radius: 10px; padding: 2rem;">
+          <h3 style="font-family: var(--font-display); color: var(--color-earth); margin-bottom: 0.5rem;">¡Gracias!</h3>
+          <p style="color: var(--color-text-soft);">¡Te contactaré pronto! Mientras tanto, si quieres escribirme directamente, encontrarás mis datos de contacto abajo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- FOOTER -->
+  <div id="footer-placeholder"></div>
+
+  <script src="../js/main.js" defer></script>
+</body>
+</html>
