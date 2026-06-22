@@ -72,7 +72,6 @@ const footerTranslations = {
   }
 };
 
-
 // Load footer and translate it
 function loadFooter() {
   const placeholder = document.getElementById('footer-placeholder');
