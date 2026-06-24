@@ -1,8 +1,181 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- ═══════════════════════════════════════════════════
+       HOME
+  ════════════════════════════════════════════════════════ -->
   <url>
-    <loc>https://barbaralol.github.io/QuietField/</loc>
+    <loc>https://barbaralol.github.io/QuietField/it/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="it"        href="https://barbaralol.github.io/QuietField/it/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://barbaralol.github.io/QuietField/en/index.html"/>
+    <xhtml:link rel="alternate" hreflang="es"        href="https://barbaralol.github.io/QuietField/es/index.html"/>
+    <xhtml:link rel="alternate" hreflang="fr"        href="https://barbaralol.github.io/QuietField/fr/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://barbaralol.github.io/QuietField/it/index.html"/>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
+  <url>
+    <loc>https://barbaralol.github.io/QuietField/en/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="it"        href="https://barbaralol.github.io/QuietField/it/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://barbaralol.github.io/QuietField/en/index.html"/>
+    <xhtml:link rel="alternate" hreflang="es"        href="https://barbaralol.github.io/QuietField/es/index.html"/>
+    <xhtml:link rel="alternate" hreflang="fr"        href="https://barbaralol.github.io/QuietField/fr/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://barbaralol.github.io/QuietField/it/index.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://barbaralol.github.io/QuietField/es/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="it"        href="https://barbaralol.github.io/QuietField/it/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://barbaralol.github.io/QuietField/en/index.html"/>
+    <xhtml:link rel="alternate" hreflang="es"        href="https://barbaralol.github.io/QuietField/es/index.html"/>
+    <xhtml:link rel="alternate" hreflang="fr"        href="https://barbaralol.github.io/QuietField/fr/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://barbaralol.github.io/QuietField/it/index.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://barbaralol.github.io/QuietField/fr/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="it"        href="https://barbaralol.github.io/QuietField/it/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://barbaralol.github.io/QuietField/en/index.html"/>
+    <xhtml:link rel="alternate" hreflang="es"        href="https://barbaralol.github.io/QuietField/es/index.html"/>
+    <xhtml:link rel="alternate" hreflang="fr"        href="https://barbaralol.github.io/QuietField/fr/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://barbaralol.github.io/QuietField/it/index.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- ═══════════════════════════════════════════════════
+       CHI SIAMO / ABOUT / QUIÉNES SOMOS / QUI SOMMES-NOUS
+  ════════════════════════════════════════════════════════ -->
+  <url>
+    <loc>https://barbaralol.github.io/QuietField/it/chi_siamo.html</loc>
+    <xhtml:link rel="alternate" hreflang="it"        href="https://barbaralol.github.io/QuietField/it/chi_siamo.html"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://barbaralol.github.io/QuietField/en/about.html"/>
+    <xhtml:link rel="alternate" hreflang="es"        href="https://barbaralol.github.io/QuietField/es/quienes-somos.html"/>
+    <xhtml:link rel="alternate" hreflang="fr"        href="https://barbaralol.github.io/QuietField/fr/qui-sommes-nous.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://barbaralol.github.io/QuietField/it/chi_siamo.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://barbaralol.github.io/QuietField/en/about.html</loc>
+    <xhtml:link rel="alternate" hreflang="it"        href="https://barbaralol.github.io/QuietField/it/chi_siamo.html"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://barbaralol.github.io/QuietField/en/about.html"/>
+    <xhtml:link rel="alternate" hreflang="es"        href="https://barbaralol.github.io/QuietField/es/quienes-somos.html"/>
+    <xhtml:link rel="alternate" hreflang="fr"        href="https://barbaralol.github.io/QuietField/fr/qui-sommes-nous.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://barbaralol.github.io/QuietField/it/chi_siamo.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://barbaralol.github.io/QuietField/es/quienes-somos.html</loc>
+    <xhtml:link rel="alternate" hreflang="it"        href="https://barbaralol.github.io/QuietField/it/chi_siamo.html"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://barbaralol.github.io/QuietField/en/about.html"/>
+    <xhtml:link rel="alternate" hreflang="es"        href="https://barbaralol.github.io/QuietField/es/quienes-somos.html"/>
+    <xhtml:link rel="alternate" hreflang="fr"        href="https://barbaralol.github.io/QuietField/fr/qui-sommes-nous.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://barbaralol.github.io/QuietField/it/chi_siamo.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://barbaralol.github.io/QuietField/fr/qui-sommes-nous.html</loc>
+    <xhtml:link rel="alternate" hreflang="it"        href="https://barbaralol.github.io/QuietField/it/chi_siamo.html"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://barbaralol.github.io/QuietField/en/about.html"/>
+    <xhtml:link rel="alternate" hreflang="es"        href="https://barbaralol.github.io/QuietField/es/quienes-somos.html"/>
+    <xhtml:link rel="alternate" hreflang="fr"        href="https://barbaralol.github.io/QuietField/fr/qui-sommes-nous.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://barbaralol.github.io/QuietField/it/chi_siamo.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ═══════════════════════════════════════════════════
+       IL PROGETTO / PROJECT / PROYECTO / PROJET
+  ════════════════════════════════════════════════════════ -->
+  <url>
+    <loc>https://barbaralol.github.io/QuietField/it/progetto.html</loc>
+    <xhtml:link rel="alternate" hreflang="it"        href="https://barbaralol.github.io/QuietField/it/progetto.html"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://barbaralol.github.io/QuietField/en/project.html"/>
+    <xhtml:link rel="alternate" hreflang="es"        href="https://barbaralol.github.io/QuietField/es/proyecto.html"/>
+    <xhtml:link rel="alternate" hreflang="fr"        href="https://barbaralol.github.io/QuietField/fr/projet.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://barbaralol.github.io/QuietField/it/progetto.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://barbaralol.github.io/QuietField/en/project.html</loc>
+    <xhtml:link rel="alternate" hreflang="it"        href="https://barbaralol.github.io/QuietField/it/progetto.html"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://barbaralol.github.io/QuietField/en/project.html"/>
+    <xhtml:link rel="alternate" hreflang="es"        href="https://barbaralol.github.io/QuietField/es/proyecto.html"/>
+    <xhtml:link rel="alternate" hreflang="fr"        href="https://barbaralol.github.io/QuietField/fr/projet.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://barbaralol.github.io/QuietField/it/progetto.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://barbaralol.github.io/QuietField/es/proyecto.html</loc>
+    <xhtml:link rel="alternate" hreflang="it"        href="https://barbaralol.github.io/QuietField/it/progetto.html"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://barbaralol.github.io/QuietField/en/project.html"/>
+    <xhtml:link rel="alternate" hreflang="es"        href="https://barbaralol.github.io/QuietField/es/proyecto.html"/>
+    <xhtml:link rel="alternate" hreflang="fr"        href="https://barbaralol.github.io/QuietField/fr/projet.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://barbaralol.github.io/QuietField/it/progetto.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://barbaralol.github.io/QuietField/fr/projet.html</loc>
+    <xhtml:link rel="alternate" hreflang="it"        href="https://barbaralol.github.io/QuietField/it/progetto.html"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://barbaralol.github.io/QuietField/en/project.html"/>
+    <xhtml:link rel="alternate" hreflang="es"        href="https://barbaralol.github.io/QuietField/es/proyecto.html"/>
+    <xhtml:link rel="alternate" hreflang="fr"        href="https://barbaralol.github.io/QuietField/fr/projet.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://barbaralol.github.io/QuietField/it/progetto.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ═══════════════════════════════════════════════════
+       CONTATTI / CONTACTS / CONTACTO / CONTACT
+  ════════════════════════════════════════════════════════ -->
+  <url>
+    <loc>https://barbaralol.github.io/QuietField/it/contatti.html</loc>
+    <xhtml:link rel="alternate" hreflang="it"        href="https://barbaralol.github.io/QuietField/it/contatti.html"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://barbaralol.github.io/QuietField/en/contacts.html"/>
+    <xhtml:link rel="alternate" hreflang="es"        href="https://barbaralol.github.io/QuietField/es/contacto.html"/>
+    <xhtml:link rel="alternate" hreflang="fr"        href="https://barbaralol.github.io/QuietField/fr/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://barbaralol.github.io/QuietField/it/contatti.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://barbaralol.github.io/QuietField/en/contacts.html</loc>
+    <xhtml:link rel="alternate" hreflang="it"        href="https://barbaralol.github.io/QuietField/it/contatti.html"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://barbaralol.github.io/QuietField/en/contacts.html"/>
+    <xhtml:link rel="alternate" hreflang="es"        href="https://barbaralol.github.io/QuietField/es/contacto.html"/>
+    <xhtml:link rel="alternate" hreflang="fr"        href="https://barbaralol.github.io/QuietField/fr/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://barbaralol.github.io/QuietField/it/contatti.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://barbaralol.github.io/QuietField/es/contacto.html</loc>
+    <xhtml:link rel="alternate" hreflang="it"        href="https://barbaralol.github.io/QuietField/it/contatti.html"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://barbaralol.github.io/QuietField/en/contacts.html"/>
+    <xhtml:link rel="alternate" hreflang="es"        href="https://barbaralol.github.io/QuietField/es/contacto.html"/>
+    <xhtml:link rel="alternate" hreflang="fr"        href="https://barbaralol.github.io/QuietField/fr/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://barbaralol.github.io/QuietField/it/contatti.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://barbaralol.github.io/QuietField/fr/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="it"        href="https://barbaralol.github.io/QuietField/it/contatti.html"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://barbaralol.github.io/QuietField/en/contacts.html"/>
+    <xhtml:link rel="alternate" hreflang="es"        href="https://barbaralol.github.io/QuietField/es/contacto.html"/>
+    <xhtml:link rel="alternate" hreflang="fr"        href="https://barbaralol.github.io/QuietField/fr/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://barbaralol.github.io/QuietField/it/contatti.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>

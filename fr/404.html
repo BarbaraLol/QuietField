@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="fr">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>404 — Champ introuvable | QuietField</title>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script src="../js/tailwind.config.js"></script>
+  <link rel="stylesheet" href="../css/main.css"/>
+  <meta name="description" content="Page introuvable — QuietField. La page que vous cherchez n'existe pas ou a été déplacée.">
+  <meta property="og:title" content="404 — Champ introuvable | QuietField">
+  <meta property="og:description" content="La page que vous recherchez semble avoir été récoltée trop tôt.">
+  <meta property="og:url" content="https://barbaralol.github.io/QuietField/fr/404.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="00ee3724-b878-4638-851a-280723171d61"></script>
+  <style>
+    .icon-light { font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24; }
+    #tilt-card  { transform-style: preserve-3d; will-change: transform; transition: transform 0.1s ease-out; }
+  </style>
+</head>
+<body class="bg-background text-on-background selection:bg-digital-lime/30 overflow-x-hidden flex flex-col min-h-screen">
+
+<div id="nav-placeholder"></div>
+
+<main class="flex-grow flex items-center justify-center pt-24 pb-section-gap px-margin-mobile">
+  <div class="max-w-4xl w-full text-center">
+
+    <div class="relative w-full h-64 md:h-96 mb-12 flex justify-center items-center">
+      <div id="tilt-card" class="relative glass-card p-12 rounded-3xl shadow-2xl flex flex-col items-center">
+        <div class="w-32 h-32 mb-6 rounded-full bg-surface-container flex items-center justify-center">
+          <span class="material-symbols-outlined icon-light text-6xl text-outline-variant">sensors_off</span>
+        </div>
+        <div class="absolute -top-4 -right-4 bg-error text-on-error px-4 py-1 rounded-full font-data-mono text-data-mono">
+          ERR_NOT_FOUND
+        </div>
+      </div>
+      <div class="absolute -z-10 w-full h-full opacity-20 grayscale">
+        <div class="w-full h-full bg-cover bg-center rounded-[4rem]" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC_y33CUZKLWwYZAEW-kUT-erT4aVZ3TC-fN7q_OwEE2CW4fP29Y2ZhkkNIw-BgF-PPp0avRzlQ8pe5RHDhp5ksy7qkaS7WN3pBRAFhoAmK4sHOhAtmw0t2QlUSYfJS_F7nCVmvt9oj_atd-xgJRYTLg1_nW035FguPSagERMEYHauQz7KIM3TaZXMeSoQh4v-R2WBIEGqy-TCbTu1e08bivTvm8EHdTx0AsmMLlviIBWs6XTIOvBwLnCQRbIcj2IqLKhBlEiyTg5fY')" role="presentation" aria-hidden="true"></div>
+      </div>
+    </div>
+
+    <div class="space-y-6 max-w-2xl mx-auto">
+      <h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary">
+        404 — Champ introuvable
+      </h1>
+      <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+        Il semble que la page que vous recherchez a été déplacée ou n'existe plus.<br class="hidden md:block"/>
+        Peut-être a-t-elle été récoltée trop tôt ?
+      </p>
+      <div class="flex flex-col md:flex-row items-center justify-center gap-6 mt-12">
+        <a href="index.html" class="group flex items-center gap-3 bg-primary text-on-primary px-10 py-4 rounded-full font-body-md font-bold hover:shadow-lg active:scale-95 transition-all">
+          <span class="material-symbols-outlined">home</span>
+          Retour à l'accueil
+        </a>
+        <a href="contact.html" class="group flex items-center gap-3 border border-primary text-primary px-10 py-4 rounded-full font-body-md font-bold hover:bg-primary/5 active:scale-95 transition-all">
+          <span class="material-symbols-outlined">mail</span>
+          Nous contacter
+        </a>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<div id="footer-placeholder"></div>
+
+<script src="../js/main.js"></script>
+<script>
+  window.addEventListener('mousemove', (e) => {
+    const card = document.getElementById('tilt-card');
+    if (!card) return;
+    const xAxis = (window.innerWidth  / 2 - e.pageX) / 50;
+    const yAxis = (window.innerHeight / 2 - e.pageY) / 50;
+    card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+  });
+</script>
+</body>
+</html>

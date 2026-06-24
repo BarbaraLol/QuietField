@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>404 | QuietField</title>
+  <script>
+    const lang = (navigator.language || 'it').slice(0, 2);
+    const map  = { en: 'en', es: 'es', fr: 'fr' };
+    const dir  = map[lang] || 'it';
+    window.location.replace('/QuietField/' + dir + '/404.html');
+  </script>
+</head>
+<body></body>
+</html>

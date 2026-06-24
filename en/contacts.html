@@ -1,83 +1,168 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="scroll-smooth" lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
- 
-<meta name="description" content="QuietField — Contact us: do you work in agriculture? Tell us about your experience.">
-<meta property="og:title" content="QuietField — Contacts">
-<meta property="og:description" content="Do you work in a vineyard, olive grove, or orchard? Let's talk.">
-<meta property="og:url" content="https://barbaralol.github.io/QuietField/en/contacts.html">
-<meta property="og:type" content="website">
-
-<title>Contacts - QuietField</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="../css/main.css">
- 
-<script defer src="https://cloud.umami.is/script.js" data-website-id="00ee3724-b878-4638-851a-280723171d61"></script>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | QuietField</title>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script src="../js/tailwind.config.js"></script>
+  <link rel="stylesheet" href="../css/main.css"/>
+  <meta name="description" content="QuietField — Contact Us: do you work in a vineyard, olive grove or orchard? Let's talk.">
+  <meta property="og:title" content="QuietField — Contact">
+  <meta property="og:description" content="Do you work in a vineyard, olive grove or orchard? Let's talk.">
+  <meta property="og:url" content="https://barbaralol.github.io/QuietField/en/contacts.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="it_IT">
+  <meta property="og:locale:alternate" content="es_ES">
+  <meta property="og:locale:alternate" content="fr_FR">
+  <link rel="alternate" hreflang="it" href="https://barbaralol.github.io/QuietField/it/contatti.html"/>
+  <link rel="alternate" hreflang="en" href="https://barbaralol.github.io/QuietField/en/contacts.html"/>
+  <link rel="alternate" hreflang="es" href="https://barbaralol.github.io/QuietField/es/contacto.html"/>
+  <link rel="alternate" hreflang="fr" href="https://barbaralol.github.io/QuietField/fr/contact.html"/>
+  <link rel="alternate" hreflang="x-default" href="https://barbaralol.github.io/QuietField/it/contatti.html"/>
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="00ee3724-b878-4638-851a-280723171d61"></script>
 </head>
+<body class="bg-background text-on-background selection:bg-digital-lime/30 overflow-x-hidden">
 
-<body>
-  <div id="nav-placeholder"></div>
-  
-  <section class="feedback" id="feedback">
-    <div class="container">
-      <h2 class="section-title">Let's talk</h2>
-      <p class="feedback-intro">
-        Do you work in the field, study agronomy, or are you interested in agricultural monitoring?
-        I'd love to hear about your experience or answer your questions.
-      </p>
+<div id="nav-placeholder"></div>
 
-      <div class="feedback-form" id="feedback-form">
-        <div class="form-row">
-          <div class="form-group">
-            <label>Name *</label>
-            <input type="text" name="nome" placeholder="What's your name">
-          </div>
-          <div class="form-group">
-            <label>Email or phone *</label>
-            <input type="text" name="contact" placeholder="So I can get back to you">
-          </div>
-        </div>
-        
-        <div class="form-group">
-          <label>Role</label>
-          <select name="role">
-            <option value="" selected disabled>Choose...</option>
-            <option value="grower">Grower / Owner</option>
-            <option value="agronomist">Agronomist</option>
-            <option value="researcher">Researcher / Academic</option>
-            <option value="investor">Investor / Partner</option>
-            <option value="other">Other</option>
-          </select>
-        </div>
-        
-        <div class="form-group">
-          <label>Message</label>
-          <textarea name="messaggio" placeholder="Tell me about your experience, ask me a question, or simply let me know what you're interested in..."></textarea>
-        </div>
+<main class="pt-32">
 
-        <button type="button" class="form-submit" onclick="handleSubmit()">Send</button>
-        <p class="form-note">
-          The data you share will be used exclusively for the development of this project.
-          It will not be shared with third parties or used for commercial purposes other than these.
-        </p>
+  <!-- Hero -->
+  <section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-section-gap">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-element-gap items-end" data-reveal>
+      <div>
+        <span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest mb-4 block">Get in Touch</span>
+        <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary leading-none">
+          <span class="italic text-secondary">We innovate</span> the field together.
+        </h1>
       </div>
-
-      <div id="form-success" style="display:none; margin-top: 2rem;">
-        <div style="background: rgba(107, 127, 94, 0.1); border: 1px solid var(--color-sage-light); border-radius: 10px; padding: 2rem;">
-          <h3 style="font-family: var(--font-display); color: var(--color-earth); margin-bottom: 0.5rem;">Thank you!</h3>
-          <p style="color: var(--color-text-soft);">I'll get back to you soon! In the meantime, if you'd like to write to me directly, you'll find my contact details below.</p>
-        </div>
+      <div class="pb-4">
+        <p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">Whether you are a farmer, agronomist or investor, our team is ready to discuss the future of your harvest.</p>
       </div>
     </div>
   </section>
-  
-  <!-- FOOTER -->
-  <div id="footer-placeholder"></div>
 
-  <script src="../js/main.js" defer></script>
+  <!-- Form & Info -->
+  <section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-section-gap">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+
+      <!-- Form card -->
+      <div class="lg:col-span-7 glass-panel rounded-3xl p-8 md:p-12 shadow-sm border border-glass-stroke" data-reveal>
+        <form class="space-y-12" id="feedback-form">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div class="relative group">
+              <label class="font-label-caps text-label-caps text-outline mb-2 block">Full Name</label>
+              <input class="w-full bg-transparent border-b border-outline-variant py-3 font-body-md text-body-md focus:border-data-cyan input-glow transition-all placeholder:text-outline-variant/50" placeholder="John Smith" type="text" name="nome"/>
+            </div>
+            <div class="relative group">
+              <label class="font-label-caps text-label-caps text-outline mb-2 block">Contact Email</label>
+              <input class="w-full bg-transparent border-b border-outline-variant py-3 font-body-md text-body-md focus:border-data-cyan input-glow transition-all placeholder:text-outline-variant/50" placeholder="john@company.com" type="email" name="contatto"/>
+            </div>
+          </div>
+          <div class="relative group">
+            <label class="font-label-caps text-label-caps text-outline mb-2 block">Your Role</label>
+            <select class="w-full bg-transparent border-b border-outline-variant py-3 font-body-md text-body-md focus:border-data-cyan input-glow transition-all appearance-none" name="ruolo">
+              <option>Farmer / Farm Manager</option>
+              <option>Agronomist</option>
+              <option>Technology Partner</option>
+              <option>Investor</option>
+              <option>Media Enquiry</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="relative group">
+            <label class="font-label-caps text-label-caps text-outline mb-2 block">Message</label>
+            <textarea class="w-full bg-transparent border-b border-outline-variant py-3 font-body-md text-body-md focus:border-data-cyan input-glow transition-all placeholder:text-outline-variant/50 resize-none" placeholder="How can we help you evolve?" rows="4" name="messaggio"></textarea>
+          </div>
+          <div class="pt-4 flex flex-col md:flex-row items-center gap-6">
+            <button class="w-full md:w-auto bg-primary text-on-primary px-10 py-4 rounded-full font-body-md font-bold flex items-center justify-center gap-3 hover:shadow-lg hover:shadow-primary/20 transition-all active:scale-95 group" type="button" onclick="handleSubmit()">
+              Send Message
+              <span class="material-symbols-outlined text-[20px] group-hover:translate-x-1 transition-transform">send</span>
+            </button>
+            <p class="font-body-md text-body-md text-outline-variant text-center md:text-left">
+              Average response: <span class="text-on-surface font-medium">48 hours</span>
+            </p>
+          </div>
+        </form>
+        <div id="form-success" style="display:none" class="py-20 text-center">
+          <span class="material-symbols-outlined text-digital-lime text-5xl block mb-6">check_circle</span>
+          <h3 class="font-headline-sm text-headline-sm text-primary mb-4">Message sent!</h3>
+          <p class="font-body-md text-on-surface-variant">We will get back to you within 48 hours. Thank you.</p>
+        </div>
+      </div>
+
+      <!-- Direct contacts + map -->
+      <div class="lg:col-span-5 flex flex-col gap-gutter">
+
+        <div class="glass-panel rounded-3xl p-8 border border-glass-stroke" data-reveal>
+          <h3 class="font-headline-sm text-headline-sm text-primary mb-8">Direct Channels</h3>
+          <div class="space-y-6">
+            <a href="mailto:info.quietfield@gmail.com" class="flex items-center gap-4 group/link">
+              <div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center group-hover/link:bg-secondary transition-colors">
+                <span class="material-symbols-outlined text-secondary group-hover/link:text-white transition-colors">mail</span>
+              </div>
+              <div>
+                <p class="font-label-caps text-label-caps text-outline">Write to Us</p>
+                <p class="font-data-mono text-data-mono text-primary group-hover/link:text-secondary transition-colors">info.quietfield@gmail.com</p>
+              </div>
+            </a>
+            <a href="https://linkedin.com/in/barbara-loletti" target="_blank" rel="noopener" class="flex items-center gap-4 group/link">
+              <div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center group-hover/link:bg-secondary transition-colors">
+                <span class="material-symbols-outlined text-secondary group-hover/link:text-white transition-colors">share</span>
+              </div>
+              <div>
+                <p class="font-label-caps text-label-caps text-outline">LinkedIn</p>
+                <p class="font-data-mono text-data-mono text-primary group-hover/link:text-secondary transition-colors">linkedin.com/in/barbara-loletti</p>
+              </div>
+            </a>
+            <a href="tel:+393477766092" class="flex items-center gap-4 group/link">
+              <div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center group-hover/link:bg-secondary transition-colors">
+                <span class="material-symbols-outlined text-secondary group-hover/link:text-white transition-colors">call</span>
+              </div>
+              <div>
+                <p class="font-label-caps text-label-caps text-outline">Phone</p>
+                <p class="font-data-mono text-data-mono text-primary group-hover/link:text-secondary transition-colors">+39 347 776 6092</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-3xl p-8 border border-glass-stroke flex-1" data-reveal>
+          <h3 class="font-headline-sm text-headline-sm text-primary mb-4">Our Roots</h3>
+          <p class="font-body-md text-body-md text-on-surface-variant mb-6">In the green heart of Italy. Terni, Umbria. Where traditional agriculture meets digital precision.</p>
+          <div class="relative w-full aspect-video rounded-2xl overflow-hidden grayscale hover:grayscale-0 transition-all duration-700 cursor-crosshair">
+            <div class="absolute inset-0 bg-primary/5 z-10 pointer-events-none"></div>
+            <div class="w-full h-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBZak_ChroP5pFglvZcUZfm9ZgYjFPpLLODCkIuu3K7pdVJ__aDL4mM6EdKhOTsqM5FUxh8qWQrVfB2cKr0xX1dqOb-NktNMVWNDI-ZNUwgwHY8FuxX8dPssdvynKjmK0_zA4R_fNMqSyyydVU_32gMskq9vGQI8EWTxZIWih6co1bmvF6pJIpoyRmidSELEnPBm6X_fDWfq_pJkViAXaa5c-sWRhmWel_ZEQgUdpBZK6cA7d0pEJd0dhNuTQDFt_6u1F2uIYZvUYIc')"></div>
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
+              <div class="w-4 h-4 bg-digital-lime rounded-full animate-ping absolute"></div>
+              <div class="w-4 h-4 bg-digital-lime rounded-full relative shadow-[0_0_15px_rgba(215,255,98,0.8)]"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote Banner -->
+  <section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-section-gap">
+    <div class="p-12 rounded-3xl bg-primary text-on-primary flex flex-col md:flex-row items-center justify-between gap-12 relative overflow-hidden" data-reveal>
+      <div class="relative z-10 max-w-2xl">
+        <h2 class="font-headline-md text-headline-md text-digital-lime mb-4">Precision is the language of the future.</h2>
+        <p class="font-body-lg text-body-lg opacity-80 italic">
+          "QuietField is not just about sensors; it's about making sure the story of every seed is told through data."
+        </p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div id="footer-placeholder"></div>
+
+<script src="../js/main.js"></script>
 </body>
 </html>

@@ -1,37 +1,60 @@
-<footer>
-  <div class="footer-container">
-    <div class="footer-main">
-      <div class="footer-left">
-        <div class="footer-logo">Quiet<span>Field</span></div>
-        <p class="footer-description" data-i18n="description">
+<footer class="bg-primary text-on-primary w-full py-20 border-t border-white/5">
+  <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter">
+
+      <!-- Brand -->
+      <div class="md:col-span-2">
+        <div class="mb-6">
+          <span class="font-display-lg-mobile text-2xl font-bold tracking-tight">
+            <span class="text-white">Quiet</span><span class="text-digital-lime">Field</span>
+          </span>
+        </div>
+        <p class="text-primary-fixed-dim/60 text-body-md pr-8 max-w-xs" data-i18n="description">
           Stazioni di monitoraggio intelligente per decisioni agricole basate su dati reali.
         </p>
       </div>
-      
-      <div class="footer-right">
-        <div class="footer-contact-list">
-          <a href="mailto:info.quietfield@gmail.com">
-            <i class="fa-solid fa-envelope"></i>
-            info.quietfield@gmail.com
+
+      <!-- Navigation -->
+      <div>
+        <h4 class="font-label-caps text-label-caps text-digital-lime mb-6 uppercase tracking-wider" data-i18n="nav-website-heading">Website</h4>
+        <ul class="space-y-4">
+          <li><a href="index.html"     data-footer-link class="text-primary-fixed-dim/70 hover:text-on-primary transition-colors font-body-md">Home</a></li>
+          <li><a href="progetto.html"  data-footer-link data-link-key="project" class="text-primary-fixed-dim/70 hover:text-on-primary transition-colors font-body-md"><span data-i18n="nav-project">Il Progetto</span></a></li>
+          <li><a href="chi_siamo.html" data-footer-link data-link-key="about"   class="text-primary-fixed-dim/70 hover:text-on-primary transition-colors font-body-md"><span data-i18n="nav-about">Chi Siamo</span></a></li>
+          <li><a href="contatti.html"  data-footer-link data-link-key="contact"  class="text-primary-fixed-dim/70 hover:text-on-primary transition-colors font-body-md"><span data-i18n="nav-contact">Contatti</span></a></li>
+        </ul>
+      </div>
+
+      <!-- Legal + contacts -->
+      <div>
+        <h4 class="font-label-caps text-label-caps text-digital-lime mb-6 uppercase tracking-wider"></h4>
+        <ul class="space-y-4 mb-8">
+          <!-- <li><a href="#" class="text-primary-fixed-dim/70 hover:text-on-primary transition-colors font-body-md">Privacy Policy</a></li>
+          <li><a href="#" class="text-primary-fixed-dim/70 hover:text-on-primary transition-colors font-body-md">Termini di Servizio</a></li> -->
+        </ul>
+        <div class="space-y-2">
+          <a href="mailto:info.quietfield@gmail.com" class="flex items-center gap-2 text-primary-fixed-dim/60 hover:text-on-primary transition-colors text-sm font-data-mono">
+            <span class="material-symbols-outlined text-base">mail</span> info.quietfield@gmail.com
           </a>
-          <a href="https://linkedin.com/in/barbara-loletti/?locale=it">
-            <i class="fa-brands fa-linkedin"></i>
-            LinkedIn
+          <a href="https://linkedin.com/in/barbara-loletti" target="_blank" rel="noopener" class="flex items-center gap-2 text-primary-fixed-dim/60 hover:text-on-primary transition-colors text-sm font-data-mono">
+            <span class="material-symbols-outlined text-base">share</span> LinkedIn
           </a>
-          <a href="tel:+393477766092">
-            <i class="fa-solid fa-phone"></i>
-            +39 347 776 6092
-          </a>
-        </div>
-        <div class="footer-location">
-          <i class="fa-solid fa-location-dot"></i>
-          <span data-i18n="location">Terni, Umbria — Italia</span>
         </div>
       </div>
+
     </div>
-    
-    <div class="footer-bottom">
-      <div class="footer-copy" data-i18n="copyright">&copy; 2026 Barbara Loletti · QuietField</div>
+
+    <!-- Bottom bar -->
+    <div class="mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="font-label-caps text-primary-fixed-dim/40 italic" data-i18n="copyright">
+        © 2026 QuietField — Terni, Italia.
+      </p>
+      <div class="flex gap-8">
+        <a href="https://linkedin.com/in/barbara-loletti" target="_blank" rel="noopener" class="text-primary-fixed-dim/40 hover:text-data-cyan transition-colors font-data-mono text-xs uppercase">LinkedIn</a>
+        <a href="mailto:info.quietfield@gmail.com" class="text-primary-fixed-dim/40 hover:text-data-cyan transition-colors font-data-mono text-xs uppercase">Email</a>
+      </div>
     </div>
+
   </div>
 </footer>

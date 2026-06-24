@@ -1,3 +1,21 @@
 User-agent: *
 Allow: /
+
+# Cartelle interne / Internal folders
+Disallow: /QuietField/components/
+
+# Pagine di sistema (nav, 404, manutenzione)
+Disallow: /QuietField/it/nav.html
+Disallow: /QuietField/en/nav.html
+Disallow: /QuietField/es/nav.html
+Disallow: /QuietField/fr/nav.html
+Disallow: /QuietField/it/404.html
+Disallow: /QuietField/en/404.html
+Disallow: /QuietField/es/404.html
+Disallow: /QuietField/fr/404.html
+Disallow: /QuietField/it/manutenzione.html
+Disallow: /QuietField/en/maintenance.html
+Disallow: /QuietField/es/mantenimiento.html
+Disallow: /QuietField/fr/maintenance.html
+
 Sitemap: https://barbaralol.github.io/QuietField/sitemap.xml

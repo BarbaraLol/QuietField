@@ -1,0 +1,95 @@
+// Shared Tailwind config — loaded after cdn.tailwindcss.com
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "surface":                   "#faf9f4",
+        "on-error":                  "#ffffff",
+        "surface-container-low":     "#f5f4ef",
+        "tertiary-container":        "#483216",
+        "data-cyan":                 "#00E5FF",
+        "surface-container-highest": "#e3e3de",
+        "on-error-container":        "#93000a",
+        "tertiary":                  "#301d04",
+        "surface-bright":            "#faf9f4",
+        "inverse-surface":           "#30312e",
+        "surface-dim":               "#dbdad5",
+        "background":                "#faf9f4",
+        "glass-stroke":              "rgba(255,255,255,0.4)",
+        "outline-variant":           "#c5c8be",
+        "on-secondary":              "#ffffff",
+        "on-secondary-fixed":        "#001f24",
+        "primary":                   "#182412",
+        "on-primary-fixed-variant":  "#3d4b35",
+        "primary-fixed-dim":         "#bccbb0",
+        "on-primary":                "#ffffff",
+        "on-secondary-container":    "#00616d",
+        "secondary-fixed":           "#9cf0ff",
+        "secondary-container":       "#00e3fd",
+        "deep-earth":                "#1F1A17",
+        "on-surface":                "#1b1c19",
+        "surface-container-high":    "#e9e8e3",
+        "on-tertiary-fixed-variant": "#5a4225",
+        "on-primary-fixed":          "#131f0d",
+        "surface-container-lowest":  "#ffffff",
+        "on-tertiary-fixed":         "#2a1801",
+        "on-surface-variant":        "#444841",
+        "digital-lime":              "#D7FF62",
+        "surface-variant":           "#e3e3de",
+        "on-primary-container":      "#95a48a",
+        "tertiary-fixed":            "#ffddb7",
+        "surface-tint":              "#54624c",
+        "on-tertiary-container":     "#b99a76",
+        "on-background":             "#1b1c19",
+        "error":                     "#ba1a1a",
+        "secondary-fixed-dim":       "#00daf3",
+        "on-tertiary":               "#ffffff",
+        "tertiary-fixed-dim":        "#e3c19a",
+        "secondary":                 "#006875",
+        "error-container":           "#ffdad6",
+        "primary-fixed":             "#d8e8cb",
+        "inverse-on-surface":        "#f2f1ec",
+        "inverse-primary":           "#bccbb0",
+        "primary-container":         "#2d3a26",
+        "surface-container":         "#efeee9",
+        "on-secondary-fixed-variant":"#004f58",
+        "outline":                   "#757870"
+      },
+      borderRadius: {
+        DEFAULT: "0.5rem",
+        lg:      "0.5rem",
+        xl:      "0.75rem",
+        full:    "9999px"
+      },
+      spacing: {
+        "margin-desktop": "64px",
+        "element-gap":    "32px",
+        "container-max":  "1280px",
+        "section-gap":    "160px",
+        "margin-mobile":  "20px",
+        "gutter":         "24px"
+      },
+      fontFamily: {
+        "display-lg-mobile": ["Newsreader"],
+        "display-lg":        ["Newsreader"],
+        "headline-md":       ["Newsreader"],
+        "headline-sm":       ["Newsreader"],
+        "body-lg":           ["Hanken Grotesk"],
+        "body-md":           ["Hanken Grotesk"],
+        "label-caps":        ["JetBrains Mono"],
+        "data-mono":         ["JetBrains Mono"]
+      },
+      fontSize: {
+        "display-lg-mobile": ["44px", { lineHeight:"48px", letterSpacing:"-0.02em", fontWeight:"600" }],
+        "display-lg":        ["72px", { lineHeight:"80px", letterSpacing:"-0.02em", fontWeight:"600" }],
+        "headline-md":       ["40px", { lineHeight:"48px", fontWeight:"500" }],
+        "headline-sm":       ["24px", { lineHeight:"32px", fontWeight:"500" }],
+        "body-lg":           ["20px", { lineHeight:"32px", fontWeight:"400" }],
+        "body-md":           ["16px", { lineHeight:"24px", fontWeight:"400" }],
+        "label-caps":        ["12px", { lineHeight:"16px", letterSpacing:"0.1em", fontWeight:"600" }],
+        "data-mono":         ["14px", { lineHeight:"20px", fontWeight:"500" }]
+      }
+    }
+  }
+};

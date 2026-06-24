@@ -1,12 +1,60 @@
-<nav>
-    <a href="index.html" class="nav-logo">Quiet<span>Field</span></a>
-    <div class="nav-links" id="nav-links">
-    <a href="index.html" onclick="closeMenu()">Inicio</a>
-    <a href="proyecto.html" onclick="closeMenu()">Proyecto</a>
-    <a href="quien_soy.html" onclick="closeMenu()">Quién soy</a>
-    <a href="contactos.html" onclick="closeMenu()">Contactos</a>
+<header class="fixed top-0 w-full z-50 bg-white/60 backdrop-blur-xl border-b border-glass-stroke shadow-sm">
+  <nav class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+
+    <!-- Logo -->
+    <a href="index.html" class="flex items-center">
+      <span class="font-display-lg-mobile text-2xl font-bold tracking-tight">
+        <span class="text-primary">Quiet</span><span class="text-surface-tint">Field</span>
+      </span>
+    </a>
+
+    <!-- Desktop links -->
+    <div class="hidden md:flex items-center space-x-element-gap">
+      <a href="index.html"     data-nav-link class="transition-colors font-body-md">Home</a>
+      <a href="proyecto.html"  data-nav-link class="transition-colors font-body-md">El Proyecto</a>
+      <a href="quienes-somos.html" data-nav-link class="transition-colors font-body-md">Quiénes Somos</a>
+      <a href="contacto.html"  data-nav-link class="transition-colors font-body-md">Contacto</a>
     </div>
-        <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
-        <span></span><span></span><span></span>
-    </button>
-</nav>
+
+    <!-- Right side: language + CTA + hamburger -->
+    <div class="flex items-center space-x-6">
+
+      <!-- Language dropdown -->
+      <div class="relative lang-dropdown">
+        <button class="flex items-center space-x-1 font-data-mono text-data-mono text-primary hover:text-secondary transition-colors uppercase py-2">
+          <span>ES</span>
+          <span class="material-symbols-outlined text-sm">expand_more</span>
+        </button>
+        <div class="lang-dropdown-content hidden absolute top-full right-0 pt-2 min-w-[140px] z-60">
+          <div class="glass-card rounded-lg overflow-hidden py-2 shadow-lg">
+            <a href="../../it/index.html" class="block px-4 py-2 font-data-mono text-xs text-primary hover:bg-secondary/10 transition-colors">ITALIANO (IT)</a>
+            <a href="../../en/index.html" class="block px-4 py-2 font-data-mono text-xs text-primary hover:bg-secondary/10 transition-colors">ENGLISH (EN)</a>
+            <a href="../../fr/index.html" class="block px-4 py-2 font-data-mono text-xs text-primary hover:bg-secondary/10 transition-colors">FRANÇAIS (FR)</a>
+            <a href="index.html"          class="block px-4 py-2 font-data-mono text-xs text-secondary bg-secondary/5 font-bold">ESPAÑOL (ES)</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA (desktop) -->
+      <a href="contacto.html" class="hidden md:block bg-primary text-on-primary px-6 py-2 rounded-full font-body-md font-bold hover:scale-95 transition-transform">
+        Solicitar Demo
+      </a>
+
+      <!-- Hamburger (mobile) -->
+      <button id="mobile-menu-btn" class="md:hidden flex flex-col gap-1.5 p-1" aria-label="Menú">
+        <span class="block w-6 h-0.5 bg-primary rounded"></span>
+        <span class="block w-6 h-0.5 bg-primary rounded"></span>
+        <span class="block w-6 h-0.5 bg-primary rounded"></span>
+      </button>
+    </div>
+
+  </nav>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-xl border-t border-glass-stroke px-margin-mobile py-4 flex flex-col gap-4">
+    <a href="index.html"     data-nav-link onclick="closeMenu()" class="font-body-md py-2 border-b border-glass-stroke">Home</a>
+    <a href="proyecto.html"  data-nav-link onclick="closeMenu()" class="font-body-md py-2 border-b border-glass-stroke">El Proyecto</a>
+    <a href="quienes-somos.html" data-nav-link onclick="closeMenu()" class="font-body-md py-2 border-b border-glass-stroke">Quiénes Somos</a>
+    <a href="contacto.html"  data-nav-link onclick="closeMenu()" class="font-body-md py-2">Contacto</a>
+  </div>
+</header>

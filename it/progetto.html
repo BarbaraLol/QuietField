@@ -1,121 +1,216 @@
 <!DOCTYPE html>
-<html lang="it">
+<html class="scroll-smooth" lang="it">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<meta name="description" content="QuietField — Il progetto: a che punto siamo, la visione, e per chi stiamo costruendo questa piattaforma.">
-<meta property="og:title" content="QuietField — Il Progetto">
-<meta property="og:description" content="A che punto siamo e dove vogliamo arrivare.">
-<meta property="og:url" content="https://barbaralol.github.io/QuietField/it/progetto.html">
-<meta property="og:type" content="website">
-
-<title>Il Progetto — QuietField</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="../css/main.css">
-
-<script defer src="https://cloud.umami.is/script.js" data-website-id="00ee3724-b878-4638-851a-280723171d61"></script>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Il Progetto | QuietField</title>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script src="../js/tailwind.config.js"></script>
+  <link rel="stylesheet" href="../css/main.css"/>
+  <meta name="description" content="QuietField — Il Progetto: roadmap, visione e fasi di sviluppo della piattaforma agritech per l'agricoltura di precisione.">
+  <meta property="og:title" content="QuietField — Il Progetto">
+  <meta property="og:description" content="A che punto siamo e dove vogliamo arrivare.">
+  <meta property="og:url" content="https://barbaralol.github.io/QuietField/it/progetto.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:locale:alternate" content="es_ES">
+  <meta property="og:locale:alternate" content="fr_FR">
+  <link rel="alternate" hreflang="it" href="https://barbaralol.github.io/QuietField/it/progetto.html"/>
+  <link rel="alternate" hreflang="en" href="https://barbaralol.github.io/QuietField/en/project.html"/>
+  <link rel="alternate" hreflang="es" href="https://barbaralol.github.io/QuietField/es/proyecto.html"/>
+  <link rel="alternate" hreflang="fr" href="https://barbaralol.github.io/QuietField/fr/projet.html"/>
+  <link rel="alternate" hreflang="x-default" href="https://barbaralol.github.io/QuietField/it/progetto.html"/>
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="00ee3724-b878-4638-851a-280723171d61"></script>
 </head>
-<body>
+<body class="bg-surface font-body-md text-body-md selection:bg-digital-lime/30 overflow-x-hidden">
 
 <div id="nav-placeholder"></div>
 
-<!-- PAGE HEADER -->
-<header class="page-header">
-  <div class="section-label">Il Progetto</div>
-  <h1>Stiamo costruendo QuietField<br>un passo alla volta</h1>
-  <p>Non partiamo da un prodotto finito, ma da un problema reale: vogliamo che ogni decisione in campo si basi su dati <b>reali</b>, non sul calendario.</p>
-</header>
+<main class="pt-20">
 
-<!-- STATO DI SVILUPPO -->
-<section id="stato">
-  <div class="container">
-    <div class="section-label">A che punto siamo</div>
-    <h2 class="section-title">Un percorso in fasi</h2>
-    <p style="color: var(--color-text-soft); max-width: 760px; line-height: 1.75;">
-      QuietField nasce dall'incontro tra agronomia e data science. Procediamo per fasi, validando ogni passaggio prima di andare avanti perché vogliamo che funzioni davvero in campo, non solo sulla carta.
-    </p>
-    <div class="phases-grid">
-      <div class="phase-card">
-        <span class="phase-number">01</span>
-        <h3>Ricerca &amp; Progettazione</h3>
-        <p>Studio dei parametri agronomici rilevanti e confronto con agronomi e ricercatori del settore.</p>
+  <!-- Hero -->
+  <section class="relative min-h-[716px] flex items-center justify-center px-margin-mobile md:px-margin-desktop overflow-hidden bg-surface">
+    <div class="relative z-10 text-center max-w-4xl" data-reveal>
+      <span class="font-label-caps text-label-caps text-primary uppercase tracking-widest mb-6 block">Il Progetto</span>
+      <h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-8 leading-tight">
+        Costruendo il futuro<br class="hidden md:block"/> dell'agricoltura
+      </h1>
+      <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto leading-relaxed">
+        Unire l'eredità fisica con l'intelligenza artificiale per creare un ecosistema resiliente e basato sui dati per il coltivatore moderno.
+      </p>
+    </div>
+  </section>
+
+  <!-- Roadmap -->
+  <section id="roadmap" class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+    <div class="flex flex-col md:flex-row justify-between items-end gap-element-gap mb-20" data-reveal>
+      <div class="max-w-xl">
+        <h2 class="font-headline-md text-headline-md text-primary mb-4">Evoluzione del Progetto</h2>
+        <p class="font-body-md text-body-md text-on-surface-variant">Il nostro viaggio dall'analisi di laboratorio all'intelligenza agricola globale.</p>
       </div>
-      <div class="phase-card current">
-        <span class="phase-badge">In corso</span>
-        <span class="phase-number">02</span>
-        <h3>Prototipazione</h3>
-        <p>Costruzione e test dei primi prototipi delle stazioni di monitoraggio.</p>
-      </div>
-      <div class="phase-card">
-        <span class="phase-number">03</span>
-        <h3>Validazione sul campo</h3>
-        <p>Installazione nei campi dei primi produttori partner, per misurare l'utilità reale sul terreno.</p>
-      </div>
-      <div class="phase-card">
-        <span class="phase-number">04</span>
-        <h3>Espansione colture</h3>
-        <p>Adattamento della piattaforma a nuove colture e contesti produttivi.</p>
+      <div class="flex items-center gap-4 bg-surface-container-low px-4 py-2 rounded-full border border-glass-stroke">
+        <span class="w-2 h-2 bg-data-cyan rounded-full animate-pulse"></span>
+        <span class="font-data-mono text-data-mono text-on-surface">Fase 02 in sviluppo attivo</span>
       </div>
     </div>
-  </div>
-</section>
 
-<!-- VISIONE -->
-<section style="background: var(--color-sand-light); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);">
-  <div class="container">
-    <div class="section-label">La visione</div>
-    <h2 class="section-title">Una piattaforma, ogni coltura</h2>
-    <div class="vision-text">
-      <p>Ogni coltura ha le sue sfide: un trattamento tardivo, un'irrigazione fuori tempo, un parassita che arriva in silenzio. Decisioni che pesano sul raccolto e sull'ambiente.</p>
-      <p>Stiamo costruendo un'architettura che non si ferma a una sola pianta: microclima, suolo, modelli predittivi, alert chiari. Un approccio pensato per adattarsi a vigneti, oliveti, frutteti e oltre.</p>
-      <p>L'obiettivo resta lo stesso: rendere il monitoraggio intelligente dei campi accessibile a ogni produttore, non solo a chi ha grandi superfici o grandi budget.</p>
-    </div>
-  </div>
-</section>
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter relative">
+      <div class="hidden md:block absolute top-[4.5rem] left-0 w-full h-0.5 bg-outline-variant/30 -z-10"></div>
 
-<!-- PER CHI -->
-<section class="for-who" id="per-chi">
-  <div class="container">
-    <div class="section-label">Per chi è</div>
-    <h2 class="section-title">Progettiamo con voi, non per voi</h2>
-    <p style="color: rgba(232, 223, 208, 0.75); max-width: 750px; margin-bottom: 2rem; line-height: 1.75;">
-      Il progetto è in fase iniziale di sviluppo. Cerchiamo chiunque lavori la terra, la studi o voglia investire nel suo futuro, e sia disposto a contribuire con la propria esperienza a costruire uno strumento davvero utile in campo.
-    </p>
-    <div class="audience-grid">
-      <div class="audience-card">
-        <h3>🌾 Coltivatori</h3>
-        <p>Realtà produttive legate alla terra, in ogni parte del mondo e su ogni scala, che vogliono trasformare i dati in scelte migliori per ridurre gli sprechi e valorizzare il proprio lavoro.</p>
+      <!-- Fase 01 -->
+      <div class="group relative" data-reveal>
+        <div class="w-12 h-12 rounded-full bg-primary text-on-primary flex items-center justify-center mb-6 ring-8 ring-background">
+          <span class="material-symbols-outlined">check</span>
+        </div>
+        <div class="glass-card p-6 rounded-xl hover:translate-y-[-8px] transition-transform duration-300">
+          <span class="font-data-mono text-data-mono text-primary/60 mb-2 block">Fase 01</span>
+          <h3 class="font-headline-sm text-headline-sm text-primary mb-3">Ricerca &amp; Progettazione</h3>
+          <p class="text-on-surface-variant text-body-md">Studio dei parametri agronomici rilevanti e confronto con agronomi e ricercatori del settore.</p>
+        </div>
       </div>
-      <div class="audience-card">
-        <h3>🔬 Ricercatori e agronomi</h3>
-        <p>Professionisti e accademici in agronomia, fitopatologia, entomologia o precision farming interessati a collaborazioni di ricerca e sviluppo.</p>
-      </div>
-      <div class="audience-card">
-        <h3>🌱 Investitori e partner</h3>
-        <p>Chi crede che l'agricoltura di precisione accessibile sia un'opportunità concreta e vuole contribuire a renderla realtà, supportando lo sviluppo e la diffusione dello strumento.</p>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- BRIDGE -->
-<section class="bridge">
-  <div class="container">
-    <h2 class="section-title">Vuoi seguire gli sviluppi?</h2>
-    <p class="bridge-intro">Se lavori in vigna, in un oliveto o in un frutteto, o se semplicemente vuoi rimanere in contatto, scrivici.</p>
-    <div class="bridge-buttons">
-      <a href="contatti.html" class="bridge-btn primary">Contattaci</a>
-      <a href="chi_siamo.html" class="bridge-btn ghost">Chi c'è dietro</a>
+      <!-- Fase 02 -->
+      <div class="group relative" data-reveal>
+        <div class="w-12 h-12 rounded-full bg-data-cyan text-deep-earth flex items-center justify-center mb-6 ring-8 ring-background relative">
+          <span class="material-symbols-outlined">analytics</span>
+          <span class="absolute -top-1 -right-1 flex h-4 w-4">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-data-cyan opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-4 w-4 bg-data-cyan"></span>
+          </span>
+        </div>
+        <div class="glass-card p-6 rounded-xl border-data-cyan shadow-lg shadow-data-cyan/5 hover:translate-y-[-8px] transition-transform duration-300">
+          <span class="font-data-mono text-data-mono text-secondary font-bold mb-2 block">Fase 02 — In corso</span>
+          <h3 class="font-headline-sm text-headline-sm text-primary mb-3">Prototipazione</h3>
+          <p class="text-on-surface-variant text-body-md">Costruzione e test dei primi prototipi delle stazioni di monitoraggio sul campo.</p>
+        </div>
+      </div>
+
+      <!-- Fase 03 -->
+      <div class="group relative" data-reveal>
+        <div class="w-12 h-12 rounded-full bg-surface-container-highest text-outline flex items-center justify-center mb-6 ring-8 ring-background">
+          <span class="material-symbols-outlined">verified</span>
+        </div>
+        <div class="glass-card p-6 rounded-xl opacity-60 hover:translate-y-[-8px] transition-transform duration-300">
+          <span class="font-data-mono text-data-mono text-outline mb-2 block">Fase 03</span>
+          <h3 class="font-headline-sm text-headline-sm text-primary mb-3">Validazione</h3>
+          <p class="text-on-surface-variant text-body-md">Installazione nei campi dei primi partner produttori per misurare l'utilità reale sul terreno.</p>
+        </div>
+      </div>
+
+      <!-- Fase 04 -->
+      <div class="group relative" data-reveal>
+        <div class="w-12 h-12 rounded-full bg-surface-container-highest text-outline flex items-center justify-center mb-6 ring-8 ring-background">
+          <span class="material-symbols-outlined">language</span>
+        </div>
+        <div class="glass-card p-6 rounded-xl opacity-60 hover:translate-y-[-8px] transition-transform duration-300">
+          <span class="font-data-mono text-data-mono text-outline mb-2 block">Fase 04</span>
+          <h3 class="font-headline-sm text-headline-sm text-primary mb-3">Espansione</h3>
+          <p class="text-on-surface-variant text-body-md">Adattamento della piattaforma a nuove colture e contesti produttivi su scala globale.</p>
+        </div>
+      </div>
+
     </div>
-  </div>
-</section>
+  </section>
+
+  <!-- Visione (full bleed) -->
+  <section class="relative min-h-screen flex items-center justify-center py-section-gap">
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="w-full h-full bg-cover bg-center transition-transform duration-[10s] hover:scale-110" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAphBfJHf0RPo-C2tZGwX_VUs1LMmft3MXQqVgOCqHfZO4n_PQx2tHkIMefYdYEKUhUX5Q3ziZL2i5mWPD61Lt06nnf8iWdPujYZonlw82LUn_AD6-5LIOy1fURUtR4BvtziZN5TD3kJPmDQpBygVixu0X3h7W_hk6YDdjYS3PzuI9AJFQz2EZ5gousEETYb2BOyF9kdPUALZNM5odjm4Qlx-Oxs6Qwu6NLceLeEbCxkHdQn2zBHPvEWs9RtSJ0PEOeDZM591b5Ej45')"></div>
+      <div class="absolute inset-0 bg-primary/40 backdrop-blur-[2px]"></div>
+    </div>
+    <div class="relative z-10 px-margin-mobile md:px-margin-desktop text-center text-on-primary max-w-5xl" data-reveal>
+      <div class="inline-flex items-center gap-3 bg-digital-lime text-primary px-5 py-2 rounded-full font-data-mono text-label-caps mb-12">
+        <span class="material-symbols-outlined text-[18px]">verified</span> MISSION STATEMENT
+      </div>
+      <h2 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg mb-8 italic">"Una piattaforma, ogni coltura."</h2>
+      <p class="font-body-lg text-body-lg max-w-3xl mx-auto leading-relaxed text-primary-fixed">Stiamo costruendo un'architettura che non si ferma a una sola pianta: microclima, suolo, modelli predittivi, alert chiari. Un approccio pensato per adattarsi a vigneti, oliveti, frutteti e oltre.</p>
+      <div class="mt-16 flex flex-wrap justify-center gap-8">
+        <div class="text-center">
+          <div class="font-display-lg text-headline-md text-digital-lime mb-2">15k+</div>
+          <div class="font-data-mono text-label-caps uppercase text-white/70">Punti Dati/Sec</div>
+        </div>
+        <div class="w-px h-16 bg-white/20 hidden md:block"></div>
+        <div class="text-center">
+          <div class="font-display-lg text-headline-md text-digital-lime mb-2">99%</div>
+          <div class="font-data-mono text-label-caps uppercase text-white/70">Precisione Analisi</div>
+        </div>
+        <div class="w-px h-16 bg-white/20 hidden md:block"></div>
+        <div class="text-center">
+          <div class="font-display-lg text-headline-md text-digital-lime mb-2">30%</div>
+          <div class="font-data-mono text-label-caps uppercase text-white/70">Risparmio Idrico</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Per chi è -->
+  <section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+    <div class="text-center mb-24" data-reveal>
+      <h2 class="font-headline-md text-headline-md text-primary mb-6">Progettato per l'Ecosistema</h2>
+      <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">QuietField connette i punti tra chi coltiva, chi studia e chi investe nel futuro del nostro pianeta.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+
+      <div class="group glass-card p-10 rounded-[2rem] flex flex-col items-start hover:shadow-2xl hover:shadow-primary/5 transition-all duration-500 hover:-translate-y-2" data-reveal>
+        <div class="w-16 h-16 rounded-2xl bg-surface-container flex items-center justify-center mb-8 group-hover:bg-primary transition-colors">
+          <span class="material-symbols-outlined text-primary group-hover:text-on-primary text-[32px]">agriculture</span>
+        </div>
+        <h3 class="font-headline-sm text-headline-sm text-primary mb-4">Coltivatori</h3>
+        <p class="font-body-md text-body-md text-on-surface-variant mb-8 flex-grow">Ottimizza il tuo raccolto con l'intelligenza del suolo in tempo reale. Riduci gli sprechi, abbassa i costi e assicura la salute delle tue colture storiche.</p>
+        <a href="contatti.html" class="font-data-mono text-label-caps text-secondary flex items-center gap-2 group/link">
+          SCOPRI DI PIÙ <span class="material-symbols-outlined text-[16px] group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+        </a>
+      </div>
+
+      <div class="group glass-card p-10 rounded-[2rem] flex flex-col items-start hover:shadow-2xl hover:shadow-primary/5 transition-all duration-500 hover:-translate-y-2" data-reveal>
+        <div class="w-16 h-16 rounded-2xl bg-surface-container flex items-center justify-center mb-8 group-hover:bg-primary transition-colors">
+          <span class="material-symbols-outlined text-primary group-hover:text-on-primary text-[32px]">biotech</span>
+        </div>
+        <h3 class="font-headline-sm text-headline-sm text-primary mb-4">Ricercatori</h3>
+        <p class="font-body-md text-body-md text-on-surface-variant mb-8 flex-grow">Accedi a dataset sulle risposte allo stress delle piante e sull'attività microbica del suolo per un'innovazione sostenibile.</p>
+        <a href="contatti.html" class="font-data-mono text-label-caps text-secondary flex items-center gap-2 group/link">
+          SCOPRI DI PIÙ <span class="material-symbols-outlined text-[16px] group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+        </a>
+      </div>
+
+      <div class="group glass-card p-10 rounded-[2rem] flex flex-col items-start hover:shadow-2xl hover:shadow-primary/5 transition-all duration-500 hover:-translate-y-2" data-reveal>
+        <div class="w-16 h-16 rounded-2xl bg-surface-container flex items-center justify-center mb-8 group-hover:bg-primary transition-colors">
+          <span class="material-symbols-outlined text-primary group-hover:text-on-primary text-[32px]">account_balance</span>
+        </div>
+        <h3 class="font-headline-sm text-headline-sm text-primary mb-4">Investitori</h3>
+        <p class="font-body-md text-body-md text-on-surface-variant mb-8 flex-grow">Sostieni un progetto che fonde l'eccellenza ingegneristica italiana con una piattaforma AI scalabile a livello globale.</p>
+        <a href="contatti.html" class="font-data-mono text-label-caps text-secondary flex items-center gap-2 group/link">
+          SCOPRI DI PIÙ <span class="material-symbols-outlined text-[16px] group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-section-gap bg-primary-container overflow-hidden relative">
+    <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto relative z-10">
+      <div class="max-w-2xl" data-reveal>
+        <h2 class="font-headline-md text-headline-md text-on-primary mb-8">Pronto ad evolvere?</h2>
+        <p class="font-body-lg text-body-lg text-primary-fixed mb-12">Unisciti al nostro programma pilota e sii il primo a implementare la prossima generazione di intelligenza agricola sui tuoi campi.</p>
+        <div class="flex flex-wrap gap-gutter">
+          <a href="contatti.html" class="bg-digital-lime text-primary px-8 py-4 rounded-full font-bold hover:scale-105 transition-transform flex items-center gap-3">
+            Contattaci <span class="material-symbols-outlined">send</span>
+          </a>
+          <!-- <button class="border border-primary-fixed text-primary-fixed px-8 py-4 rounded-full font-bold hover:bg-primary-fixed/10 transition-colors">
+            Whitepaper Tecnico
+          </button> -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
 
 <div id="footer-placeholder"></div>
 
-<script src="../js/main.js" defer></script>
-
+<script src="../js/main.js"></script>
 </body>
 </html>

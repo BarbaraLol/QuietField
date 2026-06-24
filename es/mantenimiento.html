@@ -1,90 +1,110 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="scroll-smooth" lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="robots" content="noindex">
-
-<meta name="description" content="QuietField — Our English pages are currently being rebuilt. Check back soon.">
-<meta property="og:title" content="QuietField — Site Update in Progress">
-<meta property="og:description" content="Our English pages are currently being rebuilt.">
-<meta property="og:url" content="https://barbaralol.github.io/QuietField/en/">
-<meta property="og:type" content="website">
-
-<title>QuietField — Site Update in Progress</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="../css/main.css">
-
-<script defer src="https://cloud.umami.is/script.js" data-website-id="00ee3724-b878-4638-851a-280723171d61"></script>
-
-<style>
-  .maintenance {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background: var(--color-earth);
-    padding: 2rem;
-  }
-  .maintenance-content { max-width: 560px; }
-  .maintenance-icon {
-    font-size: 2.4rem;
-    color: var(--color-sage-pale);
-    margin-bottom: 1.5rem;
-  }
-  .maintenance h1 {
-    font-family: var(--font-display);
-    font-size: clamp(2rem, 5vw, 2.8rem);
-    color: var(--color-sand-light);
-    margin-bottom: 1.2rem;
-    line-height: 1.25;
-    letter-spacing: -0.01em;
-  }
-  .maintenance p {
-    color: rgba(232, 223, 208, 0.8);
-    font-size: 1.1rem;
-    line-height: 1.7;
-    margin-bottom: 2rem;
-  }
-  .maintenance .direct-contacts {
-    justify-content: center;
-  }
-  .maintenance .direct-contacts a {
-    background: rgba(255,255,255,0.05);
-    border-color: rgba(197, 212, 181, 0.2);
-    color: var(--color-sand-light);
-  }
-  .maintenance .direct-contacts a:hover {
-    border-color: var(--color-sage-light);
-    color: var(--color-sage-pale);
-  }
-  .lang-note {
-    margin-top: 2.2rem;
-    font-size: 0.9rem;
-    color: rgba(232, 223, 208, 0.55);
-  }
-  .lang-note a {
-    color: var(--color-sage-pale);
-    text-decoration: underline;
-  }
-</style>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mantenimiento | QuietField</title>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script src="../js/tailwind.config.js"></script>
+  <link rel="stylesheet" href="../css/main.css"/>
+  <meta name="description" content="QuietField está temporalmente en mantenimiento. Estamos actualizando nuestras páginas para ofrecerte una mejor experiencia.">
+  <meta property="og:title" content="QuietField — Mantenimiento en curso">
+  <meta property="og:description" content="Estamos sembrando novedades. Volveremos en línea muy pronto.">
+  <meta property="og:url" content="https://barbaralol.github.io/QuietField/es/mantenimiento.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="00ee3724-b878-4638-851a-280723171d61"></script>
+  <style>
+    .tech-shimmer {
+      background: linear-gradient(90deg, transparent, rgba(0, 229, 255, 0.1), transparent);
+      background-size: 200% 100%;
+      animation: shimmer 3s infinite linear;
+    }
+    @keyframes shimmer {
+      0%   { background-position: -200% 0; }
+      100% { background-position:  200% 0; }
+    }
+    .pulse-soft { animation: pulse-soft 4s ease-in-out infinite; }
+    @keyframes pulse-soft {
+      0%, 100% { opacity: 0.8; transform: scale(1); }
+      50%       { opacity: 1;   transform: scale(1.02); }
+    }
+  </style>
 </head>
-<body>
+<body class="bg-background text-on-background selection:bg-digital-lime/30 overflow-x-hidden flex flex-col min-h-screen">
 
-<section class="maintenance">
-  <div class="maintenance-content">
-    <div class="maintenance-icon"><i class="fa-solid fa-seedling"></i></div>
-    <h1>Estmaos modificanto esta sectión de nuestra web</h1>
-    <p>Las páginas de QuietField se están actualizando en estos momentos. Vuelve a visitarnos pronto o ponte en contacto con nosotros directamente a través de los datos que aparecen a continuación. Nos encantaría saber de usted mientras tanto.</p>
-    <div class="direct-contacts">
-      <a href="mailto:info.quietfield@gmail.com"><i class="fa-solid fa-envelope"></i> info.quietfield@gmail.com</a>
-      <a href="https://linkedin.com/in/barbara-loletti/?locale=en"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+<div id="nav-placeholder"></div>
+
+<main class="flex-grow pt-20 flex flex-col justify-center items-center px-margin-mobile md:px-margin-desktop relative overflow-hidden">
+
+  <div class="absolute top-1/4 -left-20 w-96 h-96 bg-primary-fixed-dim/20 blur-[120px] rounded-full pointer-events-none"></div>
+  <div class="absolute bottom-1/4 -right-20 w-96 h-96 bg-secondary-fixed/10 blur-[120px] rounded-full pointer-events-none"></div>
+
+  <div class="max-w-4xl w-full text-center z-10 py-section-gap">
+
+    <div class="mb-12 relative inline-block">
+      <div class="w-48 h-48 md:w-64 md:h-64 mx-auto glass-card rounded-3xl flex items-center justify-center relative overflow-hidden pulse-soft">
+        <div class="relative z-10 flex flex-col items-center">
+          <span class="material-symbols-outlined text-primary text-[80px] mb-4" style="font-variation-settings:'FILL' 1;">eco</span>
+          <div class="flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-data-cyan animate-pulse"></span>
+            <span class="font-label-caps text-label-caps text-on-surface-variant tracking-widest">SYSTEM OPTIMIZING</span>
+          </div>
+        </div>
+        <div class="absolute inset-x-0 bottom-0 h-1 tech-shimmer"></div>
+      </div>
+    </div>
+
+    <div class="space-y-6">
+      <p class="font-label-caps text-label-caps text-secondary tracking-[0.2em] uppercase">Estado: Actualización en curso</p>
+      <h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary max-w-3xl mx-auto">
+        Estamos sembrando novedades
+      </h1>
+      <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto leading-relaxed">
+        Estamos actualizando nuestras páginas para ofrecerte una mejor experiencia.
+        Volveremos en línea muy pronto con nuevas herramientas para la agricultura de precisión.
+      </p>
+    </div>
+
+    <div class="mt-12 flex flex-col sm:flex-row gap-6 justify-center items-center">
+      <a href="mailto:info.quietfield@gmail.com" class="group flex items-center gap-3 px-8 py-4 bg-primary text-on-primary rounded-full font-body-md font-bold hover:scale-105 transition-all duration-300 shadow-lg shadow-primary/20">
+        <span class="material-symbols-outlined text-[20px]">mail</span>
+        Escríbenos
+      </a>
+      <a href="https://linkedin.com/in/barbara-loletti" target="_blank" rel="noopener" class="group flex items-center gap-3 px-8 py-4 border border-primary text-primary rounded-full font-body-md font-bold hover:bg-primary hover:text-on-primary transition-all duration-300">
+        <span class="material-symbols-outlined text-[20px]">share</span>
+        LinkedIn
+      </a>
+    </div>
+
+  </div>
+
+  <div class="absolute bottom-0 w-full opacity-10 pointer-events-none">
+    <div class="max-w-container-max mx-auto h-px bg-gradient-to-r from-transparent via-primary to-transparent"></div>
+    <div class="grid grid-cols-12 max-w-container-max mx-auto h-24">
+      <div class="border-r border-primary/20 h-full"></div><div class="border-r border-primary/20 h-full"></div>
+      <div class="border-r border-primary/20 h-full"></div><div class="border-r border-primary/20 h-full"></div>
+      <div class="border-r border-primary/20 h-full"></div><div class="border-r border-primary/20 h-full"></div>
+      <div class="border-r border-primary/20 h-full"></div><div class="border-r border-primary/20 h-full"></div>
+      <div class="border-r border-primary/20 h-full"></div><div class="border-r border-primary/20 h-full"></div>
+      <div class="border-r border-primary/20 h-full"></div><div class="h-full"></div>
     </div>
   </div>
-</section>
 
+</main>
+
+<div id="footer-placeholder"></div>
+
+<script src="../js/main.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const seedling = document.querySelector('.pulse-soft');
+    if (!seedling) return;
+    window.addEventListener('mousemove', (e) => {
+      seedling.style.transform = `translate(${(e.clientX - window.innerWidth / 2) / 50}px, ${(e.clientY - window.innerHeight / 2) / 50}px)`;
+    });
+  });
+</script>
 </body>
 </html>

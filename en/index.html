@@ -1,190 +1,247 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="scroll-smooth" lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!-- SEO metadata -->
-<meta name="description" content="QuietField — Smart monitoring stations for agriculture. Microclimate, soil, and predictive models for producers in Italy and worldwide.">
-<meta property="og:title" content="QuietField — Your field speaks to you">
-<meta property="og:description" content="Smart monitoring stations for precision agriculture.">
-<meta property="og:url" content="https://barbaralol.github.io/QuietField/en/">
-<meta property="og:type" content="website">
-
-<title>QuietField — Intelligent Monitoring for Agriculture</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="../css/main.css">
-
-
-<!-- Traffic tracking -->
-<script defer src="https://cloud.umami.is/script.js" data-website-id="00ee3724-b878-4638-851a-280723171d61"></script>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>QuietField | AI-Driven Agricultural Intelligence</title>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script src="../js/tailwind.config.js"></script>
+  <link rel="stylesheet" href="../css/main.css"/>
+  <meta name="description" content="QuietField — Smart monitoring stations for agriculture. Microclimate, soil and predictive models for producers in Italy and worldwide.">
+  <meta property="og:title" content="QuietField — AI-Driven Agricultural Intelligence">
+  <meta property="og:description" content="Smart monitoring stations for precision viticulture and agriculture.">
+  <meta property="og:url" content="https://barbaralol.github.io/QuietField/en/index.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="it_IT">
+  <meta property="og:locale:alternate" content="es_ES">
+  <meta property="og:locale:alternate" content="fr_FR">
+  <link rel="alternate" hreflang="it" href="https://barbaralol.github.io/QuietField/it/index.html"/>
+  <link rel="alternate" hreflang="en" href="https://barbaralol.github.io/QuietField/en/index.html"/>
+  <link rel="alternate" hreflang="es" href="https://barbaralol.github.io/QuietField/es/index.html"/>
+  <link rel="alternate" hreflang="fr" href="https://barbaralol.github.io/QuietField/fr/index.html"/>
+  <link rel="alternate" hreflang="x-default" href="https://barbaralol.github.io/QuietField/it/index.html"/>
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="00ee3724-b878-4638-851a-280723171d61"></script>
 </head>
-<body>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
 
-<!-- NAV -->
 <div id="nav-placeholder"></div>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-content">
-    <!-- <div class="hero-tag">Precision Viticulture · Umbria</div> -->
-    <div class="hero-tag">Precision Agriculture</div>
-    <h1 style="white-space: nowrap;">Your field speaks to you<br><em>Now you can listen</em></h1>
-    <p><b>QuietField develops intelligent monitoring stations that read the microclimate and soil of your field, interpret the data, and alert you before a problem becomes damage.</b></p>
-    <a href="project.html" class="hero-cta">Discover the project</a>
-  </div>
-</section>
+<main>
 
-<!-- PROBLEM -->
-<section class="problem" id="problem">
-  <div class="container">
-    <div class="section-label">The problem</div>
-    <!-- <h2 class="section-title">Every year, the same questions without a certain answer</h2> -->
-    <h2 class="section-title">The same uncertainties every year</h2>
-    <p style="color: var(--color-text-soft); max-width: 960px; line-height: 1.75;">
-      Treating too early is a waste. Treating too late can cost you a whole harvest. 
-      Today many of these decisions are made by calendar, out of habit, or by watching the sky, 
-      with margins of error that weigh on your wallet and the environment.
-    </p>
-    <div class="problem-grid">
-      <div class="problem-card" data-icon="🍂">
-        <h3>Blind treatments</h3>
-        <p>Diseases like downy mildew and powdery mildew are often fought "by calendar" rather than on real data. Result? Unnecessary or late treatments, higher costs and more environmental impact.</p>
-      </div>
-      <div class="problem-card" data-icon="💧">
-        <h3>Irrigation <i>by guesswork</i></h3>
-        <p>Without data on soil moisture and evapotranspiration, you irrigate too much, too little, or at the wrong time, with direct effects on product quality.</p>
-      </div>
-      <div class="problem-card" data-icon="📊">
-        <h3>Fragmented or missing data</h3>
-        <p>Those who have a weather station end up with numbers to interpret on their own. Those who don't rely on their experience. With the right data, both make better decisions.</p>
-      </div>
-      <div class="problem-card" data-icon="🪰">
-        <h3>Silent pests</h3>
-        <p>Olive fruit fly, vine moth, pear psylla: insects move before you notice them. Without continuous monitoring, you realize there's an infestation when the damage is already done.</p>
-      </div>
-      <div class="problem-card" data-icon="❄️">
-        <h3>Frosts and temperature swings</h3>
-        <p>A few degrees below zero during flowering can wipe out a whole harvest. Thermal stress and late frosts strike silently, and without real-time alerts there's no margin to intervene.</p>
-      </div>
+  <!-- Hero -->
+  <section class="relative h-screen flex items-center pt-20">
+    <div class="absolute inset-0 z-0">
+      <div class="w-full h-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA4NGsm7UoC7lRzIHMLF5rC9jaidYEpAf5sOUgq1nFR4AWFV_UvGCWoUaAs82sMMlf5HxJ6-uG7RBnfXdZSLuSIlU_CKl8gZkOnQ5R9X7xh101MjnC2Y5XL1XNNYuJWCQ3L6qBplEULQTZkQzqYAZUkJU7b_0bya4OOEqmHtJ1X1t5FK1eNU2_tB6oSrZlDEfYBrrV-8veL2eCFNMDfSaklqhJEvejd98iz9A_beusdCjWoXNuq85OUod6DLQEE7gyS2_qYd6x-u5ld')"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-white/40 to-transparent"></div>
     </div>
-  </div>
-</section>
-
-<!-- SOLUTION -->
-<section class="solution" id="solution">
-  <div class="container">
-    <div class="section-label">The solution</div>
-    <!-- <h2 class="section-title">A station that doesn't just measure.<br>It tells you what to do.</h2> -->
-    <h2 class="section-title">A sentinel in the field<br>It measures, predicts, and tells you when to act</h2>
-    <div class="solution-grid">
-      <ul class="solution-list">
-        <li>
-          <strong>Microclimate and soil sensors</strong>
-          Temperature, air and soil humidity, leaf wetness, rain, wind, radiation and much more. All in a single station, powered by a solar panel.
-        </li>
-        <li>
-          <strong>Integrated predictive models</strong>
-          Data is analyzed by agronomic and machine learning models that estimate phytosanitary risk, water stress, and phenological stage — not just today, but over the next 48-72 hours.
-        </li>
-        <li>
-          <strong>Actionable alerts on your smartphone</strong>
-          No graphs to interpret, just clear notifications. <b><i>You decide</i></b>, with the right information.
-        </li>
-        <li>
-          <strong>Designed to grow</strong>
-          Born for the vineyard, designed to expand: QuietField's modular architecture adapts to any crop.
-        </li>
-      </ul>
-      <div class="solution-visual">
-        <div class="station-diagram">
-          <svg viewBox="0 0 300 380" xmlns="http://www.w3.org/2000/svg">
-            <!-- pole -->
-            <rect x="145" y="80" width="10" height="250" rx="3" fill="#8B6F4E"/>
-            <!-- solar panel -->
-            <rect x="100" y="55" width="100" height="40" rx="4" fill="#5C6B4E" stroke="#3C4A33" stroke-width="1.5"/>
-            <line x1="130" y1="55" x2="130" y2="95" stroke="#3C4A33" stroke-width="0.5" opacity="0.5"/>
-            <line x1="170" y1="55" x2="170" y2="95" stroke="#3C4A33" stroke-width="0.5" opacity="0.5"/>
-            <line x1="100" y1="75" x2="200" y2="75" stroke="#3C4A33" stroke-width="0.5" opacity="0.5"/>
-            <!-- main box -->
-            <rect x="115" y="110" width="70" height="55" rx="6" fill="#E8DFD0" stroke="#B8A890" stroke-width="1.5"/>
-            <circle cx="135" cy="130" r="4" fill="#6B7F5E"/>
-            <circle cx="150" cy="130" r="4" fill="#B85C38"/>
-            <circle cx="165" cy="130" r="4" fill="#6B7F5E" opacity="0.5"/>
-            <rect x="128" y="142" width="44" height="14" rx="2" fill="#F4F0E8" stroke="#D4CBBC"/>
-            <!-- antenna -->
-            <line x1="185" y1="110" x2="195" y2="75" stroke="#8B6F4E" stroke-width="2"/>
-            <circle cx="195" cy="72" r="3" fill="#B85C38"/>
-            <!-- temp/hum sensor -->
-            <rect x="68" y="140" width="36" height="24" rx="4" fill="#fff" stroke="#B8A890" stroke-width="1"/>
-            <line x1="104" y1="152" x2="115" y2="145" stroke="#B8A890" stroke-width="1" stroke-dasharray="3,2"/>
-            <text x="86" y="156" text-anchor="middle" font-size="7" fill="#5C5347" font-family="sans-serif">T/H</text>
-            <!-- leaf wetness -->
-            <rect x="196" y="170" width="40" height="20" rx="4" fill="#fff" stroke="#B8A890" stroke-width="1"/>
-            <line x1="196" y1="180" x2="185" y2="160" stroke="#B8A890" stroke-width="1" stroke-dasharray="3,2"/>
-            <text x="216" y="184" text-anchor="middle" font-size="6.5" fill="#5C5347" font-family="sans-serif">Leaf</text>
-            <!-- rain gauge -->
-            <path d="M128 195 L132 210 L142 210 L146 195 Z" fill="#fff" stroke="#B8A890" stroke-width="1"/>
-            <line x1="137" y1="210" x2="137" y2="225" stroke="#B8A890" stroke-width="1" stroke-dasharray="3,2"/>
-            <text x="137" y="238" text-anchor="middle" font-size="7" fill="#5C5347" font-family="sans-serif">Rain</text>
-            <!-- soil sensor -->
-            <line x1="150" y1="330" x2="150" y2="310" stroke="#8B6F4E" stroke-width="2"/>
-            <ellipse cx="150" cy="340" rx="22" ry="8" fill="#C5B89E" stroke="#A69880" stroke-width="1"/>
-            <text x="150" y="360" text-anchor="middle" font-size="7" fill="#5C5347" font-family="sans-serif">Soil</text>
-            <!-- ground line -->
-            <line x1="60" y1="330" x2="240" y2="330" stroke="#A69880" stroke-width="1" stroke-dasharray="5,3"/>
-            <!-- wifi waves -->
-            <path d="M210 100 Q220 95 225 100" stroke="#B85C38" stroke-width="1.2" fill="none" opacity="0.5"/>
-            <path d="M212 93 Q225 85 232 93" stroke="#B85C38" stroke-width="1.2" fill="none" opacity="0.35"/>
-            <path d="M214 86 Q230 75 239 86" stroke="#B85C38" stroke-width="1.2" fill="none" opacity="0.2"/>
-          </svg>
+    <div class="relative z-10 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
+      <div class="max-w-2xl glass-card p-10 md:p-16 rounded-xl" data-reveal>
+        <div class="flex items-center gap-3 mb-4">
+          <span class="font-label-caps text-label-caps text-secondary block uppercase">Agricultural Intelligence 2.0</span>
+          <span class="bg-digital-lime/20 text-primary px-3 py-1 rounded-full text-[10px] font-data-mono font-bold">PHASE 02: PROTOTYPING</span>
         </div>
-        <p style="font-size: 0.85rem; color: var(--color-text-soft); margin-top: 1.5rem; line-height: 1.5;">
-          Conceptual diagram — the final design<br>is currently under development
+        <h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-6 leading-tight">
+          The field speaks. <br/><span class="italic font-normal">Now you can listen.</span>
+        </h1>
+        <p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-lg">
+          Transform every crop type with AI-driven monitoring that translates environmental signals into actionable strategies. Precision at the speed of nature.
         </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="project.html" class="bg-primary text-on-primary px-8 py-4 rounded-full font-body-lg font-bold hover:bg-primary/90 transition-all flex items-center justify-center">
+            Explore the Technology
+            <span class="material-symbols-outlined ml-2">arrow_forward</span>
+          </a>
+          <a href="project.html#roadmap" class="border border-primary text-primary px-8 py-4 rounded-full font-body-lg font-bold hover:bg-white/40 transition-all">
+            View the Roadmap
+          </a>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- How it works -->
-<section class="how-it-works" id="how-it-works">
-  <div class="container">
-    <div class="section-label">How it works</div>
-    <h2 class="section-title">From data to action, in three steps</h2>
-    
-    <div class="how-pipeline">
-      <div class="how-pipeline-step">
-        <div class="how-pipeline-icon"><i class="fa-solid fa-seedling"></i></div>
-        <h3>Measure</h3>
-        <p>Microclimate and soil, directly in the field</p>
-      </div>
-      
-      <div class="how-pipeline-arrow"><i class="fa-solid fa-arrow-right"></i></div>
-      
-      <div class="how-pipeline-step">
-        <div class="how-pipeline-icon"><i class="fa-solid fa-chart-line"></i></div>
-        <h3>Predict</h3>
-        <p>Risk estimates for the coming hours</p>
-      </div>
-      
-      <div class="how-pipeline-arrow"><i class="fa-solid fa-arrow-right"></i></div>
-      
-      <div class="how-pipeline-step">
-        <div class="how-pipeline-icon"><i class="fa-solid fa-bell"></i></div>
-        <h3>Alert</h3>
-        <p>Clear alert on your phone, at the right time</p>
+  <!-- Key Stats -->
+  <section class="bg-deep-earth py-12 border-y border-white/5">
+    <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-0 items-center">
+        <div class="text-center md:border-r md:border-white/10 px-4" data-reveal>
+          <div class="font-headline-md text-digital-lime text-5xl mb-2 font-normal">72h</div>
+          <div class="font-label-caps text-on-primary/60 text-[10px] tracking-widest uppercase">forecast horizon</div>
+        </div>
+        <div class="text-center md:border-r md:border-white/10 px-4" data-reveal>
+          <div class="font-headline-md text-digital-lime text-5xl mb-2 font-normal">∞</div>
+          <div class="font-label-caps text-on-primary/60 text-[10px] tracking-widest uppercase">crops supported</div>
+        </div>
+        <div class="text-center px-4" data-reveal>
+          <div class="font-headline-md text-digital-lime text-5xl mb-2 font-normal">1</div>
+          <div class="font-label-caps text-on-primary/60 text-[10px] tracking-widest uppercase">app — no charts to decode</div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- FOOTER -->
+  <!-- The Problem (Bento Grid) -->
+  <section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+    <div class="text-center mb-20" data-reveal>
+      <span class="font-label-caps text-label-caps text-secondary uppercase">The Challenges</span>
+      <h2 class="font-headline-md text-headline-md text-primary mt-4">The Cost of Uncertainty</h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+
+      <div class="md:col-span-8 glass-card p-8 rounded-xl flex flex-col md:flex-row gap-8 items-center overflow-hidden" data-reveal>
+        <div class="flex-1">
+          <span class="font-label-caps text-label-caps text-tertiary mb-2 block uppercase">Inefficient Treatments</span>
+          <h3 class="font-headline-sm text-headline-sm text-primary mb-4">Blind Chemical Application</h3>
+          <p class="text-on-surface-variant">Calendar-based preventive treatments rather than real field conditions cost farmers thousands of euros in wasted resources and environmental impact.</p>
+        </div>
+        <div class="w-full md:w-64 h-48 rounded-lg overflow-hidden shrink-0">
+          <div class="w-full h-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAKP_qAGzV1KwbJ8Vq-zFWNwtZLH1HirhLltLcdjG4y2Jj1CTaoRGKO-VyiAytrECoIh73KB7qizmZO3uuzXoD2dtsabHCtckwz3MfP_P5baDw_sXlxI5EkNecNpqtN_LPiF2bIq9spieunmwdyYi3GfzReTRtwzOVAeb7dDDhFStrZEsxHDkpSoeAxzujLX8qI8Z1cquyPeWZ1wBZpcI7KKvnx2fg3E7yd9bgrjA2_snFkLyZE-9s3f3J_OuHbDTaU2UnO8n4taDsX')"></div>
+        </div>
+      </div>
+
+      <div class="md:col-span-4 bg-primary p-8 rounded-xl flex flex-col justify-between text-on-primary" data-reveal>
+        <span class="material-symbols-outlined text-digital-lime text-4xl mb-6">water_drop</span>
+        <div>
+          <h3 class="font-headline-sm text-headline-sm mb-4">Irrigation Stress</h3>
+          <p class="text-primary-fixed-dim/80">Water scarcity and over-saturation threaten crops. Without real-time soil data, yield is a gamble.</p>
+        </div>
+      </div>
+
+      <div class="md:col-span-4 glass-card p-8 rounded-xl border border-error/20" data-reveal>
+        <div class="w-12 h-12 bg-error/10 rounded-full flex items-center justify-center mb-6">
+          <span class="material-symbols-outlined text-error">coronavirus</span>
+        </div>
+        <h3 class="font-headline-sm text-headline-sm text-primary mb-4">Invisible Threats</h3>
+        <p class="text-on-surface-variant">Pathogens can decimate a harvest before symptoms are visible to the naked eye, across any variety or soil type.</p>
+      </div>
+
+      <div class="md:col-span-8 glass-card p-8 rounded-xl flex items-center overflow-hidden" data-reveal>
+        <div class="max-w-md">
+          <h3 class="font-headline-sm text-headline-sm text-primary mb-4">Climate Volatility</h3>
+          <p class="text-on-surface-variant">Modern agriculture must face unpredictable weather patterns. Passive farming is no longer a viable strategy.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- The Solution (Split Screen) -->
+  <section class="bg-primary text-on-primary py-section-gap overflow-hidden">
+    <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+        <div class="flex flex-col items-center" data-reveal>
+          <div class="relative w-full">
+            <div class="absolute -inset-20 bg-digital-lime/10 blur-[100px] rounded-full"></div>
+            <div class="relative glass-card bg-white/5 border-white/10 rounded-2xl p-4 md:p-8">
+              <img alt="QuietField agricultural monitoring station" class="w-full h-auto rounded-xl shadow-2xl object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtV7M0Feim_O8cz5E2pP5dxtswZbxV6-gEw2FFAhmOq1dqpJCS6gtPpIHHqckZPhHxvwMfDKZSPO4fLhP9CiJZ8jxyuff0QNqJFNNmm0DLWDFgVMk3sAEx2O92qzrBOIRGXF6CWim_gF2RNE5Jr5RtRwebLablRRMC-ED6P2HqZle59Yn9wiHhmYIwDkFNcjU_E4PwlEWDcl4mJZhhI7ZzSHJcWWbbq0pMVArC77rb8Y7qkTvfYHWL-5TSqKuXPpV47ibvuP0aSJiU"/>
+            </div>
+          </div>
+          <p class="mt-6 text-xs italic text-primary-fixed-dim/50 font-body-md">Conceptual diagram — final design is in development</p>
+        </div>
+
+        <div class="space-y-element-gap" data-reveal>
+          <span class="font-label-caps text-label-caps text-digital-lime uppercase">The Sentinel System</span>
+          <h2 class="font-headline-md text-headline-md leading-tight">Predictive Ecology<br/>at your fingertips</h2>
+          <div class="space-y-8">
+            <div class="flex gap-6">
+              <div class="shrink-0 w-12 h-12 bg-data-cyan/20 rounded-full flex items-center justify-center">
+                <span class="material-symbols-outlined text-data-cyan">query_stats</span>
+              </div>
+              <div>
+                <h4 class="font-headline-sm text-headline-sm mb-2">Predictive AI Models</h4>
+                <p class="text-primary-fixed-dim/70">Our algorithms predict disease outbreaks 48 hours before they manifest across every crop type.</p>
+              </div>
+            </div>
+            <div class="flex gap-6">
+              <div class="shrink-0 w-12 h-12 bg-data-cyan/20 rounded-full flex items-center justify-center">
+                <span class="material-symbols-outlined text-data-cyan">notifications_active</span>
+              </div>
+              <div>
+                <h4 class="font-headline-sm text-headline-sm mb-2">Omni-Crop Intelligence</h4>
+                <p class="text-primary-fixed-dim/70">Receive precise alerts for orchards, plantations, and open fields.</p>
+              </div>
+            </div>
+            <div class="flex gap-6">
+              <div class="shrink-0 w-12 h-12 bg-data-cyan/20 rounded-full flex items-center justify-center">
+                <span class="material-symbols-outlined text-data-cyan">eco</span>
+              </div>
+              <div>
+                <h4 class="font-headline-sm text-headline-sm mb-2">Regenerative ROI</h4>
+                <p class="text-primary-fixed-dim/70">Reduce chemical use by up to 40% while increasing crop health.</p>
+              </div>
+            </div>
+          </div>
+          <a href="project.html" class="inline-flex items-center bg-digital-lime text-primary px-10 py-4 rounded-full font-body-lg font-bold hover:scale-105 transition-transform">
+            Explore the Solution
+            <span class="material-symbols-outlined ml-2">bolt</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works (Pipeline) -->
+  <section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto overflow-hidden">
+    <div class="text-center mb-24" data-reveal>
+      <span class="font-label-caps text-label-caps text-secondary uppercase">Efficiency Pipeline</span>
+      <h2 class="font-headline-md text-headline-md text-primary mt-4">Intelligence in Three Acts</h2>
+    </div>
+    <div class="relative">
+      <div class="absolute top-1/2 left-0 w-full h-[2px] bg-outline-variant/30 -translate-y-1/2 hidden lg:block"></div>
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-16 relative z-10">
+        <div class="flex flex-col items-center text-center group" data-reveal>
+          <div class="w-32 h-32 rounded-full glass-card flex items-center justify-center mb-8 border-2 border-primary group-hover:bg-primary transition-colors duration-500">
+            <span class="material-symbols-outlined text-4xl text-primary group-hover:text-on-primary transition-colors duration-500">sensors</span>
+          </div>
+          <h3 class="font-headline-sm text-headline-sm text-primary mb-4">1. Measure</h3>
+          <p class="text-on-surface-variant max-w-xs">Our systems constantly detect vital environmental and soil parameters in real time.</p>
+        </div>
+        <div class="flex flex-col items-center text-center group" data-reveal>
+          <div class="w-32 h-32 rounded-full glass-card flex items-center justify-center mb-8 border-2 border-primary group-hover:bg-primary transition-colors duration-500">
+            <span class="material-symbols-outlined text-4xl text-primary group-hover:text-on-primary transition-colors duration-500">psychology</span>
+          </div>
+          <h3 class="font-headline-sm text-headline-sm text-primary mb-4">2. Predict</h3>
+          <p class="text-on-surface-variant max-w-xs">Artificial intelligence analyses data against advanced agronomic models to anticipate risks and needs.</p>
+        </div>
+        <div class="flex flex-col items-center text-center group" data-reveal>
+          <div class="w-32 h-32 rounded-full glass-card flex items-center justify-center mb-8 border-2 border-primary group-hover:bg-primary transition-colors duration-500">
+            <span class="material-symbols-outlined text-4xl text-primary group-hover:text-on-primary transition-colors duration-500">campaign</span>
+          </div>
+          <h3 class="font-headline-sm text-headline-sm text-primary mb-4">3. Alert</h3>
+          <p class="text-on-surface-variant max-w-xs">Receive clear, timely guidance to act only where and when it matters.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="mb-section-gap px-margin-mobile">
+    <div class="max-w-container-max mx-auto rounded-[2rem] overflow-hidden relative min-h-[500px] flex items-center justify-center text-center">
+      <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCBzHl_PlLiioc5oeC8FT017JTuTU5B2YweQ5JXOisUzJ4GvtMgWaktPF5LW4XRlT3osfojxCdnMgbFr55IKcVrYI4gkVSXZETZ5wIjca6eyjGeGcyJsaGziJ3y4pnQhQnx3E7o1V5V5Be4SbcFPa5k8XkgnGAtJSRVyAV27uOiD-wm47EHFOpzD-BxfbnGOZavrZBBSfuIABSol4IlenAIEiQQDf2Bj-yuN1D96oNS9YMD76TeA4u_9brR_5vrTLBifjLUzWlB8Xhi')"></div>
+      <div class="absolute inset-0 bg-primary/60 backdrop-blur-sm"></div>
+      <div class="relative z-10 px-6 max-w-3xl" data-reveal>
+        <h2 class="font-display-lg-mobile md:font-headline-md text-on-primary mb-4 uppercase">Ready to evolve your legacy?</h2>
+        <p class="font-headline-sm italic text-digital-lime/90 mb-8">"Precision is the language of the future."</p>
+        <p class="text-body-lg text-primary-fixed-dim mb-12">Join the network of farmers using QuietField to secure the future of agriculture.</p>
+        <div class="flex flex-wrap justify-center gap-6">
+          <a href="contacts.html" class="bg-digital-lime text-primary px-10 py-4 rounded-full font-body-lg font-bold hover:scale-105 transition-transform">
+            Request Early Access
+          </a>
+          <a href="contacts.html" class="text-on-primary border border-on-primary/30 px-10 py-4 rounded-full font-body-lg font-bold hover:bg-white/10 transition-all">
+            Talk to an Expert
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
 <div id="footer-placeholder"></div>
 
-<script src="../js/main.js" defer></script>
-
+<script src="../js/main.js"></script>
 </body>
 </html>

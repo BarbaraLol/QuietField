@@ -1,186 +1,247 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html class="scroll-smooth" lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!-- SEO metadata -->
-<meta name="description" content="QuietField — Stations de surveillance intelligente pour l'agriculture. Microclimat, sol et modèles prédictifs pour les producteurs en Italie et dans le monde.">
-<meta property="og:title" content="QuietField — Votre champ vous parle">
-<meta property="og:description" content="Stations de surveillance intelligente pour l'agriculture de précision.">
-<meta property="og:url" content="https://barbaralol.github.io/QuietField/fr/">
-<meta property="og:type" content="website">
-
-<title>QuietField — Surveillance Intelligente pour l'Agriculture</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="../css/main.css">
-
-<!-- Traffic tracking -->
-<script defer src="https://cloud.umami.is/script.js" data-website-id="00ee3724-b878-4638-851a-280723171d61"></script>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>QuietField | Intelligence Agricole Guidée par l'IA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script src="../js/tailwind.config.js"></script>
+  <link rel="stylesheet" href="../css/main.css"/>
+  <meta name="description" content="QuietField — Stations de surveillance intelligente pour l'agriculture. Microclimat, sol et modèles prédictifs pour les producteurs en Italie et dans le monde.">
+  <meta property="og:title" content="QuietField — Intelligence Agricole Guidée par l'IA">
+  <meta property="og:description" content="Stations de surveillance intelligente pour la viticulture et l'agriculture de précision.">
+  <meta property="og:url" content="https://barbaralol.github.io/QuietField/fr/index.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:locale:alternate" content="it_IT">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:locale:alternate" content="es_ES">
+  <link rel="alternate" hreflang="it" href="https://barbaralol.github.io/QuietField/it/index.html"/>
+  <link rel="alternate" hreflang="en" href="https://barbaralol.github.io/QuietField/en/index.html"/>
+  <link rel="alternate" hreflang="es" href="https://barbaralol.github.io/QuietField/es/index.html"/>
+  <link rel="alternate" hreflang="fr" href="https://barbaralol.github.io/QuietField/fr/index.html"/>
+  <link rel="alternate" hreflang="x-default" href="https://barbaralol.github.io/QuietField/it/index.html"/>
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="00ee3724-b878-4638-851a-280723171d61"></script>
 </head>
-<body>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
 
-<!-- NAV -->
 <div id="nav-placeholder"></div>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-content">
-    <div class="hero-tag">Agriculture de Précision</div>
-    <h1 style="white-space: nowrap;">Votre champ vous parle<br><em>Maintenant vous pouvez <br> l'écouter</em></h1>
-    <p><b>QuietField développe des stations de surveillance intelligente qui lisent le microclimat et le sol de votre champ, interprètent les données et vous alertent avant qu'un problème ne devienne un dommage.</b></p>
-    <a href="projet.html" class="hero-cta">Découvrez le projet</a>
-  </div>
-</section>
+<main>
 
-<!-- PROBLÈME -->
-<section class="problem" id="probleme">
-  <div class="container">
-    <div class="section-label">Le problème</div>
-    <h2 class="section-title">Les mêmes incertitudes chaque année</h2>
-    <p style="color: var(--color-text-soft); max-width: 960px; line-height: 1.75;">
-      Traiter trop tôt est un gaspillage. Traiter trop tard peut coûter une récolte. 
-      Aujourd'hui, beaucoup de ces décisions se prennent par calendrier, par habitude, ou en regardant le ciel, 
-      avec des marges d'erreur qui pèsent sur le portefeuille et sur l'environnement.
-    </p>
-    <div class="problem-grid">
-      <div class="problem-card" data-icon="">
-        <h3>Traitements à l'aveugle</h3>
-        <p>Des maladies comme le mildiou et l'oïdium sont souvent combattues « par calendrier » plutôt que sur des données réelles. Résultat ? Traitements inutiles ou tardifs, coûts plus élevés et plus d'impact environnemental.</p>
-      </div>
-      <div class="problem-card" data-icon="💧">
-        <h3>Irrigation <i>à l'intuition</i></h3>
-        <p>Sans données sur l'humidité du sol et l'évapotranspiration, on irrigue trop, trop peu, ou au mauvais moment, avec des effets directs sur la qualité du produit.</p>
-      </div>
-      <div class="problem-card" data-icon="📊">
-        <h3>Données fragmentées ou absentes</h3>
-        <p>Celui qui a une station météo se retrouve avec des chiffres à interpréter seul. Celui qui n'en a pas s'en remet à son expérience. Avec les bonnes données, les deux prennent de meilleures décisions.</p>
-      </div>
-      <div class="problem-card" data-icon="🪰">
-        <h3>Ravageurs silencieux</h3>
-        <p>Mouche de l'olive, tordeuse de la vigne, psylle du poirier : les insectes se déplacent avant que vous ne vous en aperceviez. Sans surveillance continue, on se rend compte de l'infestation quand les dégâts sont déjà faits.</p>
-      </div>
-      <div class="problem-card" data-icon="❄️">
-        <h3>Gels et variations thermiques</h3>
-        <p>Quelques degrés sous zéro pendant la floraison peuvent anéantir une récolte. Le stress thermique et les gelées tardives frappent en silence, et sans alertes en temps réel il n'y a plus de marge pour intervenir.</p>
-      </div>
+  <!-- Hero -->
+  <section class="relative h-screen flex items-center pt-20">
+    <div class="absolute inset-0 z-0">
+      <div class="w-full h-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA4NGsm7UoC7lRzIHMLF5rC9jaidYEpAf5sOUgq1nFR4AWFV_UvGCWoUaAs82sMMlf5HxJ6-uG7RBnfXdZSLuSIlU_CKl8gZkOnQ5R9X7xh101MjnC2Y5XL1XNNYuJWCQ3L6qBplEULQTZkQzqYAZUkJU7b_0bya4OOEqmHtJ1X1t5FK1eNU2_tB6oSrZlDEfYBrrV-8veL2eCFNMDfSaklqhJEvejd98iz9A_beusdCjWoXNuq85OUod6DLQEE7gyS2_qYd6x-u5ld')"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-white/40 to-transparent"></div>
     </div>
-  </div>
-</section>
-
-<!-- SOLUTION -->
-<section class="solution" id="solution">
-  <div class="container">
-    <div class="section-label">La solution</div>
-    <h2 class="section-title">Une sentinelle dans le champ<br>Elle mesure, prédit et vous dit quand agir</h2>
-    <div class="solution-grid">
-      <ul class="solution-list">
-        <li>
-          <strong>Capteurs de microclimat et de sol</strong>
-          Température, humidité de l'air et du sol, humidité foliaire, pluie, vent, rayonnement et bien plus encore. Le tout dans une seule station, alimentée par un panneau solaire.
-        </li>
-        <li>
-          <strong>Modèles prédictifs intégrés</strong>
-          Les données sont analysées par des modèles agronomiques et de machine learning qui estiment le risque phytosanitaire, le stress hydrique et le stade phénologique, non seulement aujourd'hui, mais dans les 48 à 72 heures à venir.
-        </li>
-        <li>
-          <strong>Alertes exploitables sur votre smartphone</strong>
-          Pas de graphiques à interpréter, juste des notifications claires. <b><i>Vous décidez</i></b>, avec les bonnes informations.
-        </li>
-        <li>
-          <strong>Conçu pour grandir</strong>
-          Né pour le vignoble, conçu pour s'étendre : l'architecture modulaire de QuietField s'adapte à toute culture.
-        </li>
-      </ul>
-      <div class="solution-visual">
-        <div class="station-diagram">
-          <svg viewBox="0 0 300 380" xmlns="http://www.w3.org/2000/svg">
-            <!-- pole -->
-            <rect x="145" y="80" width="10" height="250" rx="3" fill="#8B6F4E"/>
-            <!-- solar panel -->
-            <rect x="100" y="55" width="100" height="40" rx="4" fill="#5C6B4E" stroke="#3C4A33" stroke-width="1.5"/>
-            <line x1="130" y1="55" x2="130" y2="95" stroke="#3C4A33" stroke-width="0.5" opacity="0.5"/>
-            <line x1="170" y1="55" x2="170" y2="95" stroke="#3C4A33" stroke-width="0.5" opacity="0.5"/>
-            <line x1="100" y1="75" x2="200" y2="75" stroke="#3C4A33" stroke-width="0.5" opacity="0.5"/>
-            <!-- main box -->
-            <rect x="115" y="110" width="70" height="55" rx="6" fill="#E8DFD0" stroke="#B8A890" stroke-width="1.5"/>
-            <circle cx="135" cy="130" r="4" fill="#6B7F5E"/>
-            <circle cx="150" cy="130" r="4" fill="#B85C38"/>
-            <circle cx="165" cy="130" r="4" fill="#6B7F5E" opacity="0.5"/>
-            <rect x="128" y="142" width="44" height="14" rx="2" fill="#F4F0E8" stroke="#D4CBBC"/>
-            <!-- antenna -->
-            <line x1="185" y1="110" x2="195" y2="75" stroke="#8B6F4E" stroke-width="2"/>
-            <circle cx="195" cy="72" r="3" fill="#B85C38"/>
-            <!-- temp/hum sensor -->
-            <rect x="68" y="140" width="36" height="24" rx="4" fill="#fff" stroke="#B8A890" stroke-width="1"/>
-            <line x1="104" y1="152" x2="115" y2="145" stroke="#B8A890" stroke-width="1" stroke-dasharray="3,2"/>
-            <text x="86" y="156" text-anchor="middle" font-size="7" fill="#5C5347" font-family="sans-serif">T/H</text>
-            <!-- leaf wetness -->
-            <rect x="196" y="170" width="40" height="20" rx="4" fill="#fff" stroke="#B8A890" stroke-width="1"/>
-            <line x1="196" y1="180" x2="185" y2="160" stroke="#B8A890" stroke-width="1" stroke-dasharray="3,2"/>
-            <text x="216" y="184" text-anchor="middle" font-size="6.5" fill="#5C5347" font-family="sans-serif">Feuille</text>
-            <!-- rain gauge -->
-            <path d="M128 195 L132 210 L142 210 L146 195 Z" fill="#fff" stroke="#B8A890" stroke-width="1"/>
-            <line x1="137" y1="210" x2="137" y2="225" stroke="#B8A890" stroke-width="1" stroke-dasharray="3,2"/>
-            <text x="137" y="238" text-anchor="middle" font-size="7" fill="#5C5347" font-family="sans-serif">Pluie</text>
-            <!-- soil sensor -->
-            <line x1="150" y1="330" x2="150" y2="310" stroke="#8B6F4E" stroke-width="2"/>
-            <ellipse cx="150" cy="340" rx="22" ry="8" fill="#C5B89E" stroke="#A69880" stroke-width="1"/>
-            <text x="150" y="360" text-anchor="middle" font-size="7" fill="#5C5347" font-family="sans-serif">Sol</text>
-            <!-- ground line -->
-            <line x1="60" y1="330" x2="240" y2="330" stroke="#A69880" stroke-width="1" stroke-dasharray="5,3"/>
-            <!-- wifi waves -->
-            <path d="M210 100 Q220 95 225 100" stroke="#B85C38" stroke-width="1.2" fill="none" opacity="0.5"/>
-            <path d="M212 93 Q225 85 232 93" stroke="#B85C38" stroke-width="1.2" fill="none" opacity="0.35"/>
-            <path d="M214 86 Q230 75 239 86" stroke="#B85C38" stroke-width="1.2" fill="none" opacity="0.2"/>
-          </svg>
+    <div class="relative z-10 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
+      <div class="max-w-2xl glass-card p-10 md:p-16 rounded-xl" data-reveal>
+        <div class="flex items-center gap-3 mb-4">
+          <span class="font-label-caps text-label-caps text-secondary block uppercase">Intelligence Agricole 2.0</span>
+          <span class="bg-digital-lime/20 text-primary px-3 py-1 rounded-full text-[10px] font-data-mono font-bold">PHASE 02 : PROTOTYPAGE</span>
         </div>
-        <p style="font-size: 0.85rem; color: var(--color-text-soft); margin-top: 1.5rem; line-height: 1.5;">
-          Schéma conceptuel — le design définitif<br>est actuellement en développement
+        <h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-6 leading-tight">
+          Le champ parle. <br/><span class="italic font-normal">Maintenant, vous pouvez l'écouter.</span>
+        </h1>
+        <p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-lg">
+          Transformez chaque type de culture grâce au monitoring guidé par l'IA qui traduit les signaux environnementaux en stratégies actionnables. La précision à la vitesse de la nature.
         </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="projet.html" class="bg-primary text-on-primary px-8 py-4 rounded-full font-body-lg font-bold hover:bg-primary/90 transition-all flex items-center justify-center">
+            Explorer la Technologie
+            <span class="material-symbols-outlined ml-2">arrow_forward</span>
+          </a>
+          <a href="projet.html#roadmap" class="border border-primary text-primary px-8 py-4 rounded-full font-body-lg font-bold hover:bg-white/40 transition-all">
+            Voir la Feuille de Route
+          </a>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Comment ça marche -->
-<section class="how-it-works" id="how-it-works">
-  <div class="container">
-    <div class="section-label">Comment ça marche</div>
-    <h2 class="section-title">De la donnée à l'action, en trois étapes</h2>
-    
-    <div class="how-pipeline">
-      <div class="how-pipeline-step">
-        <div class="how-pipeline-icon"><i class="fa-solid fa-seedling"></i></div>
-        <h3>Mesure</h3>
-        <p>Microclimat et sol, directement dans le champ</p>
-      </div>
-      
-      <div class="how-pipeline-arrow"><i class="fa-solid fa-arrow-right"></i></div>
-      
-      <div class="how-pipeline-step">
-        <div class="how-pipeline-icon"><i class="fa-solid fa-chart-line"></i></div>
-        <h3>Prédit</h3>
-        <p>Estimations de risque pour les prochaines heures</p>
-      </div>
-      
-      <div class="how-pipeline-arrow"><i class="fa-solid fa-arrow-right"></i></div>
-      
-      <div class="how-pipeline-step">
-        <div class="how-pipeline-icon"><i class="fa-solid fa-bell"></i></div>
-        <h3>Alerte</h3>
-        <p>Alerte claire sur votre téléphone, au bon moment</p>
+  <!-- Key Stats -->
+  <section class="bg-deep-earth py-12 border-y border-white/5">
+    <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-0 items-center">
+        <div class="text-center md:border-r md:border-white/10 px-4" data-reveal>
+          <div class="font-headline-md text-digital-lime text-5xl mb-2 font-normal">72h</div>
+          <div class="font-label-caps text-on-primary/60 text-[10px] tracking-widest uppercase">horizon de prévision</div>
+        </div>
+        <div class="text-center md:border-r md:border-white/10 px-4" data-reveal>
+          <div class="font-headline-md text-digital-lime text-5xl mb-2 font-normal">∞</div>
+          <div class="font-label-caps text-on-primary/60 text-[10px] tracking-widest uppercase">cultures prises en charge</div>
+        </div>
+        <div class="text-center px-4" data-reveal>
+          <div class="font-headline-md text-digital-lime text-5xl mb-2 font-normal">1</div>
+          <div class="font-label-caps text-on-primary/60 text-[10px] tracking-widest uppercase">app — aucun graphique à déchiffrer</div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- FOOTER -->
+  <!-- Le Problème (Bento Grid) -->
+  <section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+    <div class="text-center mb-20" data-reveal>
+      <span class="font-label-caps text-label-caps text-secondary uppercase">Les Défis</span>
+      <h2 class="font-headline-md text-headline-md text-primary mt-4">Le coût de l'incertitude</h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+
+      <div class="md:col-span-8 glass-card p-8 rounded-xl flex flex-col md:flex-row gap-8 items-center overflow-hidden" data-reveal>
+        <div class="flex-1">
+          <span class="font-label-caps text-label-caps text-tertiary mb-2 block uppercase">Traitements Inefficaces</span>
+          <h3 class="font-headline-sm text-headline-sm text-primary mb-4">Application Chimique à l'Aveugle</h3>
+          <p class="text-on-surface-variant">Les traitements préventifs basés sur des calendriers plutôt que sur les conditions réelles du champ coûtent aux agriculteurs des milliers d'euros en ressources gaspillées et en impact environnemental.</p>
+        </div>
+        <div class="w-full md:w-64 h-48 rounded-lg overflow-hidden shrink-0">
+          <div class="w-full h-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAKP_qAGzV1KwbJ8Vq-zFWNwtZLH1HirhLltLcdjG4y2Jj1CTaoRGKO-VyiAytrECoIh73KB7qizmZO3uuzXoD2dtsabHCtckwz3MfP_P5baDw_sXlxI5EkNecNpqtN_LPiF2bIq9spieunmwdyYi3GfzReTRtwzOVAeb7dDDhFStrZEsxHDkpSoeAxzujLX8qI8Z1cquyPeWZ1wBZpcI7KKvnx2fg3E7yd9bgrjA2_snFkLyZE-9s3f3J_OuHbDTaU2UnO8n4taDsX')"></div>
+        </div>
+      </div>
+
+      <div class="md:col-span-4 bg-primary p-8 rounded-xl flex flex-col justify-between text-on-primary" data-reveal>
+        <span class="material-symbols-outlined text-digital-lime text-4xl mb-6">water_drop</span>
+        <div>
+          <h3 class="font-headline-sm text-headline-sm mb-4">Stress Hydrique</h3>
+          <p class="text-primary-fixed-dim/80">La pénurie d'eau et la sursaturation menacent les cultures. Sans données sur le sol en temps réel, le rendement est une loterie.</p>
+        </div>
+      </div>
+
+      <div class="md:col-span-4 glass-card p-8 rounded-xl border border-error/20" data-reveal>
+        <div class="w-12 h-12 bg-error/10 rounded-full flex items-center justify-center mb-6">
+          <span class="material-symbols-outlined text-error">coronavirus</span>
+        </div>
+        <h3 class="font-headline-sm text-headline-sm text-primary mb-4">Menaces Invisibles</h3>
+        <p class="text-on-surface-variant">Les agents pathogènes peuvent décimer une récolte avant que les symptômes soient visibles à l'œil nu, sur n'importe quelle variété ou type de sol.</p>
+      </div>
+
+      <div class="md:col-span-8 glass-card p-8 rounded-xl flex items-center overflow-hidden" data-reveal>
+        <div class="max-w-md">
+          <h3 class="font-headline-sm text-headline-sm text-primary mb-4">Volatilité Climatique</h3>
+          <p class="text-on-surface-variant">L'agriculture moderne doit faire face à des modèles météorologiques imprévisibles. L'agriculture passive n'est plus une stratégie viable.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- La Solution (Split Screen) -->
+  <section class="bg-primary text-on-primary py-section-gap overflow-hidden">
+    <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+        <div class="flex flex-col items-center" data-reveal>
+          <div class="relative w-full">
+            <div class="absolute -inset-20 bg-digital-lime/10 blur-[100px] rounded-full"></div>
+            <div class="relative glass-card bg-white/5 border-white/10 rounded-2xl p-4 md:p-8">
+              <img alt="Station de surveillance agricole QuietField" class="w-full h-auto rounded-xl shadow-2xl object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtV7M0Feim_O8cz5E2pP5dxtswZbxV6-gEw2FFAhmOq1dqpJCS6gtPpIHHqckZPhHxvwMfDKZSPO4fLhP9CiJZ8jxyuff0QNqJFNNmm0DLWDFgVMk3sAEx2O92qzrBOIRGXF6CWim_gF2RNE5Jr5RtRwebLablRRMC-ED6P2HqZle59Yn9wiHhmYIwDkFNcjU_E4PwlEWDcl4mJZhhI7ZzSHJcWWbbq0pMVArC77rb8Y7qkTvfYHWL-5TSqKuXPpV47ibvuP0aSJiU"/>
+            </div>
+          </div>
+          <p class="mt-6 text-xs italic text-primary-fixed-dim/50 font-body-md">Schéma conceptuel — le design définitif est en cours de développement</p>
+        </div>
+
+        <div class="space-y-element-gap" data-reveal>
+          <span class="font-label-caps text-label-caps text-digital-lime uppercase">Le Système Sentinel</span>
+          <h2 class="font-headline-md text-headline-md leading-tight">Écologie Prédictive<br/>à portée de main</h2>
+          <div class="space-y-8">
+            <div class="flex gap-6">
+              <div class="shrink-0 w-12 h-12 bg-data-cyan/20 rounded-full flex items-center justify-center">
+                <span class="material-symbols-outlined text-data-cyan">query_stats</span>
+              </div>
+              <div>
+                <h4 class="font-headline-sm text-headline-sm mb-2">Modèles d'IA Prédictifs</h4>
+                <p class="text-primary-fixed-dim/70">Nos algorithmes prédisent les foyers de maladies 48 heures avant qu'ils ne se manifestent sur chaque type de culture.</p>
+              </div>
+            </div>
+            <div class="flex gap-6">
+              <div class="shrink-0 w-12 h-12 bg-data-cyan/20 rounded-full flex items-center justify-center">
+                <span class="material-symbols-outlined text-data-cyan">notifications_active</span>
+              </div>
+              <div>
+                <h4 class="font-headline-sm text-headline-sm mb-2">Intelligence Omni-Culture</h4>
+                <p class="text-primary-fixed-dim/70">Recevez des alertes précises pour les vergers, les plantations et les champs ouverts.</p>
+              </div>
+            </div>
+            <div class="flex gap-6">
+              <div class="shrink-0 w-12 h-12 bg-data-cyan/20 rounded-full flex items-center justify-center">
+                <span class="material-symbols-outlined text-data-cyan">eco</span>
+              </div>
+              <div>
+                <h4 class="font-headline-sm text-headline-sm mb-2">ROI Régénératif</h4>
+                <p class="text-primary-fixed-dim/70">Réduisez l'utilisation de produits chimiques jusqu'à 40 % tout en améliorant la santé des cultures.</p>
+              </div>
+            </div>
+          </div>
+          <a href="projet.html" class="inline-flex items-center bg-digital-lime text-primary px-10 py-4 rounded-full font-body-lg font-bold hover:scale-105 transition-transform">
+            Explorer la Solution
+            <span class="material-symbols-outlined ml-2">bolt</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Comment ça fonctionne (Pipeline) -->
+  <section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto overflow-hidden">
+    <div class="text-center mb-24" data-reveal>
+      <span class="font-label-caps text-label-caps text-secondary uppercase">Pipeline d'Efficacité</span>
+      <h2 class="font-headline-md text-headline-md text-primary mt-4">L'Intelligence en Trois Actes</h2>
+    </div>
+    <div class="relative">
+      <div class="absolute top-1/2 left-0 w-full h-[2px] bg-outline-variant/30 -translate-y-1/2 hidden lg:block"></div>
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-16 relative z-10">
+        <div class="flex flex-col items-center text-center group" data-reveal>
+          <div class="w-32 h-32 rounded-full glass-card flex items-center justify-center mb-8 border-2 border-primary group-hover:bg-primary transition-colors duration-500">
+            <span class="material-symbols-outlined text-4xl text-primary group-hover:text-on-primary transition-colors duration-500">sensors</span>
+          </div>
+          <h3 class="font-headline-sm text-headline-sm text-primary mb-4">1. Mesure</h3>
+          <p class="text-on-surface-variant max-w-xs">Nos systèmes détectent en permanence les paramètres vitaux de l'environnement et du sol en temps réel.</p>
+        </div>
+        <div class="flex flex-col items-center text-center group" data-reveal>
+          <div class="w-32 h-32 rounded-full glass-card flex items-center justify-center mb-8 border-2 border-primary group-hover:bg-primary transition-colors duration-500">
+            <span class="material-symbols-outlined text-4xl text-primary group-hover:text-on-primary transition-colors duration-500">psychology</span>
+          </div>
+          <h3 class="font-headline-sm text-headline-sm text-primary mb-4">2. Prédit</h3>
+          <p class="text-on-surface-variant max-w-xs">L'intelligence artificielle analyse les données en les comparant à des modèles agronomiques avancés pour anticiper les risques et les besoins.</p>
+        </div>
+        <div class="flex flex-col items-center text-center group" data-reveal>
+          <div class="w-32 h-32 rounded-full glass-card flex items-center justify-center mb-8 border-2 border-primary group-hover:bg-primary transition-colors duration-500">
+            <span class="material-symbols-outlined text-4xl text-primary group-hover:text-on-primary transition-colors duration-500">campaign</span>
+          </div>
+          <h3 class="font-headline-sm text-headline-sm text-primary mb-4">3. Alerte</h3>
+          <p class="text-on-surface-variant max-w-xs">Recevez des indications claires et opportunes pour intervenir uniquement là où et quand c'est nécessaire.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA final -->
+  <section class="mb-section-gap px-margin-mobile">
+    <div class="max-w-container-max mx-auto rounded-[2rem] overflow-hidden relative min-h-[500px] flex items-center justify-center text-center">
+      <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCBzHl_PlLiioc5oeC8FT017JTuTU5B2YweQ5JXOisUzJ4GvtMgWaktPF5LW4XRlT3osfojxCdnMgbFr55IKcVrYI4gkVSXZETZ5wIjca6eyjGeGcyJsaGziJ3y4pnQhQnx3E7o1V5V5Be4SbcFPa5k8XkgnGAtJSRVyAV27uOiD-wm47EHFOpzD-BxfbnGOZavrZBBSfuIABSol4IlenAIEiQQDf2Bj-yuN1D96oNS9YMD76TeA4u_9brR_5vrTLBifjLUzWlB8Xhi')"></div>
+      <div class="absolute inset-0 bg-primary/60 backdrop-blur-sm"></div>
+      <div class="relative z-10 px-6 max-w-3xl" data-reveal>
+        <h2 class="font-display-lg-mobile md:font-headline-md text-on-primary mb-4 uppercase">Prêt à faire évoluer votre héritage ?</h2>
+        <p class="font-headline-sm italic text-digital-lime/90 mb-8">"La précision est le langage du futur."</p>
+        <p class="text-body-lg text-primary-fixed-dim mb-12">Rejoignez le réseau d'agriculteurs qui utilisent QuietField pour assurer l'avenir de l'agriculture.</p>
+        <div class="flex flex-wrap justify-center gap-6">
+          <a href="contact.html" class="bg-digital-lime text-primary px-10 py-4 rounded-full font-body-lg font-bold hover:scale-105 transition-transform">
+            Demander un Accès Anticipé
+          </a>
+          <a href="contact.html" class="text-on-primary border border-on-primary/30 px-10 py-4 rounded-full font-body-lg font-bold hover:bg-white/10 transition-all">
+            Parler à un Expert
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
 <div id="footer-placeholder"></div>
 
-<script src="../js/main.js" defer></script>
-
+<script src="../js/main.js"></script>
 </body>
 </html>
