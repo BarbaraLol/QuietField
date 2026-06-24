@@ -8,7 +8,8 @@
     const lang = (navigator.language || 'it').slice(0, 2);
     const map  = { en: 'en', es: 'es', fr: 'fr' };
     const dir  = map[lang] || 'it';
-    window.location.replace('/QuietField/' + dir + '/404.html');
+    const base = location.hostname === 'barbaralol.github.io' ? '/QuietField' : '';
+    window.location.replace(base + '/' + dir + '/404.html');
   </script>
 </head>
 <body></body>
