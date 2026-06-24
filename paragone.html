@@ -1,0 +1,488 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="it"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>QuietField | Intelligenza Agricola Guidata dall'IA</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind Config Verbatim -->
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "surface": "#faf9f4",
+                "on-error": "#ffffff",
+                "surface-container-low": "#f5f4ef",
+                "tertiary-container": "#483216",
+                "data-cyan": "#00E5FF",
+                "surface-container-highest": "#e3e3de",
+                "on-error-container": "#93000a",
+                "tertiary": "#301d04",
+                "surface-bright": "#faf9f4",
+                "inverse-surface": "#30312e",
+                "surface-dim": "#dbdad5",
+                "background": "#faf9f4",
+                "glass-stroke": "rgba(255, 255, 255, 0.4)",
+                "outline-variant": "#c5c8be",
+                "on-secondary": "#ffffff",
+                "on-secondary-fixed": "#001f24",
+                "primary": "#182412",
+                "on-primary-fixed-variant": "#3d4b35",
+                "primary-fixed-dim": "#bccbb0",
+                "on-primary": "#ffffff",
+                "on-secondary-container": "#00616d",
+                "secondary-fixed": "#9cf0ff",
+                "secondary-container": "#00e3fd",
+                "deep-earth": "#1F1A17",
+                "on-surface": "#1b1c19",
+                "surface-container-high": "#e9e8e3",
+                "on-tertiary-fixed-variant": "#5a4225",
+                "on-primary-fixed": "#131f0d",
+                "surface-container-lowest": "#ffffff",
+                "on-tertiary-fixed": "#2a1801",
+                "on-surface-variant": "#444841",
+                "digital-lime": "#D7FF62",
+                "surface-variant": "#e3e3de",
+                "on-primary-container": "#95a48a",
+                "tertiary-fixed": "#ffddb7",
+                "surface-tint": "#54624c",
+                "on-tertiary-container": "#b99a76",
+                "on-background": "#1b1c19",
+                "error": "#ba1a1a",
+                "secondary-fixed-dim": "#00daf3",
+                "on-tertiary": "#ffffff",
+                "tertiary-fixed-dim": "#e3c19a",
+                "secondary": "#006875",
+                "error-container": "#ffdad6",
+                "primary-fixed": "#d8e8cb",
+                "inverse-on-surface": "#f2f1ec",
+                "inverse-primary": "#bccbb0",
+                "primary-container": "#2d3a26",
+                "surface-container": "#efeee9",
+                "on-secondary-fixed-variant": "#004f58",
+                "outline": "#757870"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.5rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+        },
+        "spacing": {
+                "margin-desktop": "64px",
+                "element-gap": "32px",
+                "container-max": "1280px",
+                "section-gap": "160px",
+                "margin-mobile": "20px",
+                "gutter": "24px"
+        },
+        "fontFamily": {
+                "display-lg-mobile": [
+                        "Newsreader"
+                ],
+                "body-lg": [
+                        "Hanken Grotesk"
+                ],
+                "label-caps": [
+                        "JetBrains Mono"
+                ],
+                "headline-md": [
+                        "Newsreader"
+                ],
+                "data-mono": [
+                        "JetBrains Mono"
+                ],
+                "headline-sm": [
+                        "Newsreader"
+                ],
+                "display-lg": [
+                        "Newsreader"
+                ],
+                "body-md": [
+                        "Hanken Grotesk"
+                ]
+        },
+        "fontSize": {
+                "display-lg-mobile": [
+                        "44px",
+                        {
+                                "lineHeight": "48px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "600"
+                        }
+                ],
+                "body-lg": [
+                        "20px",
+                        {
+                                "lineHeight": "32px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "label-caps": [
+                        "12px",
+                        {
+                                "lineHeight": "16px",
+                                "letterSpacing": "0.1em",
+                                "fontWeight": "600"
+                        }
+                ],
+                "headline-md": [
+                        "40px",
+                        {
+                                "lineHeight": "48px",
+                                "fontWeight": "500"
+                        }
+                ],
+                "data-mono": [
+                        "14px",
+                        {
+                                "lineHeight": "20px",
+                                "fontWeight": "500"
+                        }
+                ],
+                "headline-sm": [
+                        "24px",
+                        {
+                                "lineHeight": "32px",
+                                "fontWeight": "500"
+                        }
+                ],
+                "display-lg": [
+                        "72px",
+                        {
+                                "lineHeight": "80px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "600"
+                        }
+                ],
+                "body-md": [
+                        "16px",
+                        {
+                                "lineHeight": "24px",
+                                "fontWeight": "400"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            box-shadow: inset 1px 1px 0px rgba(255, 255, 255, 0.4);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .text-glow-cyan {
+            text-shadow: 0 0 15px rgba(0, 229, 255, 0.4);
+        }
+        .lang-dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            min-width: 140px;
+            z-index: 60;
+        }
+        .lang-dropdown:hover .lang-dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full z-50 bg-white/60 backdrop-blur-xl border-b border-glass-stroke shadow-sm">
+<nav class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<a class="flex items-center" href="#">
+<img alt="QuietField Logo" class="h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxHJpKcGnufDYZ6SmMUvHduN_S8Lti38pAycnTimNO9w6vSJI_N5mF_QzBSuRaAvC_7TbxsFEuYlvt6_hEuA0tF3tM0VHOIg23I4YRfqQJoVqBePkGy_jzjYh-AoKlkflCYmMUc-DfZ96sdI0UvM7-2ztxRAinIbxsHJnoGQr8ARY9nG2YHDpfKF8BzzX-aJ2EnaxYCviu9wRvls4Dhdvmw25M1GPCNynPrGGfSYjaLdTynIQ0fNWI3qyDkdCWq603t8pSGhNkkjzk">
+</a>
+<div class="hidden md:flex items-center space-x-element-gap">
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-body-md" href="#">Home</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="#">Il Progetto</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="#">Chi Siamo</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="#">Contatti</a>
+</div>
+<div class="flex items-center space-x-6">
+<!-- Language Selector Dropdown -->
+<div class="relative lang-dropdown">
+<button class="flex items-center space-x-1 font-data-mono text-data-mono text-primary hover:text-secondary transition-colors uppercase py-2">
+<span class="">IT</span>
+<span class="material-symbols-outlined text-sm">expand_more</span>
+</button>
+<div class="lang-dropdown-content pt-2">
+<div class="glass-card rounded-lg overflow-hidden py-2 shadow-lg">
+<a class="block px-4 py-2 text-data-mono text-xs text-secondary bg-secondary/5 font-bold" href="#">ITALIANO (IT)</a>
+<a class="block px-4 py-2 text-data-mono text-xs text-primary hover:bg-secondary/10 transition-colors" href="#">ENGLISH (EN)</a>
+<a class="block px-4 py-2 text-data-mono text-xs text-primary hover:bg-secondary/10 transition-colors" href="#">FRANÇAIS (FR)</a>
+<a class="block px-4 py-2 text-data-mono text-xs text-primary hover:bg-secondary/10 transition-colors" href="#">ESPAÑOL (ES)</a>
+</div>
+</div>
+</div>
+<button class="hidden md:block bg-primary text-on-primary px-6 py-2 rounded-full font-body-md font-bold hover:scale-95 transition-transform">
+                Richiedi Demo
+            </button>
+</div>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative h-screen flex items-center pt-20">
+<div class="absolute inset-0 z-0 transition-all duration-1000 opacity-100 translate-y-0">
+<div class="w-full h-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB9Y0S9y6-v8Z8pMv9fX2X_H7n5Q0uM2eUv7w8r1Y9o3z8x7v6u5t4r3e2w1q0p9o8n7m6l5k4j3h2g1f0e9d8c7b6a5')"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-white/40 to-transparent"></div>
+</div>
+<div class="relative z-10 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full transition-all duration-1000 opacity-100 translate-y-0">
+<div class="max-w-2xl glass-card p-10 md:p-16 rounded-xl">
+<div class="flex items-center gap-3 mb-4">
+<span class="font-label-caps text-label-caps text-secondary block uppercase">Intelligenza Agricola 2.0</span>
+<span class="bg-digital-lime/20 text-primary px-3 py-1 rounded-full text-[10px] font-data-mono font-bold">FASE 02: PROTOTIPAZIONE</span>
+</div>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-6 leading-tight">
+                Il campo parla. <br><span class="italic font-normal">Ora puoi ascoltarlo.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-lg">
+                Trasforma ogni tipo di coltura con il monitoraggio guidato dall'IA che traduce i segnali ambientali in strategie di raccolta azionabili. La precisione alla velocità della natura.
+            </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-full font-body-lg font-bold hover:bg-primary/90 transition-all flex items-center justify-center">
+                    Esplora la Tecnologia
+                    <span class="material-symbols-outlined ml-2">arrow_forward</span>
+</button>
+<button class="border border-primary text-primary px-8 py-4 rounded-full font-body-lg font-bold hover:bg-white/40 transition-all">
+                    Guarda la Roadmap
+                </button>
+</div>
+</div>
+</div>
+</section>
+<!-- The Problem Section (Bento Grid) -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="text-center mb-20 transition-all duration-1000 opacity-100 translate-y-0">
+<span class="font-label-caps text-label-caps text-secondary uppercase">Le Sfide</span>
+<h2 class="font-headline-md text-headline-md text-primary mt-4">Il costo dell'incertezza</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter transition-all duration-1000 opacity-100 translate-y-0">
+<!-- Treatment Card -->
+<div class="md:col-span-8 glass-card p-8 rounded-xl flex flex-col md:flex-row gap-8 items-center overflow-hidden">
+<div class="flex-1">
+<span class="font-label-caps text-label-caps text-tertiary mb-2 block uppercase">Trattamenti Inefficienti</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-4">Applicazione Chimica alla Cieca</h3>
+<p class="text-on-surface-variant">I trattamenti preventivi basati sui calendari piuttosto che sulle condizioni reali del campo costano ai coltivatori migliaia di euro in risorse sprecate e impatto ambientale.</p>
+</div>
+<div class="w-full md:w-64 h-48 rounded-lg overflow-hidden shrink-0">
+<div class="w-full h-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAKP_qAGzV1KwbJ8Vq-zFWNwtZLH1HirhLltLcdjG4y2Jj1CTaoRGKO-VyiAytrECoIh73KB7qizmZO3uuzXoD2dtsabHCtckwz3MfP_P5baDw_sXlxI5EkNecNpqtN_LPiF2bIq9spieunmwdyYi3GfzReTRtwzOVAeb7dDDhFStrZEsxHDkpSoeAxzujLX8qI8Z1cquyPeWZ1wBZpcI7KKvnx2fg3E7yd9bgrjA2_snFkLyZE-9s3f3J_OuHbDTaU2UnO8n4taDsX')"></div>
+</div>
+</div>
+<!-- Irrigation Card -->
+<div class="md:col-span-4 bg-primary p-8 rounded-xl flex flex-col justify-between text-on-primary">
+<span class="material-symbols-outlined text-digital-lime text-4xl mb-6">water_drop</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm mb-4">Stress da Irrigazione</h3>
+<p class="text-primary-fixed-dim/80">La scarsità d'acqua e la sovrasaturazione minacciano entrambe la longevità delle colture. Senza dati sul suolo in tempo reale, la resa è una scommessa.</p>
+</div>
+</div>
+<!-- Pest/Disease Card -->
+<div class="md:col-span-4 glass-card p-8 rounded-xl border border-error/20">
+<div class="w-12 h-12 bg-error/10 rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-error">coronavirus</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-4">Minacce Invisibili</h3>
+<p class="text-on-surface-variant">I patogeni possono decimare un raccolto prima che i sintomi siano visibili a occhio nudo, su qualsiasi varietà o tipo di terreno.</p>
+</div>
+<!-- Climate Change Card -->
+<div class="md:col-span-8 glass-card p-8 rounded-xl flex items-center justify-between overflow-hidden relative">
+<div class="max-w-md relative z-10">
+<h3 class="font-headline-sm text-headline-sm text-primary mb-4">Volatilità Climatica</h3>
+<p class="text-on-surface-variant">L'agricoltura moderna in tutti i settori deve affrontare modelli meteorologici imprevedibili. L'agricoltura passiva non è più una strategia commerciale valida.</p>
+</div>
+<div class="absolute right-0 top-0 h-full w-1/3 opacity-20 md:opacity-100"></div>
+</div>
+</div>
+</section>
+<!-- The Solution (Split Screen) -->
+<section class="bg-primary text-on-primary py-section-gap overflow-hidden">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto transition-all duration-1000 opacity-100 translate-y-0">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<!-- Left: Hardware Display -->
+<div class="relative">
+<div class="absolute -inset-20 bg-digital-lime/10 blur-[100px] rounded-full"></div>
+<div class="relative glass-card bg-white/5 border-white/10 rounded-2xl p-4 md:p-12"><img alt="Agricultural Monitoring Station" class="w-full h-auto rounded-xl shadow-2xl object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAN00lYNizBxli2PSxDqmt1sa6hPdo0vAAjU1pFfkMa2SCXvl82ViRdWSw-p8jLEzZ7pl2LlL0Uu_iwjy84mOx0C6FuZWU7Xu2S80e5iAhGz0X9uCfINfkXHvqhONN4fBU9upmlgDn8n3FBHOOwH4F1PTUqGkK7yq7FY00gupv5mDDcyXJxOYIoIs8TQ7Si6dDfVzyJND8mfM7jWu0Ph-Pbl_UcC_FLJ-2lSB6GowD30vACeaOHuOwgURlz2wdQOYNMdRWyfkWDNYst"></div>
+</div>
+<!-- Right: Software/Benefits -->
+<div class="space-y-element-gap">
+<span class="font-label-caps text-label-caps text-digital-lime uppercase">Il Sistema Sentinel</span>
+<h2 class="font-headline-md text-headline-md leading-tight">Ecologia Predittiva <br>a portata di mano</h2>
+<div class="space-y-8">
+<div class="flex gap-6">
+<div class="shrink-0 w-12 h-12 bg-data-cyan/20 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-data-cyan">query_stats</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm mb-2">Modelli IA Predittivi</h4>
+<p class="text-primary-fixed-dim/70">I nostri algoritmi elaborano miliardi di punti dati per prevedere i focolai di malattie 48 ore prima che si manifestino in ogni tipo di coltura.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="shrink-0 w-12 h-12 bg-data-cyan/20 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-data-cyan">notifications_active</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm mb-2">Intelligenza Omni-Coltura</h4>
+<p class="text-primary-fixed-dim/70">Ricevi avvisi precisi sulle carenze nutrizionali o sulle esigenze di irrigazione per frutteti, piantagioni e campi aperti.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="shrink-0 w-12 h-12 bg-data-cyan/20 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-data-cyan">eco</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm mb-2">ROI Rigenerativo</h4>
+<p class="text-primary-fixed-dim/70">Riduci l'uso di sostanze chimiche fino al 40% aumentando al contempo la salute generale delle colture e il valore del raccolto in ogni settore.</p>
+</div>
+</div>
+</div>
+<button class="bg-digital-lime text-primary px-10 py-4 rounded-full font-body-lg font-bold hover:scale-105 transition-transform flex items-center">
+                    Esplora la Soluzione
+                    <span class="material-symbols-outlined ml-2">bolt</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- How It Works (Pipeline) -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto overflow-hidden">
+<div class="text-center mb-24 transition-all duration-1000 opacity-100 translate-y-0">
+<span class="font-label-caps text-label-caps text-secondary uppercase">Pipeline di Efficienza</span>
+<h2 class="font-headline-md text-headline-md text-primary mt-4">Intelligenza in Tre Atti</h2>
+</div>
+<div class="relative transition-all duration-1000 opacity-100 translate-y-0">
+<!-- Connection Line -->
+<div class="absolute top-1/2 left-0 w-full h-[2px] bg-outline-variant/30 -translate-y-1/2 hidden lg:block"></div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-16 relative z-10">
+<!-- Step 1 -->
+<div class="flex flex-col items-center text-center group">
+<div class="w-32 h-32 rounded-full glass-card flex items-center justify-center mb-8 border-2 border-primary group-hover:bg-primary transition-colors duration-500">
+<span class="material-symbols-outlined text-4xl text-primary group-hover:text-on-primary transition-colors duration-500">sensors</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-4">1. Misura</h3>
+<p class="text-on-surface-variant max-w-xs">I nostri sistemi rilevano costantemente i parametri vitali dell'ambiente e del terreno, monitorando lo stato di salute delle tue colture in tempo reale.</p>
+</div>
+<!-- Step 2 -->
+<div class="flex flex-col items-center text-center group">
+<div class="w-32 h-32 rounded-full glass-card flex items-center justify-center mb-8 border-2 border-primary group-hover:bg-primary transition-colors duration-500">
+<span class="material-symbols-outlined text-4xl text-primary group-hover:text-on-primary transition-colors duration-500">psychology</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-4">2. Prevedi</h3>
+<p class="text-on-surface-variant max-w-xs">L'intelligenza artificiale analizza i dati raccolti confrontandoli con modelli agronomici avanzati per anticipare rischi e necessità produttive.</p>
+</div>
+<!-- Step 3 -->
+<div class="flex flex-col items-center text-center group">
+<div class="w-32 h-32 rounded-full glass-card flex items-center justify-center mb-8 border-2 border-primary group-hover:bg-primary transition-colors duration-500">
+<span class="material-symbols-outlined text-4xl text-primary group-hover:text-on-primary transition-colors duration-500">campaign</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-4">3. Avvisa</h3>
+<p class="text-on-surface-variant max-w-xs">Ricevi indicazioni chiare e tempestive per intervenire solo dove e quando serve, ottimizzando le risorse e garantendo la qualità del raccolto.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA Section -->
+<section class="mb-section-gap px-margin-mobile">
+<div class="max-w-container-max mx-auto rounded-[2rem] overflow-hidden relative min-h-[500px] flex items-center justify-center text-center transition-all duration-1000 opacity-100 translate-y-0">
+<div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCBzHl_PlLiioc5oeC8FT017JTuTU5B2YweQ5JXOisUzJ4GvtMgWaktPF5LW4XRlT3osfojxCdnMgbFr55IKcVrYI4gkVSXZETZ5wIjca6eyjGeGcyJsaGziJ3y4pnQhQnx3E7o1V5V5Be4SbcFPa5k8XkgnGAtJSRVyAV27uOiD-wm47EHFOpzD-BxfbnGOZavrZBBSfuIABSol4IlenAIEiQQDf2Bj-yuN1D96oNS9YMD76TeA4u_9brR_5vrTLBifjLUzWlB8Xhi')"></div>
+<div class="absolute inset-0 bg-primary/60 bg-primary"></div>
+<div class="relative z-10 px-6 max-w-3xl">
+<h2 class="font-display-lg-mobile md:font-headline-md text-on-primary mb-4 uppercase">Sei pronto a far evolvere la tua eredità?</h2>
+<p class="font-headline-sm italic text-digital-lime/90 mb-8">"La precisione è la lingua del futuro."</p>
+<p class="text-body-lg text-primary-fixed-dim mb-12">Unisciti alla rete d'élite di agricoltori che utilizzano QuietField per assicurare il futuro dell'agricoltura.</p>
+<div class="flex flex-wrap justify-center gap-6">
+<button class="bg-digital-lime text-primary px-10 py-4 rounded-full font-body-lg font-bold hover:scale-105 transition-transform">
+                    Richiedi Accesso Anticipato
+                </button>
+<button class="text-on-primary border border-on-primary/30 px-10 py-4 rounded-full font-body-lg font-bold hover:bg-white/10 transition-all">
+                    Parla con un Esperto
+                </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary text-on-primary w-full py-section-gap border-t border-white/5">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="mb-6">
+<img alt="QuietField Logo" class="h-12 w-auto object-contain brightness-0 invert opacity-90" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxHJpKcGnufDYZ6SmMUvHduN_S8Lti38pAycnTimNO9w6vSJI_N5mF_QzBSuRaAvC_7TbxsFEuYlvt6_hEuA0tF3tM0VHOIg23I4YRfqQJoVqBePkGy_jzjYh-AoKlkflCYmMUc-DfZ96sdI0UvM7-2ztxRAinIbxsHJnoGQr8ARY9nG2YHDpfKF8BzzX-aJ2EnaxYCviu9wRvls4Dhdvmw25M1GPCNynPrGGfSYjaLdTynIQ0fNWI3qyDkdCWq603t8pSGhNkkjzk">
+</div>
+<p class="text-primary-fixed-dim/60 text-body-md pr-8">
+                Colmare il divario tra eredità millenaria e intelligenza futura. Progettato nel cuore del corridoio agritech italiano.
+            </p>
+</div>
+<div class="col-span-1">
+<h4 class="font-label-caps text-label-caps text-digital-lime mb-8 uppercase">Prodotto</h4>
+<ul class="space-y-4">
+<li class=""><a class="text-primary-fixed-dim/70 hover:text-on-primary transition-colors" href="#">Il Sentinel</a></li>
+<li class=""><a class="text-primary-fixed-dim/70 hover:text-on-primary transition-colors" href="#">Motore Dati</a></li>
+<li class=""><a class="text-primary-fixed-dim/70 hover:text-on-primary transition-colors" href="#">API Predittive</a></li>
+<li class=""><a class="text-primary-fixed-dim/70 hover:text-on-primary transition-colors" href="#">Prezzi</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h4 class="font-label-caps text-label-caps text-digital-lime mb-8 uppercase">Azienda</h4>
+<ul class="space-y-4">
+<li class=""><a class="text-primary-fixed-dim/70 hover:text-on-primary transition-colors" href="#">Chi Siamo</a></li>
+<li class=""><a class="text-primary-fixed-dim/70 hover:text-on-primary transition-colors" href="#">Il Nostro Team</a></li>
+<li class=""><a class="text-primary-fixed-dim/70 hover:text-on-primary transition-colors" href="#">Sostenibilità</a></li>
+<li class=""><a class="text-primary-fixed-dim/70 hover:text-on-primary transition-colors" href="#">Contatti</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h4 class="font-label-caps text-label-caps text-digital-lime mb-8 uppercase">Legale</h4>
+<ul class="space-y-4">
+<li class=""><a class="text-primary-fixed-dim/70 hover:text-on-primary transition-colors" href="#">Informativa sulla Privacy</a></li>
+<li class=""><a class="text-primary-fixed-dim/70 hover:text-on-primary transition-colors" href="#">Termini di Servizio</a></li>
+<li class=""><a class="text-primary-fixed-dim/70 hover:text-on-primary transition-colors" href="#">Sicurezza</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mt-20 pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="text-label-caps text-primary-fixed-dim/40 italic">© 2024 QuietField. Progettato a Terni, Italia.</p>
+<div class="flex gap-8">
+<a class="text-primary-fixed-dim/40 hover:text-data-cyan transition-colors font-data-mono text-xs uppercase" href="#">Linkedin</a>
+<a class="text-primary-fixed-dim/40 hover:text-data-cyan transition-colors font-data-mono text-xs uppercase" href="#">Twitter</a>
+<a class="text-primary-fixed-dim/40 hover:text-data-cyan transition-colors font-data-mono text-xs uppercase" href="#">Instagram</a>
+</div>
+</div>
+</footer>
+<!-- Simple Hover & Reveal Interactions -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section > div').forEach(el => {
+            el.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            observer.observe(el);
+        });
+    });
+</script>
+
+```
+
+</body></html>
